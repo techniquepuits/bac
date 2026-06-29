@@ -1,13 +1,8 @@
 {
-  "SC_ph_25_H_04": {
-    "exercise_id": "SC_ph_25_H_04",
-    "text_image_path": "",
-    "correction_image_path": "assets/60_ex_webp/MA/SC_ph_25_Hs_04.webp"
-  },
   "SC_ma_25_H_04": {
     "exercise_id": "SC_ma_25_H_04",
     "text_image_path": "assets/60_ex_webp/MA/SC_ma_25_H_04.webp",
-    "correction_image_path": ""
+    "correction_image_path": "assets/60_ex_webp/MA/SC_ma_25_Hs_04.webp"
   },
   "SC_ph_25_B_03": {
     "exercise_id": "SC_ph_25_B_03",
