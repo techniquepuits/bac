@@ -318,4 +318,112 @@
                     navigationHistory.push({ type: 'levels', brId: brId, modId: modId, axeId: axeId, milesId: milesId });
                     showExercises(brId, modId, axeId, milesId, lvlId);
                 };
-                container
+                container.appendChild(btn);
+            });
+
+            addBackButton(() => showMilestones(brId, modId, axeId));
+        }
+
+        // 6. عرض قائمة التمارين التابعة للمستوى المختار
+        function showExercises(brId, modId, axeId, milesId, lvlId) {
+            updateAcademicInfo(`الوحدة: ${milesId} • المستوى: ${lvlId}`);
+            const container = document.getElementById('mainMenuContainer');
+            container.innerHTML = "";
+
+            const axe = navigationData[brId].modules[modId].axes.find(a => a.axe_id === axeId);
+            const milestone = axe.milestones.find(m => m.milestones_id === milesId);
+            const exercises = milestone.levels[lvlId].exercises;
+
+            exercises.forEach(ex => {
+                if (ex.exercise_status !== "active") return; // تجاهل التمارين المؤرشفة
+                
+                const btn = document.createElement('div');
+                btn.className = 'gmax-btn';
+                btn.innerHTML = `<span>📝 تمرين: ${ex.exercise_name || ex.exercise_id}</span>`;
+                btn.onclick = () => {
+                    navigationHistory.push({ type: 'exercises', brId: brId, modId: modId, axeId: axeId, milesId: milesId, lvlId: lvlId });
+                    handleExerciseSelection(ex);
+                };
+                container.appendChild(btn);
+            });
+
+            addBackButton(() => showLevels(brId, modId, axeId, milesId));
+        }
+
+        // 7. معالجة وتدقيق تمرين الصور المختار وعرض أزراره الثلاثة
+        function handleExerciseSelection(ex) {
+            // نتحقق إذا كان التمرين يعتمد نظام العرض الصوري "image" أو "html"
+            if (ex.exercise_type === "image" || ex.exercise_type === "html") { 
+                const exId = ex.exercise_id;
+                
+                // البحث الفوري في خريطة الصور json02 المجلوبة
+                const imgRecord = imagesMapData[exId];
+                
+                if (imgRecord) {
+                    displayImageExerciseDashboard(exId, imgRecord.text_image_path, imgRecord.correction_image_path);
+                } else {
+                    alert("⚠️ معذرة، لم يتم العثور على مسارات الصور الخاصة بهذا المعرف في خريطة الصور بعد.");
+                }
+            } else {
+                alert("💡 هذا التمرين يعتمد صيغة عرض نصية مختلفة.");
+            }
+        }
+
+        // 8. عرض لوحة التحكم النهائية للتمرين (الـ 3 أزرار المطلوبة بدقة)
+        function displayImageExerciseDashboard(exId, textImgPath, correctionImgPath) {
+            updateAcademicInfo(`استعراض التمرين: ${exId}`);
+            const container = document.getElementById('mainMenuContainer');
+            container.innerHTML = ""; // تفريغ كامل ومطلق للشاشة
+
+            // الزر الأول: فتح واستعراض نص التمرين
+            const btnText = document.createElement('a');
+            btnText.className = 'gmax-btn';
+            btnText.target = '_blank';
+            btnText.href = textImgPath ? `https://htmlpreview.github.io/?${REPO_BASE_URL}${textImgPath}` : '#';
+            if(!textImgPath) btnText.onclick = () => alert("صورة نص التمرين غير متوفرة حالياً.");
+            btnText.innerHTML = `<span>📄 استعراض نص التمرين</span>`;
+            container.appendChild(btnText);
+
+            // الزر الثاني: فتح واستعراض تصحيح التمرين
+            const btnCorrect = document.createElement('a');
+            btnCorrect.className = 'gmax-btn';
+            btnCorrect.target = '_blank';
+            btnCorrect.href = correctionImgPath ? `https://htmlpreview.github.io/?${REPO_BASE_URL}${correctionImgPath}` : '#';
+            if(!correctionImgPath) btnCorrect.onclick = () => alert("صورة الحل والتصحيح غير متوفرة لهذا التمرين بعد.");
+            btnCorrect.innerHTML = `<span>💡 استعراض تصحيح التمرين</span>`;
+            container.appendChild(btnCorrect);
+
+            // فاصل تجميلي مبسط للوحة التحكم
+            const divider = document.createElement('div');
+            divider.className = 'section-divider';
+            container.appendChild(divider);
+
+            // الزر الثالث: العودة الفورية المباشرة إلى الفهرس الرئيسي (شجرة البداية)
+            const btnHome = document.createElement('div');
+            btnHome.className = 'gmax-btn back-btn';
+            btnHome.innerHTML = `<span>🏠 العودة إلى الفهرس الرئيسي</span>`;
+            btnHome.onclick = () => showBranches();
+            container.appendChild(btnHome);
+        }
+
+        // أدوات مساعدة مرنة لإدارة وحقن واجهة العودة والنصوص الخفيفة
+        function updateAcademicInfo(text) {
+            document.getElementById('academicInfo').innerText = text;
+        }
+
+        function addBackButton(previousStepFunction) {
+            const container = document.getElementById('mainMenuContainer');
+            
+            const divider = document.createElement('div');
+            divider.className = 'section-divider';
+            container.appendChild(divider);
+
+            const backBtn = document.createElement('div');
+            backBtn.className = 'gmax-btn back-btn';
+            backBtn.innerHTML = `<span>🔙 عودة للخلف</span>`;
+            backBtn.onclick = previousStepFunction;
+            container.appendChild(backBtn);
+        }
+    </script>
+</body>
+</html>
