@@ -88,8 +88,8 @@
       }
     }
   },
-  "SCx": {
-    "branche_id": "SCx",
+  "aSC": {
+    "branche_id": "aSC",
     "modules": {
       "SC_ma": {
         "module_id": "SC_ma",
