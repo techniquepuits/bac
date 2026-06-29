@@ -1,8 +1,8 @@
 {
-  "SC_ma_25_B_04": {
-    "exercise_id": "SC_ma_25_B_04",
-    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25/SC_ma_25_B/SC_ma_25_B_04.webp",
-    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25_Bs/SC_ma_25_Bs_04.webp"
+  "SC_ma_25_B_04zzzz": {
+    "exercise_id": "SC_ma_25_B_04zzzz",
+    "text_image_path": "assets/60_ex_webp/MA/SC_ma_25_B_04zzzz.png",
+    "correction_image_path": ""
   },
   "SC_ph_25_B_03": {
     "exercise_id": "SC_ph_25_B_03",
@@ -748,6 +748,11 @@
     "exercise_id": "SC_ph_25_A_01_img_0",
     "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_A/images/SC_ph_25_A_01_img_0.webp",
     "correction_image_path": ""
+  },
+  "SC_ma_25_B_04": {
+    "exercise_id": "SC_ma_25_B_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25/SC_ma_25_B/SC_ma_25_B_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25_Bs/SC_ma_25_Bs_04.webp"
   },
   "SC_ma_25_B_03": {
     "exercise_id": "SC_ma_25_B_03",
