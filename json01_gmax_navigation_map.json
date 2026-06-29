@@ -18,8 +18,8 @@
                     "level_id": "level_1",
                     "exercises": [
                       {
-                        "exercise_id": "تمرين فهم مفهوم النهاية",
-                        "exercise_name": "ex_01_concept",
+                        "exercise_id": "2026",
+                        "exercise_name": "ex_01",
                         "exercise_tag": "مشترك",
                         "exercise_type": "image",
                         "exercise_status": "active"
@@ -30,8 +30,8 @@
                     "level_id": "level_3",
                     "exercises": [
                       {
-                        "exercise_id": "سؤال نهايات بكالوريا 2024",
-                        "exercise_name": "ex_02_bac24",
+                        "exercise_id": "2026",
+                        "exercise_name": "ex_02",
                         "exercise_tag": "مشترك",
                         "exercise_type": "image",
                         "exercise_status": "active"
@@ -54,8 +54,8 @@
                     "level_id": "level_2",
                     "exercises": [
                       {
-                        "exercise_id": "تمرين بناء في الموافقات",
-                        "exercise_name": "ex_01_congruence",
+                        "exercise_id": "2026",
+                        "exercise_name": "ex_01",
                         "exercise_tag": "مشترك",
                         "exercise_type": "image",
                         "exercise_status": "active"
@@ -84,8 +84,8 @@
                     "level_id": "level_1",
                     "exercises": [
                       {
-                        "exercise_id": "كويز الناقلية التفاعلي",
-                        "exercise_name": "ex_01_quiz",
+                        "exercise_id": "2026",
+                        "exercise_name": "ex_01",
                         "exercise_tag": "مشترك",
                         "exercise_type": "image",
                         "exercise_status": "active"
