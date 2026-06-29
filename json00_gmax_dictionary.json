@@ -1,0 +1,62 @@
+{
+  "SC": {
+    "item_id": "SC",
+    "item_name": "علوم تجريبية",
+    "item_type": "branch"
+  },
+  "SC_ma": {
+    "item_id": "SC_ma",
+    "item_name": "الرياضيات",
+    "item_type": "module"
+  },
+  "SC_ph": {
+    "item_id": "SC_ph",
+    "item_name": "الفيزياء",
+    "item_type": "module"
+  },
+  "SC_ma_01_funct": {
+    "item_id": "SC_ma_01_funct",
+    "item_name": "الدوال العددية",
+    "item_type": "axe"
+  },
+  "SC_ma_02_arith": {
+    "item_id": "SC_ma_02_arith",
+    "item_name": "الحساب",
+    "item_type": "axe"
+  },
+  "SC_ph_01_kinet": {
+    "item_id": "SC_ph_01_kinet",
+    "item_name": "المتابعة الزمنية",
+    "item_type": "axe"
+  },
+  "SC_ma_01_funct_01_limits": {
+    "item_id": "SC_ma_01_funct_01_limits",
+    "item_name": "النهايات والاستمرارية",
+    "item_type": "milestone"
+  },
+  "SC_ma_02_arith_01_divis": {
+    "item_id": "SC_ma_02_arith_01_divis",
+    "item_name": "القواسم والمضاعفات",
+    "item_type": "milestone"
+  },
+  "SC_ph_01_kinet_01_condu": {
+    "item_id": "SC_ph_01_kinet_01_condu",
+    "item_name": "المتابعة بالناقلية",
+    "item_type": "milestone"
+  },
+  "level_1": {
+    "item_id": "level_1",
+    "item_name": "level_1",
+    "item_type": "level"
+  },
+  "level_2": {
+    "item_id": "level_2",
+    "item_name": "level_2",
+    "item_type": "level"
+  },
+  "level_3": {
+    "item_id": "level_3",
+    "item_name": "level_3",
+    "item_type": "level"
+  }
+}
