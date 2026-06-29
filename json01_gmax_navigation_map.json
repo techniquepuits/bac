@@ -14,18 +14,6 @@
                 "milestones_id": "SC_ma_01_funct_01_limits",
                 "milestones_tag": "مشترك",
                 "levels": {
-                  "level_1": {
-                    "level_id": "level_1",
-                    "exercises": [
-                      {
-                        "exercise_id": "2026",
-                        "exercise_name": "ex_01",
-                        "exercise_tag": "مشترك",
-                        "exercise_type": "image",
-                        "exercise_status": "active"
-                      }
-                    ]
-                  },
                   "level_3": {
                     "level_id": "level_3",
                     "exercises": [
@@ -78,6 +66,41 @@
             "milestones": [
               {
                 "milestones_id": "SC_ph_01_kinet_01_condu",
+                "milestones_tag": "مشترك",
+                "levels": {
+                  "level_1": {
+                    "level_id": "level_1",
+                    "exercises": [
+                      {
+                        "exercise_id": "2026",
+                        "exercise_name": "ex_01",
+                        "exercise_tag": "مشترك",
+                        "exercise_type": "image",
+                        "exercise_status": "active"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sSC": {
+    "branche_id": "sSC",
+    "modules": {
+      "SC_ma": {
+        "module_id": "SC_ma",
+        "module_tag": "مشترك",
+        "axes": [
+          {
+            "axe_id": "SC_ma_01_funct",
+            "axe_tag": "مشترك",
+            "milestones": [
+              {
+                "milestones_id": "SC_ma_01_funct_01_limits",
                 "milestones_tag": "مشترك",
                 "levels": {
                   "level_1": {
