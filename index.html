@@ -71,6 +71,27 @@
             border-radius: 4px;
             font-family: monospace;
         }
+/* ضبط الجداول لتأخذ اتجاهها الصحيح دون الانقلاب */
+#exercise-content table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    width: 100%;
+    direction: ltr; /* يجبر الجدول على ترتيب أعمدته من اليسار إلى اليمين */
+    text-align: right; /* يحافظ على محاذاة النصوص العربية بالداخل إلى اليمين لسهولة القراءة */
+}
+
+#exercise-content th, #exercise-content td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+}
+
+#exercise-content th {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: bold;
+}
+
+
     </style>
 </head>
 <body>
