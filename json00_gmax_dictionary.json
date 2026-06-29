@@ -44,9 +44,9 @@
     "item_name": "المتابعة بالناقلية",
     "item_type": "milestone"
   },
-  "level_1": {
-    "item_id": "level_1",
-    "item_name": "level_1",
+  "level_10": {
+    "item_id": "level_10",
+    "item_name": "level_10",
     "item_type": "level"
   },
   "level_2": {
@@ -54,9 +54,9 @@
     "item_name": "level_2",
     "item_type": "level"
   },
-  "level_3azert": {
-    "item_id": "level_3azert",
-    "item_name": "level_3hhhhhh",
+  "level_3": {
+    "item_id": "level_3",
+    "item_name": "level_3",
     "item_type": "level"
   }
 }
