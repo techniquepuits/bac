@@ -1,0 +1,1547 @@
+{
+  "SC_ma_25_B_04": {
+    "exercise_id": "SC_ma_25_B_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25/SC_ma_25_B/SC_ma_25_B_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25_Bs/SC_ma_25_Bs_04.webp"
+  },
+  "SC_ph_25_B_03": {
+    "exercise_id": "SC_ph_25_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_B/SC_ph_25_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_Bs/SC_ph_25_Bs_03.webp"
+  },
+  "SC_ph_25_B_02": {
+    "exercise_id": "SC_ph_25_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_B/SC_ph_25_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_Bs/SC_ph_25_Bs_02.webp"
+  },
+  "SC_ph_25_B_01": {
+    "exercise_id": "SC_ph_25_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_B/SC_ph_25_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_Bs/SC_ph_25_Bs_01.webp"
+  },
+  "SC_ph_25_Bs_03_img_0": {
+    "exercise_id": "SC_ph_25_Bs_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_Bs/images/SC_ph_25_Bs_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_25_Bs_02_img_2": {
+    "exercise_id": "SC_ph_25_Bs_02_img_2",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_Bs/images/SC_ph_25_Bs_02_img_2.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_25_Bs_02_img_1": {
+    "exercise_id": "SC_ph_25_Bs_02_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_Bs/images/SC_ph_25_Bs_02_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_25_Bs_02_img_0": {
+    "exercise_id": "SC_ph_25_Bs_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_Bs/images/SC_ph_25_Bs_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_25_A_03": {
+    "exercise_id": "SC_ph_25_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_A/SC_ph_25_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_As/SC_ph_25_As_03.webp"
+  },
+  "SC_ph_25_A_02": {
+    "exercise_id": "SC_ph_25_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_A/SC_ph_25_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_As/SC_ph_25_As_02.webp"
+  },
+  "SC_ph_25_A_01": {
+    "exercise_id": "SC_ph_25_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_A/SC_ph_25_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_As/SC_ph_25_As_01.webp"
+  },
+  "SC_ph_25_As_03_img_0": {
+    "exercise_id": "SC_ph_25_As_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_As/images/SC_ph_25_As_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_25_As_02_img_1": {
+    "exercise_id": "SC_ph_25_As_02_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_As/images/SC_ph_25_As_02_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_25_As_02_img_0": {
+    "exercise_id": "SC_ph_25_As_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_As/images/SC_ph_25_As_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_25_As_01_img_1": {
+    "exercise_id": "SC_ph_25_As_01_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_As/images/SC_ph_25_As_01_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_25_As_01_img_0": {
+    "exercise_id": "SC_ph_25_As_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_As/images/SC_ph_25_As_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_24_B_03": {
+    "exercise_id": "SC_ph_24_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_B/SC_ph_24_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_Bs/SC_ph_24_Bs_03.webp"
+  },
+  "SC_ph_24_B_02": {
+    "exercise_id": "SC_ph_24_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_B/SC_ph_24_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_Bs/SC_ph_24_Bs_02.webp"
+  },
+  "SC_ph_24_B_01": {
+    "exercise_id": "SC_ph_24_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_B/SC_ph_24_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_Bs/SC_ph_24_Bs_01.webp"
+  },
+  "SC_ph_24_Bs_03_img_0": {
+    "exercise_id": "SC_ph_24_Bs_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_Bs/images/SC_ph_24_Bs_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_24_Bs_02_img_0": {
+    "exercise_id": "SC_ph_24_Bs_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_Bs/images/SC_ph_24_Bs_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_24_Bs_01_img_0": {
+    "exercise_id": "SC_ph_24_Bs_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_Bs/images/SC_ph_24_Bs_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_24_A_03": {
+    "exercise_id": "SC_ph_24_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_A/SC_ph_24_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_As/SC_ph_24_As_03.webp"
+  },
+  "SC_ph_24_A_02": {
+    "exercise_id": "SC_ph_24_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_A/SC_ph_24_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_As/SC_ph_24_As_02.webp"
+  },
+  "SC_ph_24_A_01": {
+    "exercise_id": "SC_ph_24_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_A/SC_ph_24_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_As/SC_ph_24_As_01.webp"
+  },
+  "SC_ph_24_As_03_img_0": {
+    "exercise_id": "SC_ph_24_As_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_As/images/SC_ph_24_As_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_24_As_02_img_0": {
+    "exercise_id": "SC_ph_24_As_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_As/images/SC_ph_24_As_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_24_As_01_img_0": {
+    "exercise_id": "SC_ph_24_As_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_24_As/images/SC_ph_24_As_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_23_B_03": {
+    "exercise_id": "SC_ph_23_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_B/SC_ph_23_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_Bs/SC_ph_23_Bs_03.webp"
+  },
+  "SC_ph_23_B_02": {
+    "exercise_id": "SC_ph_23_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_B/SC_ph_23_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_Bs/SC_ph_23_Bs_02.webp"
+  },
+  "SC_ph_23_B_01": {
+    "exercise_id": "SC_ph_23_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_B/SC_ph_23_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_Bs/SC_ph_23_Bs_01.webp"
+  },
+  "SC_ph_23_Bs_03_img_1": {
+    "exercise_id": "SC_ph_23_Bs_03_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_Bs/images/SC_ph_23_Bs_03_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_23_Bs_03_img_0": {
+    "exercise_id": "SC_ph_23_Bs_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_Bs/images/SC_ph_23_Bs_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_23_Bs_02_img_1": {
+    "exercise_id": "SC_ph_23_Bs_02_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_Bs/images/SC_ph_23_Bs_02_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_23_Bs_02_img_0": {
+    "exercise_id": "SC_ph_23_Bs_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_Bs/images/SC_ph_23_Bs_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_23_A_03": {
+    "exercise_id": "SC_ph_23_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_A/SC_ph_23_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_As/SC_ph_23_As_03.webp"
+  },
+  "SC_ph_23_A_02": {
+    "exercise_id": "SC_ph_23_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_A/SC_ph_23_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_As/SC_ph_23_As_02.webp"
+  },
+  "SC_ph_23_A_01": {
+    "exercise_id": "SC_ph_23_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_A/SC_ph_23_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_As/SC_ph_23_As_01.webp"
+  },
+  "SC_ph_23_As_03_img_1": {
+    "exercise_id": "SC_ph_23_As_03_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_As/images/SC_ph_23_As_03_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_23_As_03_img_0": {
+    "exercise_id": "SC_ph_23_As_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_As/images/SC_ph_23_As_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_23_As_02_img_0": {
+    "exercise_id": "SC_ph_23_As_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_As/images/SC_ph_23_As_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_23_As_01_img_1": {
+    "exercise_id": "SC_ph_23_As_01_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_As/images/SC_ph_23_As_01_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_23_As_01_img_0": {
+    "exercise_id": "SC_ph_23_As_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_23_As/images/SC_ph_23_As_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_22_B_03": {
+    "exercise_id": "SC_ph_22_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_B/SC_ph_22_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_Bs/SC_ph_22_Bs_03.webp"
+  },
+  "SC_ph_22_B_02": {
+    "exercise_id": "SC_ph_22_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_B/SC_ph_22_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_Bs/SC_ph_22_Bs_02.webp"
+  },
+  "SC_ph_22_B_01": {
+    "exercise_id": "SC_ph_22_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_B/SC_ph_22_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_Bs/SC_ph_22_Bs_01.webp"
+  },
+  "SC_ph_22_Bs_03_img_0": {
+    "exercise_id": "SC_ph_22_Bs_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_Bs/images/SC_ph_22_Bs_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_22_Bs_02_img_0": {
+    "exercise_id": "SC_ph_22_Bs_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_Bs/images/SC_ph_22_Bs_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_22_Bs_01_img_0": {
+    "exercise_id": "SC_ph_22_Bs_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_Bs/images/SC_ph_22_Bs_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_22_A_03": {
+    "exercise_id": "SC_ph_22_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_A/SC_ph_22_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_As/SC_ph_22_As_03.webp"
+  },
+  "SC_ph_22_A_02": {
+    "exercise_id": "SC_ph_22_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_A/SC_ph_22_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_As/SC_ph_22_As_02.webp"
+  },
+  "SC_ph_22_A_01": {
+    "exercise_id": "SC_ph_22_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_A/SC_ph_22_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_As/SC_ph_22_As_01.webp"
+  },
+  "SC_ph_22_As_03_img_0": {
+    "exercise_id": "SC_ph_22_As_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_As/images/SC_ph_22_As_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_22_As_02_img_1": {
+    "exercise_id": "SC_ph_22_As_02_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_As/images/SC_ph_22_As_02_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_22_As_02_img_0": {
+    "exercise_id": "SC_ph_22_As_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_As/images/SC_ph_22_As_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_22_As_01_img_0": {
+    "exercise_id": "SC_ph_22_As_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_22_As/images/SC_ph_22_As_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_21_B_03": {
+    "exercise_id": "SC_ph_21_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_B/SC_ph_21_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_Bs/SC_ph_21_Bs_03.webp"
+  },
+  "SC_ph_21_B_02": {
+    "exercise_id": "SC_ph_21_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_B/SC_ph_21_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_Bs/SC_ph_21_Bs_02.webp"
+  },
+  "SC_ph_21_B_01": {
+    "exercise_id": "SC_ph_21_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_B/SC_ph_21_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_Bs/SC_ph_21_Bs_01.webp"
+  },
+  "SC_ph_21_Bs_03_img_0": {
+    "exercise_id": "SC_ph_21_Bs_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_Bs/images/SC_ph_21_Bs_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_21_Bs_02_img_1": {
+    "exercise_id": "SC_ph_21_Bs_02_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_Bs/images/SC_ph_21_Bs_02_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_21_Bs_02_img_0": {
+    "exercise_id": "SC_ph_21_Bs_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_Bs/images/SC_ph_21_Bs_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_21_Bs_01_img_0": {
+    "exercise_id": "SC_ph_21_Bs_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_Bs/images/SC_ph_21_Bs_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_21_A_03": {
+    "exercise_id": "SC_ph_21_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_A/SC_ph_21_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_As/SC_ph_21_As_03.webp"
+  },
+  "SC_ph_21_A_02": {
+    "exercise_id": "SC_ph_21_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_A/SC_ph_21_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_As/SC_ph_21_As_02.webp"
+  },
+  "SC_ph_21_A_01": {
+    "exercise_id": "SC_ph_21_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_A/SC_ph_21_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_As/SC_ph_21_As_01.webp"
+  },
+  "SC_ph_21_As_03_img_0": {
+    "exercise_id": "SC_ph_21_As_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_As/images/SC_ph_21_As_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_21_As_01_img_0": {
+    "exercise_id": "SC_ph_21_As_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_21_As/images/SC_ph_21_As_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_20_B_03": {
+    "exercise_id": "SC_ph_20_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_B/SC_ph_20_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_Bs/SC_ph_20_Bs_03.webp"
+  },
+  "SC_ph_20_B_02": {
+    "exercise_id": "SC_ph_20_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_B/SC_ph_20_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_Bs/SC_ph_20_Bs_02.webp"
+  },
+  "SC_ph_20_B_01": {
+    "exercise_id": "SC_ph_20_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_B/SC_ph_20_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_Bs/SC_ph_20_Bs_01.webp"
+  },
+  "SC_ph_20_Bs_03_img_0": {
+    "exercise_id": "SC_ph_20_Bs_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_Bs/images/SC_ph_20_Bs_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_20_Bs_02_img_0": {
+    "exercise_id": "SC_ph_20_Bs_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_Bs/images/SC_ph_20_Bs_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_20_Bs_01_img_0": {
+    "exercise_id": "SC_ph_20_Bs_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_Bs/images/SC_ph_20_Bs_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_20_A_03": {
+    "exercise_id": "SC_ph_20_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_A/SC_ph_20_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_As/SC_ph_20_As_03.webp"
+  },
+  "SC_ph_20_A_02": {
+    "exercise_id": "SC_ph_20_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_A/SC_ph_20_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_As/SC_ph_20_As_02.webp"
+  },
+  "SC_ph_20_A_01": {
+    "exercise_id": "SC_ph_20_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_A/SC_ph_20_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_As/SC_ph_20_As_01.webp"
+  },
+  "SC_ph_20_As_03_img_1": {
+    "exercise_id": "SC_ph_20_As_03_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_As/images/SC_ph_20_As_03_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_20_As_03_img_0": {
+    "exercise_id": "SC_ph_20_As_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_As/images/SC_ph_20_As_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_20_As_02_img_0": {
+    "exercise_id": "SC_ph_20_As_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_As/images/SC_ph_20_As_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_20_As_01_img_1": {
+    "exercise_id": "SC_ph_20_As_01_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_As/images/SC_ph_20_As_01_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_20_As_01_img_0": {
+    "exercise_id": "SC_ph_20_As_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_20_As/images/SC_ph_20_As_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_19_B_03": {
+    "exercise_id": "SC_ph_19_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_B/SC_ph_19_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_Bs/SC_ph_19_Bs_03.webp"
+  },
+  "SC_ph_19_B_02": {
+    "exercise_id": "SC_ph_19_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_B/SC_ph_19_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_Bs/SC_ph_19_Bs_02.webp"
+  },
+  "SC_ph_19_B_01": {
+    "exercise_id": "SC_ph_19_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_B/SC_ph_19_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_Bs/SC_ph_19_Bs_01.webp"
+  },
+  "SC_ph_19_Bs_03_img_1": {
+    "exercise_id": "SC_ph_19_Bs_03_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_Bs/images/SC_ph_19_Bs_03_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_19_Bs_03_img_0": {
+    "exercise_id": "SC_ph_19_Bs_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_Bs/images/SC_ph_19_Bs_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_19_Bs_02_img_1": {
+    "exercise_id": "SC_ph_19_Bs_02_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_Bs/images/SC_ph_19_Bs_02_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_19_Bs_02_img_0": {
+    "exercise_id": "SC_ph_19_Bs_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_Bs/images/SC_ph_19_Bs_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_19_A_03": {
+    "exercise_id": "SC_ph_19_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_A/SC_ph_19_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_As/SC_ph_19_As_03.webp"
+  },
+  "SC_ph_19_A_02": {
+    "exercise_id": "SC_ph_19_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_A/SC_ph_19_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_As/SC_ph_19_As_02.webp"
+  },
+  "SC_ph_19_A_01": {
+    "exercise_id": "SC_ph_19_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_A/SC_ph_19_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_As/SC_ph_19_As_01.webp"
+  },
+  "SC_ph_19_As_03_img_2": {
+    "exercise_id": "SC_ph_19_As_03_img_2",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_As/images/SC_ph_19_As_03_img_2.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_19_As_03_img_1": {
+    "exercise_id": "SC_ph_19_As_03_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_As/images/SC_ph_19_As_03_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_19_As_03_img_0": {
+    "exercise_id": "SC_ph_19_As_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_As/images/SC_ph_19_As_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_19_As_01_img_0": {
+    "exercise_id": "SC_ph_19_As_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_19_As/images/SC_ph_19_As_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_18_B_03": {
+    "exercise_id": "SC_ph_18_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_B/SC_ph_18_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_Bs/SC_ph_18_Bs_03.webp"
+  },
+  "SC_ph_18_B_02": {
+    "exercise_id": "SC_ph_18_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_B/SC_ph_18_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_Bs/SC_ph_18_Bs_02.webp"
+  },
+  "SC_ph_18_B_01": {
+    "exercise_id": "SC_ph_18_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_B/SC_ph_18_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_Bs/SC_ph_18_Bs_01.webp"
+  },
+  "SC_ph_18_Bs_03_img_1": {
+    "exercise_id": "SC_ph_18_Bs_03_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_Bs/images/SC_ph_18_Bs_03_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_18_Bs_03_img_0": {
+    "exercise_id": "SC_ph_18_Bs_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_Bs/images/SC_ph_18_Bs_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_18_Bs_02_img_2": {
+    "exercise_id": "SC_ph_18_Bs_02_img_2",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_Bs/images/SC_ph_18_Bs_02_img_2.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_18_Bs_02_img_1": {
+    "exercise_id": "SC_ph_18_Bs_02_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_Bs/images/SC_ph_18_Bs_02_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_18_Bs_02_img_0": {
+    "exercise_id": "SC_ph_18_Bs_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_Bs/images/SC_ph_18_Bs_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_18_Bs_01_img_0": {
+    "exercise_id": "SC_ph_18_Bs_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_Bs/images/SC_ph_18_Bs_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_18_A_03": {
+    "exercise_id": "SC_ph_18_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_A/SC_ph_18_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_As/SC_ph_18_As_03.webp"
+  },
+  "SC_ph_18_A_02": {
+    "exercise_id": "SC_ph_18_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_A/SC_ph_18_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_As/SC_ph_18_As_02.webp"
+  },
+  "SC_ph_18_A_01": {
+    "exercise_id": "SC_ph_18_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_A/SC_ph_18_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_As/SC_ph_18_As_01.webp"
+  },
+  "SC_ph_18_As_03_img_1": {
+    "exercise_id": "SC_ph_18_As_03_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_As/images/SC_ph_18_As_03_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_18_As_03_img_0": {
+    "exercise_id": "SC_ph_18_As_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_As/images/SC_ph_18_As_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_18_As_01_img_0": {
+    "exercise_id": "SC_ph_18_As_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_18_As/images/SC_ph_18_As_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_V2_B_03": {
+    "exercise_id": "SC_ph_17_V2_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_B/SC_ph_17_V2_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_Bs/SC_ph_17_V2_Bs_03.webp"
+  },
+  "SC_ph_17_V2_B_02": {
+    "exercise_id": "SC_ph_17_V2_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_B/SC_ph_17_V2_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_Bs/SC_ph_17_V2_Bs_02.webp"
+  },
+  "SC_ph_17_V2_B_01": {
+    "exercise_id": "SC_ph_17_V2_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_B/SC_ph_17_V2_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_Bs/SC_ph_17_V2_Bs_01.webp"
+  },
+  "SC_ph_17_V2_Bs_03_img_1": {
+    "exercise_id": "SC_ph_17_V2_Bs_03_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_Bs/images/SC_ph_17_V2_Bs_03_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_V2_Bs_03_img_0": {
+    "exercise_id": "SC_ph_17_V2_Bs_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_Bs/images/SC_ph_17_V2_Bs_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_V2_Bs_02_img_2": {
+    "exercise_id": "SC_ph_17_V2_Bs_02_img_2",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_Bs/images/SC_ph_17_V2_Bs_02_img_2.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_V2_Bs_02_img_1": {
+    "exercise_id": "SC_ph_17_V2_Bs_02_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_Bs/images/SC_ph_17_V2_Bs_02_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_V2_Bs_02_img_0": {
+    "exercise_id": "SC_ph_17_V2_Bs_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_Bs/images/SC_ph_17_V2_Bs_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_V2_Bs_01_img_1": {
+    "exercise_id": "SC_ph_17_V2_Bs_01_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_Bs/images/SC_ph_17_V2_Bs_01_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_V2_Bs_01_img_0": {
+    "exercise_id": "SC_ph_17_V2_Bs_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_Bs/images/SC_ph_17_V2_Bs_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_V2_A_03": {
+    "exercise_id": "SC_ph_17_V2_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_A/SC_ph_17_V2_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_As/SC_ph_17_V2_As_03.webp"
+  },
+  "SC_ph_17_V2_A_02": {
+    "exercise_id": "SC_ph_17_V2_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_A/SC_ph_17_V2_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_As/SC_ph_17_V2_As_02.webp"
+  },
+  "SC_ph_17_V2_A_01": {
+    "exercise_id": "SC_ph_17_V2_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_A/SC_ph_17_V2_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_As/SC_ph_17_V2_As_01.webp"
+  },
+  "SC_ph_17_V2_As_02_img_1": {
+    "exercise_id": "SC_ph_17_V2_As_02_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_As/images/SC_ph_17_V2_As_02_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_V2_As_02_img_0": {
+    "exercise_id": "SC_ph_17_V2_As_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_As/images/SC_ph_17_V2_As_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_V2_As_01_img_1": {
+    "exercise_id": "SC_ph_17_V2_As_01_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_As/images/SC_ph_17_V2_As_01_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_V2_As_01_img_0": {
+    "exercise_id": "SC_ph_17_V2_As_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_V2_As/images/SC_ph_17_V2_As_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_B_03": {
+    "exercise_id": "SC_ph_17_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_B/SC_ph_17_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_Bs/SC_ph_17_Bs_03.webp"
+  },
+  "SC_ph_17_B_02": {
+    "exercise_id": "SC_ph_17_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_B/SC_ph_17_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_Bs/SC_ph_17_Bs_02.webp"
+  },
+  "SC_ph_17_B_01": {
+    "exercise_id": "SC_ph_17_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_B/SC_ph_17_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_Bs/SC_ph_17_Bs_01.webp"
+  },
+  "SC_ph_17_Bs_02_img_2": {
+    "exercise_id": "SC_ph_17_Bs_02_img_2",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_Bs/images/SC_ph_17_Bs_02_img_2.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_Bs_02_img_1": {
+    "exercise_id": "SC_ph_17_Bs_02_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_Bs/images/SC_ph_17_Bs_02_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_Bs_02_img_0": {
+    "exercise_id": "SC_ph_17_Bs_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_Bs/images/SC_ph_17_Bs_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_Bs_01_img_0": {
+    "exercise_id": "SC_ph_17_Bs_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_Bs/images/SC_ph_17_Bs_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_A_03": {
+    "exercise_id": "SC_ph_17_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_A/SC_ph_17_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_As/SC_ph_17_As_03.webp"
+  },
+  "SC_ph_17_A_02": {
+    "exercise_id": "SC_ph_17_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_A/SC_ph_17_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_As/SC_ph_17_As_02.webp"
+  },
+  "SC_ph_17_A_01": {
+    "exercise_id": "SC_ph_17_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_A/SC_ph_17_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_As/SC_ph_17_As_01.webp"
+  },
+  "SC_ph_17_As_03_img_1": {
+    "exercise_id": "SC_ph_17_As_03_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_As/images/SC_ph_17_As_03_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_As_03_img_0": {
+    "exercise_id": "SC_ph_17_As_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_As/images/SC_ph_17_As_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_17_As_02_img_0": {
+    "exercise_id": "SC_ph_17_As_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_17_As/images/SC_ph_17_As_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_25_B_02_img_3": {
+    "exercise_id": "SC_ph_25_B_02_img_3",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_B/images/SC_ph_25_B_02_img_3.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_25_B_02_img_2": {
+    "exercise_id": "SC_ph_25_B_02_img_2",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_B/images/SC_ph_25_B_02_img_2.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_25_B_02_img_1": {
+    "exercise_id": "SC_ph_25_B_02_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_B/images/SC_ph_25_B_02_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_25_B_02_img_0": {
+    "exercise_id": "SC_ph_25_B_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_B/images/SC_ph_25_B_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_25_A_03_img_2": {
+    "exercise_id": "SC_ph_25_A_03_img_2",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_A/images/SC_ph_25_A_03_img_2.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_25_A_03_img_1": {
+    "exercise_id": "SC_ph_25_A_03_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_A/images/SC_ph_25_A_03_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_25_A_03_img_0": {
+    "exercise_id": "SC_ph_25_A_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_A/images/SC_ph_25_A_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_25_A_01_img_1": {
+    "exercise_id": "SC_ph_25_A_01_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_A/images/SC_ph_25_A_01_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ph_25_A_01_img_0": {
+    "exercise_id": "SC_ph_25_A_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ph/SC_ph_25_A/images/SC_ph_25_A_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_25_B_03": {
+    "exercise_id": "SC_ma_25_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25/SC_ma_25_B/SC_ma_25_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25_Bs/SC_ma_25_Bs_03.webp"
+  },
+  "SC_ma_25_B_02": {
+    "exercise_id": "SC_ma_25_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25/SC_ma_25_B/SC_ma_25_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25_Bs/SC_ma_25_Bs_02.webp"
+  },
+  "SC_ma_25_B_01": {
+    "exercise_id": "SC_ma_25_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25/SC_ma_25_B/SC_ma_25_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25_Bs/SC_ma_25_Bs_01.webp"
+  },
+  "SC_ma_25_Bs_04_img_1": {
+    "exercise_id": "SC_ma_25_Bs_04_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25_Bs/images/SC_ma_25_Bs_04_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_25_Bs_04_img_0": {
+    "exercise_id": "SC_ma_25_Bs_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25_Bs/images/SC_ma_25_Bs_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_25_Bs_02_img_0": {
+    "exercise_id": "SC_ma_25_Bs_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25_Bs/images/SC_ma_25_Bs_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_25_A_04": {
+    "exercise_id": "SC_ma_25_A_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25/SC_ma_25_A/SC_ma_25_A_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25_As/SC_ma_25_As_04.webp"
+  },
+  "SC_ma_25_A_03": {
+    "exercise_id": "SC_ma_25_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25/SC_ma_25_A/SC_ma_25_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25_As/SC_ma_25_As_03.webp"
+  },
+  "SC_ma_25_A_02": {
+    "exercise_id": "SC_ma_25_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25/SC_ma_25_A/SC_ma_25_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25_As/SC_ma_25_As_02.webp"
+  },
+  "SC_ma_25_A_01": {
+    "exercise_id": "SC_ma_25_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25/SC_ma_25_A/SC_ma_25_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25_As/SC_ma_25_As_01.webp"
+  },
+  "SC_ma_25_As_04_img_1": {
+    "exercise_id": "SC_ma_25_As_04_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25_As/images/SC_ma_25_As_04_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_25_As_04_img_0": {
+    "exercise_id": "SC_ma_25_As_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25_As/images/SC_ma_25_As_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_25_As_01_img_1": {
+    "exercise_id": "SC_ma_25_As_01_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25_As/images/SC_ma_25_As_01_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_25_As_01_img_0": {
+    "exercise_id": "SC_ma_25_As_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25_As/images/SC_ma_25_As_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_24_B_04": {
+    "exercise_id": "SC_ma_24_B_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24/SC_ma_24_B/SC_ma_24_B_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24_Bs/SC_ma_24_Bs_04.webp"
+  },
+  "SC_ma_24_B_03": {
+    "exercise_id": "SC_ma_24_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24/SC_ma_24_B/SC_ma_24_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24_Bs/SC_ma_24_Bs_03.webp"
+  },
+  "SC_ma_24_B_02": {
+    "exercise_id": "SC_ma_24_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24/SC_ma_24_B/SC_ma_24_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24_Bs/SC_ma_24_Bs_02.webp"
+  },
+  "SC_ma_24_B_01": {
+    "exercise_id": "SC_ma_24_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24/SC_ma_24_B/SC_ma_24_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24_Bs/SC_ma_24_Bs_01.webp"
+  },
+  "SC_ma_24_Bs_04_img_1": {
+    "exercise_id": "SC_ma_24_Bs_04_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24_Bs/images/SC_ma_24_Bs_04_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_24_Bs_04_img_0": {
+    "exercise_id": "SC_ma_24_Bs_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24_Bs/images/SC_ma_24_Bs_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_24_Bs_03_img_0": {
+    "exercise_id": "SC_ma_24_Bs_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24_Bs/images/SC_ma_24_Bs_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_24_Bs_01_img_1": {
+    "exercise_id": "SC_ma_24_Bs_01_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24_Bs/images/SC_ma_24_Bs_01_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_24_Bs_01_img_0": {
+    "exercise_id": "SC_ma_24_Bs_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24_Bs/images/SC_ma_24_Bs_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_24_A_04": {
+    "exercise_id": "SC_ma_24_A_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24/SC_ma_24_A/SC_ma_24_A_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24_As/SC_ma_24_As_04.webp"
+  },
+  "SC_ma_24_A_03": {
+    "exercise_id": "SC_ma_24_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24/SC_ma_24_A/SC_ma_24_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24_As/SC_ma_24_As_03.webp"
+  },
+  "SC_ma_24_A_02": {
+    "exercise_id": "SC_ma_24_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24/SC_ma_24_A/SC_ma_24_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24_As/SC_ma_24_As_02.webp"
+  },
+  "SC_ma_24_A_01": {
+    "exercise_id": "SC_ma_24_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24/SC_ma_24_A/SC_ma_24_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24_As/SC_ma_24_As_01.webp"
+  },
+  "SC_ma_24_As_04_img_1": {
+    "exercise_id": "SC_ma_24_As_04_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24_As/images/SC_ma_24_As_04_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_24_As_04_img_0": {
+    "exercise_id": "SC_ma_24_As_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24_As/images/SC_ma_24_As_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_24_As_01_img_0": {
+    "exercise_id": "SC_ma_24_As_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24_As/images/SC_ma_24_As_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_23_B_04": {
+    "exercise_id": "SC_ma_23_B_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23/SC_ma_23_B/SC_ma_23_B_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23_Bs/SC_ma_23_Bs_04.webp"
+  },
+  "SC_ma_23_B_03": {
+    "exercise_id": "SC_ma_23_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23/SC_ma_23_B/SC_ma_23_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23_Bs/SC_ma_23_Bs_03.webp"
+  },
+  "SC_ma_23_B_02": {
+    "exercise_id": "SC_ma_23_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23/SC_ma_23_B/SC_ma_23_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23_Bs/SC_ma_23_Bs_02.webp"
+  },
+  "SC_ma_23_B_01": {
+    "exercise_id": "SC_ma_23_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23/SC_ma_23_B/SC_ma_23_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23_Bs/SC_ma_23_Bs_01.webp"
+  },
+  "SC_ma_23_Bs_04_img_2": {
+    "exercise_id": "SC_ma_23_Bs_04_img_2",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23_Bs/images/SC_ma_23_Bs_04_img_2.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_23_Bs_04_img_1": {
+    "exercise_id": "SC_ma_23_Bs_04_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23_Bs/images/SC_ma_23_Bs_04_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_23_Bs_04_img_0": {
+    "exercise_id": "SC_ma_23_Bs_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23_Bs/images/SC_ma_23_Bs_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_23_Bs_01_img_0": {
+    "exercise_id": "SC_ma_23_Bs_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23_Bs/images/SC_ma_23_Bs_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_23_A_04": {
+    "exercise_id": "SC_ma_23_A_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23/SC_ma_23_A/SC_ma_23_A_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23_As/SC_ma_23_As_04.webp"
+  },
+  "SC_ma_23_A_03": {
+    "exercise_id": "SC_ma_23_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23/SC_ma_23_A/SC_ma_23_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23_As/SC_ma_23_As_03.webp"
+  },
+  "SC_ma_23_A_02": {
+    "exercise_id": "SC_ma_23_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23/SC_ma_23_A/SC_ma_23_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23_As/SC_ma_23_As_02.webp"
+  },
+  "SC_ma_23_A_01": {
+    "exercise_id": "SC_ma_23_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23/SC_ma_23_A/SC_ma_23_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23_As/SC_ma_23_As_01.webp"
+  },
+  "SC_ma_23_As_04_img_2": {
+    "exercise_id": "SC_ma_23_As_04_img_2",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23_As/images/SC_ma_23_As_04_img_2.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_23_As_04_img_1": {
+    "exercise_id": "SC_ma_23_As_04_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23_As/images/SC_ma_23_As_04_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_23_As_04_img_0": {
+    "exercise_id": "SC_ma_23_As_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23_As/images/SC_ma_23_As_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_23_As_01_img_1": {
+    "exercise_id": "SC_ma_23_As_01_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23_As/images/SC_ma_23_As_01_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_23_As_01_img_0": {
+    "exercise_id": "SC_ma_23_As_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23_As/images/SC_ma_23_As_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_22_B_04": {
+    "exercise_id": "SC_ma_22_B_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22/SC_ma_22_B/SC_ma_22_B_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22_Bs/SC_ma_22_Bs_04.webp"
+  },
+  "SC_ma_22_B_03": {
+    "exercise_id": "SC_ma_22_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22/SC_ma_22_B/SC_ma_22_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22_Bs/SC_ma_22_Bs_03.webp"
+  },
+  "SC_ma_22_B_02": {
+    "exercise_id": "SC_ma_22_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22/SC_ma_22_B/SC_ma_22_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22_Bs/SC_ma_22_Bs_02.webp"
+  },
+  "SC_ma_22_B_01": {
+    "exercise_id": "SC_ma_22_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22/SC_ma_22_B/SC_ma_22_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22_Bs/SC_ma_22_Bs_01.webp"
+  },
+  "SC_ma_22_Bs_04_img_2": {
+    "exercise_id": "SC_ma_22_Bs_04_img_2",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22_Bs/images/SC_ma_22_Bs_04_img_2.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_22_Bs_04_img_1": {
+    "exercise_id": "SC_ma_22_Bs_04_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22_Bs/images/SC_ma_22_Bs_04_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_22_Bs_04_img_0": {
+    "exercise_id": "SC_ma_22_Bs_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22_Bs/images/SC_ma_22_Bs_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_22_Bs_01_img_0": {
+    "exercise_id": "SC_ma_22_Bs_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22_Bs/images/SC_ma_22_Bs_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_22_A_04": {
+    "exercise_id": "SC_ma_22_A_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22/SC_ma_22_A/SC_ma_22_A_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22_As/SC_ma_22_As_04.webp"
+  },
+  "SC_ma_22_A_03": {
+    "exercise_id": "SC_ma_22_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22/SC_ma_22_A/SC_ma_22_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22_As/SC_ma_22_As_03.webp"
+  },
+  "SC_ma_22_A_02": {
+    "exercise_id": "SC_ma_22_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22/SC_ma_22_A/SC_ma_22_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22_As/SC_ma_22_As_02.webp"
+  },
+  "SC_ma_22_A_01": {
+    "exercise_id": "SC_ma_22_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22/SC_ma_22_A/SC_ma_22_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22_As/SC_ma_22_As_01.webp"
+  },
+  "SC_ma_22_As_04_img_2": {
+    "exercise_id": "SC_ma_22_As_04_img_2",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22_As/images/SC_ma_22_As_04_img_2.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_22_As_04_img_1": {
+    "exercise_id": "SC_ma_22_As_04_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22_As/images/SC_ma_22_As_04_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_22_As_04_img_0": {
+    "exercise_id": "SC_ma_22_As_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22_As/images/SC_ma_22_As_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_22_As_03_img_0": {
+    "exercise_id": "SC_ma_22_As_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22_As/images/SC_ma_22_As_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_22_As_01_img_0": {
+    "exercise_id": "SC_ma_22_As_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22_As/images/SC_ma_22_As_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_21_B_04": {
+    "exercise_id": "SC_ma_21_B_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21/SC_ma_21_B/SC_ma_21_B_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21_Bs/SC_ma_21_Bs_04.webp"
+  },
+  "SC_ma_21_B_03": {
+    "exercise_id": "SC_ma_21_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21/SC_ma_21_B/SC_ma_21_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21_Bs/SC_ma_21_Bs_03.webp"
+  },
+  "SC_ma_21_B_02": {
+    "exercise_id": "SC_ma_21_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21/SC_ma_21_B/SC_ma_21_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21_Bs/SC_ma_21_Bs_02.webp"
+  },
+  "SC_ma_21_B_01": {
+    "exercise_id": "SC_ma_21_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21/SC_ma_21_B/SC_ma_21_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21_Bs/SC_ma_21_Bs_01.webp"
+  },
+  "SC_ma_21_Bs_04_img_1": {
+    "exercise_id": "SC_ma_21_Bs_04_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21_Bs/images/SC_ma_21_Bs_04_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_21_Bs_04_img_0": {
+    "exercise_id": "SC_ma_21_Bs_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21_Bs/images/SC_ma_21_Bs_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_21_Bs_01_img_0": {
+    "exercise_id": "SC_ma_21_Bs_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21_Bs/images/SC_ma_21_Bs_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_21_A_04": {
+    "exercise_id": "SC_ma_21_A_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21/SC_ma_21_A/SC_ma_21_A_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21_As/SC_ma_21_As_04.webp"
+  },
+  "SC_ma_21_A_03": {
+    "exercise_id": "SC_ma_21_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21/SC_ma_21_A/SC_ma_21_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21_As/SC_ma_21_As_03.webp"
+  },
+  "SC_ma_21_A_02": {
+    "exercise_id": "SC_ma_21_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21/SC_ma_21_A/SC_ma_21_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21_As/SC_ma_21_As_02.webp"
+  },
+  "SC_ma_21_A_01": {
+    "exercise_id": "SC_ma_21_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21/SC_ma_21_A/SC_ma_21_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21_As/SC_ma_21_As_01.webp"
+  },
+  "SC_ma_21_As_04_img_1": {
+    "exercise_id": "SC_ma_21_As_04_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21_As/images/SC_ma_21_As_04_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_21_As_04_img_0": {
+    "exercise_id": "SC_ma_21_As_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21_As/images/SC_ma_21_As_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_21_As_01_img_0": {
+    "exercise_id": "SC_ma_21_As_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21_As/images/SC_ma_21_As_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_20_B_04": {
+    "exercise_id": "SC_ma_20_B_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20/SC_ma_20_B/SC_ma_20_B_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20_Bs/SC_ma_20_Bs_04.webp"
+  },
+  "SC_ma_20_B_03": {
+    "exercise_id": "SC_ma_20_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20/SC_ma_20_B/SC_ma_20_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20_Bs/SC_ma_20_Bs_03.webp"
+  },
+  "SC_ma_20_B_02": {
+    "exercise_id": "SC_ma_20_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20/SC_ma_20_B/SC_ma_20_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20_Bs/SC_ma_20_Bs_02.webp"
+  },
+  "SC_ma_20_B_01": {
+    "exercise_id": "SC_ma_20_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20/SC_ma_20_B/SC_ma_20_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20_Bs/SC_ma_20_Bs_01.webp"
+  },
+  "SC_ma_20_Bs_04_img_0": {
+    "exercise_id": "SC_ma_20_Bs_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20_Bs/images/SC_ma_20_Bs_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_20_Bs_02_img_0": {
+    "exercise_id": "SC_ma_20_Bs_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20_Bs/images/SC_ma_20_Bs_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_20_A_04": {
+    "exercise_id": "SC_ma_20_A_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20/SC_ma_20_A/SC_ma_20_A_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20_As/SC_ma_20_As_04.webp"
+  },
+  "SC_ma_20_A_03": {
+    "exercise_id": "SC_ma_20_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20/SC_ma_20_A/SC_ma_20_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20_As/SC_ma_20_As_03.webp"
+  },
+  "SC_ma_20_A_02": {
+    "exercise_id": "SC_ma_20_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20/SC_ma_20_A/SC_ma_20_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20_As/SC_ma_20_As_02.webp"
+  },
+  "SC_ma_20_A_01": {
+    "exercise_id": "SC_ma_20_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20/SC_ma_20_A/SC_ma_20_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20_As/SC_ma_20_As_01.webp"
+  },
+  "SC_ma_20_As_04_img_0": {
+    "exercise_id": "SC_ma_20_As_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20_As/images/SC_ma_20_As_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_20_As_02_img_0": {
+    "exercise_id": "SC_ma_20_As_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20_As/images/SC_ma_20_As_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_19_B_04": {
+    "exercise_id": "SC_ma_19_B_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_19/SC_ma_19_B/SC_ma_19_B_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_19_Bs/SC_ma_19_Bs_04.webp"
+  },
+  "SC_ma_19_B_03": {
+    "exercise_id": "SC_ma_19_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_19/SC_ma_19_B/SC_ma_19_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_19_Bs/SC_ma_19_Bs_03.webp"
+  },
+  "SC_ma_19_B_02": {
+    "exercise_id": "SC_ma_19_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_19/SC_ma_19_B/SC_ma_19_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_19_Bs/SC_ma_19_Bs_02.webp"
+  },
+  "SC_ma_19_B_01": {
+    "exercise_id": "SC_ma_19_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_19/SC_ma_19_B/SC_ma_19_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_19_Bs/SC_ma_19_Bs_01.webp"
+  },
+  "SC_ma_19_A_04": {
+    "exercise_id": "SC_ma_19_A_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_19/SC_ma_19_A/SC_ma_19_A_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_19_As/SC_ma_19_As_04.webp"
+  },
+  "SC_ma_19_A_03": {
+    "exercise_id": "SC_ma_19_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_19/SC_ma_19_A/SC_ma_19_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_19_As/SC_ma_19_As_03.webp"
+  },
+  "SC_ma_19_A_02": {
+    "exercise_id": "SC_ma_19_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_19/SC_ma_19_A/SC_ma_19_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_19_As/SC_ma_19_As_02.webp"
+  },
+  "SC_ma_19_A_01": {
+    "exercise_id": "SC_ma_19_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_19/SC_ma_19_A/SC_ma_19_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_19_As/SC_ma_19_As_01.webp"
+  },
+  "SC_ma_19_As_02_img_0": {
+    "exercise_id": "SC_ma_19_As_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_19_As/images/SC_ma_19_As_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_18_B_04": {
+    "exercise_id": "SC_ma_18_B_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18/SC_ma_18_B/SC_ma_18_B_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18_Bs/SC_ma_18_Bs_04.webp"
+  },
+  "SC_ma_18_B_03": {
+    "exercise_id": "SC_ma_18_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18/SC_ma_18_B/SC_ma_18_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18_Bs/SC_ma_18_Bs_03.webp"
+  },
+  "SC_ma_18_B_02": {
+    "exercise_id": "SC_ma_18_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18/SC_ma_18_B/SC_ma_18_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18_Bs/SC_ma_18_Bs_02.webp"
+  },
+  "SC_ma_18_B_01": {
+    "exercise_id": "SC_ma_18_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18/SC_ma_18_B/SC_ma_18_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18_Bs/SC_ma_18_Bs_01.webp"
+  },
+  "SC_ma_18_A_04": {
+    "exercise_id": "SC_ma_18_A_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18/SC_ma_18_A/SC_ma_18_A_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18_As/SC_ma_18_As_04.webp"
+  },
+  "SC_ma_18_A_03": {
+    "exercise_id": "SC_ma_18_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18/SC_ma_18_A/SC_ma_18_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18_As/SC_ma_18_As_03.webp"
+  },
+  "SC_ma_18_A_02": {
+    "exercise_id": "SC_ma_18_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18/SC_ma_18_A/SC_ma_18_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18_As/SC_ma_18_As_02.webp"
+  },
+  "SC_ma_18_A_01": {
+    "exercise_id": "SC_ma_18_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18/SC_ma_18_A/SC_ma_18_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18_As/SC_ma_18_As_01.webp"
+  },
+  "SC_ma_18_As_04_img_0": {
+    "exercise_id": "SC_ma_18_As_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18_As/images/SC_ma_18_As_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_18_As_02_img_0": {
+    "exercise_id": "SC_ma_18_As_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18_As/images/SC_ma_18_As_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_V2_B_04": {
+    "exercise_id": "SC_ma_17_V2_B_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2/SC_ma_17_V2_B/SC_ma_17_V2_B_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2_Bs/SC_ma_17_V2_Bs_04.webp"
+  },
+  "SC_ma_17_V2_B_03": {
+    "exercise_id": "SC_ma_17_V2_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2/SC_ma_17_V2_B/SC_ma_17_V2_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2_Bs/SC_ma_17_V2_Bs_03.webp"
+  },
+  "SC_ma_17_V2_B_02": {
+    "exercise_id": "SC_ma_17_V2_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2/SC_ma_17_V2_B/SC_ma_17_V2_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2_Bs/SC_ma_17_V2_Bs_02.webp"
+  },
+  "SC_ma_17_V2_B_01": {
+    "exercise_id": "SC_ma_17_V2_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2/SC_ma_17_V2_B/SC_ma_17_V2_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2_Bs/SC_ma_17_V2_Bs_01.webp"
+  },
+  "SC_ma_17_V2_Bs_04_img_3": {
+    "exercise_id": "SC_ma_17_V2_Bs_04_img_3",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2_Bs/images/SC_ma_17_V2_Bs_04_img_3.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_V2_Bs_04_img_2": {
+    "exercise_id": "SC_ma_17_V2_Bs_04_img_2",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2_Bs/images/SC_ma_17_V2_Bs_04_img_2.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_V2_Bs_04_img_1": {
+    "exercise_id": "SC_ma_17_V2_Bs_04_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2_Bs/images/SC_ma_17_V2_Bs_04_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_V2_Bs_04_img_0": {
+    "exercise_id": "SC_ma_17_V2_Bs_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2_Bs/images/SC_ma_17_V2_Bs_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_V2_A_04": {
+    "exercise_id": "SC_ma_17_V2_A_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2/SC_ma_17_V2_A/SC_ma_17_V2_A_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2_As/SC_ma_17_V2_As_04.webp"
+  },
+  "SC_ma_17_V2_A_03": {
+    "exercise_id": "SC_ma_17_V2_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2/SC_ma_17_V2_A/SC_ma_17_V2_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2_As/SC_ma_17_V2_As_03.webp"
+  },
+  "SC_ma_17_V2_A_02": {
+    "exercise_id": "SC_ma_17_V2_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2/SC_ma_17_V2_A/SC_ma_17_V2_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2_As/SC_ma_17_V2_As_02.webp"
+  },
+  "SC_ma_17_V2_A_01": {
+    "exercise_id": "SC_ma_17_V2_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2/SC_ma_17_V2_A/SC_ma_17_V2_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2_As/SC_ma_17_V2_As_01.webp"
+  },
+  "SC_ma_17_V2_As_04_img_2": {
+    "exercise_id": "SC_ma_17_V2_As_04_img_2",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2_As/images/SC_ma_17_V2_As_04_img_2.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_V2_As_04_img_1": {
+    "exercise_id": "SC_ma_17_V2_As_04_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2_As/images/SC_ma_17_V2_As_04_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_V2_As_04_img_0": {
+    "exercise_id": "SC_ma_17_V2_As_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2_As/images/SC_ma_17_V2_As_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_V2_As_03_img_1": {
+    "exercise_id": "SC_ma_17_V2_As_03_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2_As/images/SC_ma_17_V2_As_03_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_V2_As_03_img_0": {
+    "exercise_id": "SC_ma_17_V2_As_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2_As/images/SC_ma_17_V2_As_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_B_04": {
+    "exercise_id": "SC_ma_17_B_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17/SC_ma_17_B/SC_ma_17_B_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_Bs/SC_ma_17_Bs_04.webp"
+  },
+  "SC_ma_17_B_03": {
+    "exercise_id": "SC_ma_17_B_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17/SC_ma_17_B/SC_ma_17_B_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_Bs/SC_ma_17_Bs_03.webp"
+  },
+  "SC_ma_17_B_02": {
+    "exercise_id": "SC_ma_17_B_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17/SC_ma_17_B/SC_ma_17_B_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_Bs/SC_ma_17_Bs_02.webp"
+  },
+  "SC_ma_17_B_01": {
+    "exercise_id": "SC_ma_17_B_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17/SC_ma_17_B/SC_ma_17_B_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_Bs/SC_ma_17_Bs_01.webp"
+  },
+  "SC_ma_17_Bs_04_img_2": {
+    "exercise_id": "SC_ma_17_Bs_04_img_2",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_Bs/images/SC_ma_17_Bs_04_img_2.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_Bs_04_img_1": {
+    "exercise_id": "SC_ma_17_Bs_04_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_Bs/images/SC_ma_17_Bs_04_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_Bs_04_img_0": {
+    "exercise_id": "SC_ma_17_Bs_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_Bs/images/SC_ma_17_Bs_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_Bs_02_img_0": {
+    "exercise_id": "SC_ma_17_Bs_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_Bs/images/SC_ma_17_Bs_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_A_04": {
+    "exercise_id": "SC_ma_17_A_04",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17/SC_ma_17_A/SC_ma_17_A_04.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_As/SC_ma_17_As_04.webp"
+  },
+  "SC_ma_17_A_03": {
+    "exercise_id": "SC_ma_17_A_03",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17/SC_ma_17_A/SC_ma_17_A_03.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_As/SC_ma_17_As_03.webp"
+  },
+  "SC_ma_17_A_02": {
+    "exercise_id": "SC_ma_17_A_02",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17/SC_ma_17_A/SC_ma_17_A_02.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_As/SC_ma_17_As_02.webp"
+  },
+  "SC_ma_17_A_01": {
+    "exercise_id": "SC_ma_17_A_01",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17/SC_ma_17_A/SC_ma_17_A_01.webp",
+    "correction_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_As/SC_ma_17_As_01.webp"
+  },
+  "SC_ma_17_As_04_img_1": {
+    "exercise_id": "SC_ma_17_As_04_img_1",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_As/images/SC_ma_17_As_04_img_1.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_As_04_img_0": {
+    "exercise_id": "SC_ma_17_As_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_As/images/SC_ma_17_As_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_As_03_img_0": {
+    "exercise_id": "SC_ma_17_As_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_As/images/SC_ma_17_As_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_B_02_img_0": {
+    "exercise_id": "SC_ma_17_B_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17/SC_ma_17_B/images/SC_ma_17_B_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_17_V2_B_02_img_0": {
+    "exercise_id": "SC_ma_17_V2_B_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_17_V2/SC_ma_17_V2_B/images/SC_ma_17_V2_B_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_18_B_04_img_0": {
+    "exercise_id": "SC_ma_18_B_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_18/SC_ma_18_B/images/SC_ma_18_B_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_20_B_04_img_0": {
+    "exercise_id": "SC_ma_20_B_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20/SC_ma_20_B/images/SC_ma_20_B_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_20_B_02_img_0": {
+    "exercise_id": "SC_ma_20_B_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20/SC_ma_20_B/images/SC_ma_20_B_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_20_A_02_img_0": {
+    "exercise_id": "SC_ma_20_A_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20/SC_ma_20_A/images/SC_ma_20_A_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_20_A_01_img_0": {
+    "exercise_id": "SC_ma_20_A_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_20/SC_ma_20_A/images/SC_ma_20_A_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_21_B_04_img_0": {
+    "exercise_id": "SC_ma_21_B_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_21/SC_ma_21_B/images/SC_ma_21_B_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_22_B_01_img_0": {
+    "exercise_id": "SC_ma_22_B_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22/SC_ma_22_B/images/SC_ma_22_B_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_22_A_03_img_0": {
+    "exercise_id": "SC_ma_22_A_03_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22/SC_ma_22_A/images/SC_ma_22_A_03_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_22_A_01_img_0": {
+    "exercise_id": "SC_ma_22_A_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_22/SC_ma_22_A/images/SC_ma_22_A_01_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_23_A_04_img_0": {
+    "exercise_id": "SC_ma_23_A_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_23/SC_ma_23_A/images/SC_ma_23_A_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_24_B_04_img_0": {
+    "exercise_id": "SC_ma_24_B_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24/SC_ma_24_B/images/SC_ma_24_B_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_24_A_04_img_0": {
+    "exercise_id": "SC_ma_24_A_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_24/SC_ma_24_A/images/SC_ma_24_A_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_25_B_04_img_0": {
+    "exercise_id": "SC_ma_25_B_04_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25/SC_ma_25_B/images/SC_ma_25_B_04_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_25_B_02_img_0": {
+    "exercise_id": "SC_ma_25_B_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25/SC_ma_25_B/images/SC_ma_25_B_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_25_A_02_img_0": {
+    "exercise_id": "SC_ma_25_A_02_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25/SC_ma_25_A/images/SC_ma_25_A_02_img_0.webp",
+    "correction_image_path": ""
+  },
+  "SC_ma_25_A_01_img_0": {
+    "exercise_id": "SC_ma_25_A_01_img_0",
+    "text_image_path": "assets/60_ex_webp/SC/ma/SC_ma_25/SC_ma_25_A/images/SC_ma_25_A_01_img_0.webp",
+    "correction_image_path": ""
+  }
+}
