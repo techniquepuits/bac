@@ -1,1 +1,126 @@
-{}
+{
+  "mod_01_math": {
+    "module_id": "mod_01_math",
+    "module_name": "الرياضيات",
+    "module_tag": "مشترك",
+    "axes": [
+      {
+        "axe_id": "axe_01_functions",
+        "axe_name": "الدوال العددية",
+        "axe_tag": "مشترك",
+        "milestones": [
+          {
+            "milestones_id": "mil_01_limits",
+            "milestones_name": "المحطة 1: النهايات والاستمرارية",
+            "milestones_tag": "مشترك",
+            "levels": {
+              "level_1": {
+                "name": "م1: فهم",
+                "exercises": [
+                  {
+                    "exercise_id": "ex_01_concept",
+                    "exercise_name": "تمرين فهم مفهوم النهاية",
+                    "exercise_tag": "مشترك",
+                    "exercise_type": "html",
+                    "exercise_status": "active"
+                  }
+                ]
+              },
+              "level_2": {
+                "name": "م2: بناء",
+                "exercises": []
+              },
+              "level_3": {
+                "name": "م3: بكالوريا",
+                "exercises": [
+                  {
+                    "exercise_id": "ex_02_bac24",
+                    "exercise_name": "سؤال نهايات بكالوريا 2024",
+                    "exercise_tag": "رياضيات",
+                    "exercise_type": "image",
+                    "exercise_status": "active"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "axe_id": "axe_02_arithmetic",
+        "axe_name": "الحساب",
+        "axe_tag": "رياضيات + تقني",
+        "milestones": [
+          {
+            "milestones_id": "mil_01_divisibility",
+            "milestones_name": "المحطة 1: القواسم والمضاعفات",
+            "milestones_tag": "رياضيات + تقني",
+            "levels": {
+              "level_1": {
+                "name": "م1: فهم",
+                "exercises": []
+              },
+              "level_2": {
+                "name": "م2: بناء",
+                "exercises": [
+                  {
+                    "exercise_id": "ex_01_congruence",
+                    "exercise_name": "تمرين بناء في الموافقات",
+                    "exercise_tag": "مشترك",
+                    "exercise_type": "interactive",
+                    "exercise_status": "active"
+                  }
+                ]
+              },
+              "level_3": {
+                "name": "م3: بكالوريا",
+                "exercises": []
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "mod_02_physics": {
+    "module_id": "mod_02_physics",
+    "module_name": "الفيزياء",
+    "module_tag": "مشترك",
+    "axes": [
+      {
+        "axe_id": "axe_01_kinetics",
+        "axe_name": "المتابعة الزمنية",
+        "axe_tag": "مشترك",
+        "milestones": [
+          {
+            "milestones_id": "mil_01_conduct",
+            "milestones_name": "المحطة 1: المتابعة بالناقلية",
+            "milestones_tag": "مشترك",
+            "levels": {
+              "level_1": {
+                "name": "م1: فهم",
+                "exercises": [
+                  {
+                    "exercise_id": "ex_01_quiz",
+                    "exercise_name": "كويز الناقلية التفاعلي",
+                    "exercise_tag": "مشترك",
+                    "exercise_type": "interactive",
+                    "exercise_status": "active"
+                  }
+                ]
+              },
+              "level_2": {
+                "name": "م2: بناء",
+                "exercises": []
+              },
+              "level_3": {
+                "name": "م3: بكالوريا",
+                "exercises": []
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
