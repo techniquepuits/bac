@@ -351,60 +351,85 @@
         }
 
         // 7. معالجة وتدقيق تمرين الصور المختار وعرض أزراره الثلاثة
-        function handleExerciseSelection(ex) {
-            // نتحقق إذا كان التمرين يعتمد نظام العرض الصوري "image" أو "html"
-            if (ex.exercise_type === "image" || ex.exercise_type === "html") { 
-                const exId = ex.exercise_id;
-                
-                // البحث الفوري في خريطة الصور json02 المجلوبة
-                const imgRecord = imagesMapData[exId];
-                
-                if (imgRecord) {
-                    displayImageExerciseDashboard(exId, imgRecord.text_image_path, imgRecord.correction_image_path);
-                } else {
-                    alert("⚠️ معذرة، لم يتم العثور على مسارات الصور الخاصة بهذا المعرف في خريطة الصور بعد.");
-                }
-            } else {
-                alert("💡 هذا التمرين يعتمد صيغة عرض نصية مختلفة.");
+// 7. معالجة وتدقيق تمرين الصور المختار مع دعم كامل للمجلدات الفرعية (مثل MA)
+function handleExerciseSelection(ex) {
+    if (ex.exercise_type === "image" || ex.exercise_type === "html") { 
+        const exId = ex.exercise_id;
+        
+        // 1. المحاولة الأولى: قراءة المسار المباشر من ملف json02 المجلوب من GitHub
+        let imgRecord = imagesMapData ? imagesMapData[exId] : null;
+        
+        if (imgRecord && imgRecord.text_image_path) {
+            // إذا وُجد في الجيسون، نمرر المسار كاملًا كما هو (بما فيه مجلد MA أو غيره)
+            displayImageExerciseDashboard(exId, imgRecord.text_image_path, imgRecord.correction_image_path);
+        } else {
+            // 2. المحاولة الثانية (الخطة البديلة العبقرية): إذا غاب عن الجيسون أو تأخر الكاش
+            console.warn(`⚠️ المعرف ${exId} غير مفهرس، تم تشغيل الاستنتاج الشجري للمسار.`);
+            
+            // استنتاج المجلد الفرعي تلقائياً من اسم الأيدي (مثال: SC_ma_25_H_04 يحتوي على _ma_ إذن المجلد هو MA)
+            let subFolder = "";
+            let lowerId = exId.toLowerCase();
+            if (lowerId.includes("_ma_")) subFolder = "MA/";
+            else if (lowerId.includes("_ph_")) subFolder = "PH/";
+            else if (lowerId.includes("_sc_")) subFolder = "SC/";
+            
+            // تفكيك الاسم لصناعة أيدي التصحيح بإضافة s قبل المطة الأخيرة
+            let lastUnderscoreIndex = exId.lastIndexOf('_');
+            let correctionId = exId;
+            if (lastUnderscoreIndex !== -1) {
+                correctionId = exId.substring(0, lastUnderscoreIndex) + 's' + exId.substring(lastUnderscoreIndex);
             }
+            
+            // بناء المسار الديناميكي الصحيح المتوافق مع الهيكل المرفوع
+            const fallbackTextPath = `assets/60_ex_webp/${subFolder}${exId}.webp`;
+            const fallbackCorrectPath = `assets/60_ex_webp/${subFolder}${correctionId}.webp`;
+            
+            displayImageExerciseDashboard(exId, fallbackTextPath, fallbackCorrectPath);
         }
+    } else {
+        alert("💡 هذا التمرين يعتمد صيغة عرض نصية مختلفة.");
+    }
+}
 
-        // 8. عرض لوحة التحكم النهائية للتمرين (الـ 3 أزرار المطلوبة بدقة)
-        function displayImageExerciseDashboard(exId, textImgPath, correctionImgPath) {
-            updateAcademicInfo(`استعراض التمرين: ${exId}`);
-            const container = document.getElementById('mainMenuContainer');
-            container.innerHTML = ""; // تفريغ كامل ومطلق للشاشة
+// 8. عرض لوحة التحكم النهائية للتمرين وتوليد الروابط بشكل صحيح مع الرابط الأساسي المستودع
+function displayImageExerciseDashboard(exId, textImgPath, correctionImgPath) {
+    updateAcademicInfo(`استعراض التمرين: ${exId}`);
+    const container = document.getElementById('mainMenuContainer');
+    container.innerHTML = ""; // تفريغ كامل ومطلق للشاشة
 
-            // الزر الأول: فتح واستعراض نص التمرين
-            const btnText = document.createElement('a');
-            btnText.className = 'gmax-btn';
-            btnText.target = '_blank';
-            btnText.href = textImgPath ? `https://htmlpreview.github.io/?${REPO_BASE_URL}${textImgPath}` : '#';
-            if(!textImgPath) btnText.onclick = () => alert("صورة نص التمرين غير متوفرة حالياً.");
-            btnText.innerHTML = `<span>📄 استعراض نص التمرين</span>`;
-            container.appendChild(btnText);
+    // التأكد من عدم تكرار الرابط الأساسي إذا كان مخزناً كاملاً في الجيسون
+    const fullTextUrl = textImgPath.startsWith('http') ? textImgPath : `${REPO_BASE_URL}${textImgPath}`;
+    const fullCorrectUrl = correctionImgPath.startsWith('http') ? correctionImgPath : `${REPO_BASE_URL}${correctionImgPath}`;
 
-            // الزر الثاني: فتح واستعراض تصحيح التمرين
-            const btnCorrect = document.createElement('a');
-            btnCorrect.className = 'gmax-btn';
-            btnCorrect.target = '_blank';
-            btnCorrect.href = correctionImgPath ? `https://htmlpreview.github.io/?${REPO_BASE_URL}${correctionImgPath}` : '#';
-            if(!correctionImgPath) btnCorrect.onclick = () => alert("صورة الحل والتصحيح غير متوفرة لهذا التمرين بعد.");
-            btnCorrect.innerHTML = `<span>💡 استعراض تصحيح التمرين</span>`;
-            container.appendChild(btnCorrect);
+    // الزر الأول: فتح واستعراض نص التمرين
+    const btnText = document.createElement('a');
+    btnText.className = 'gmax-btn';
+    btnText.target = '_blank';
+    // استخدام الهيكل المتوافق مع بريفيو جيت هاب أو العرض المباشر للويب بـ webp
+    btnText.href = fullTextUrl;
+    btnText.innerHTML = `<span>📄 استعراض نص التمرين</span>`;
+    container.appendChild(btnText);
 
-            // فاصل تجميلي مبسط للوحة التحكم
-            const divider = document.createElement('div');
-            divider.className = 'section-divider';
-            container.appendChild(divider);
+    // الزر الثاني: فتح واستعراض تصحيح التمرين
+    const btnCorrect = document.createElement('a');
+    btnCorrect.className = 'gmax-btn';
+    btnCorrect.target = '_blank';
+    btnCorrect.href = fullCorrectUrl;
+    btnCorrect.innerHTML = `<span>💡 استعراض تصحيح التمرين</span>`;
+    container.appendChild(btnCorrect);
 
-            // الزر الثالث: العودة الفورية المباشرة إلى الفهرس الرئيسي (شجرة البداية)
-            const btnHome = document.createElement('div');
-            btnHome.className = 'gmax-btn back-btn';
-            btnHome.innerHTML = `<span>🏠 العودة إلى الفهرس الرئيسي</span>`;
-            btnHome.onclick = () => showBranches();
-            container.appendChild(btnHome);
-        }
+    // فاصل تجميلي مبسط للوحة التحكم
+    const divider = document.createElement('div');
+    divider.className = 'section-divider';
+    container.appendChild(divider);
+
+    // الزر الثالث: العودة الفورية المباشرة إلى الفهرس الرئيسي
+    const btnHome = document.createElement('div');
+    btnHome.className = 'gmax-btn back-btn';
+    btnHome.innerHTML = `<span>🏠 العودة إلى الفهرس الرئيسي</span>`;
+    btnHome.onclick = () => showBranches();
+    container.appendChild(btnHome);
+}
 
         // أدوات مساعدة مرنة لإدارة وحقن واجهة العودة والنصوص الخفيفة
         function updateAcademicInfo(text) {
