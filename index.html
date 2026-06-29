@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmax Bac | لوحة التحكم</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #0f2027; 
+            --accent-blue: #3498db;
+            --pure-gold: #D4AF37;
+            --white-fade: rgba(255, 255, 255, 0.45);
+            --card-bg: rgba(255, 255, 255, 0.03);
+        }
+
+        * { box-sizing: border-box; }
+        body, html {
+            margin: 0; padding: 0; 
+            height: 100vh;
+            width: 100%;
+            font-family: 'Cairo', sans-serif;
+            background: radial-gradient(circle at center, #203a43 0%, #0f2027 100%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* لتتوسط اللوحة الشاشة تماماً */
+            overflow: hidden; /* منع التمرير لضمان ظهور كل شيء من الوهلة الأولى */
+        }
+
+        .main-wrapper { 
+            text-align: center; 
+            width: 100%;
+            max-width: 480px; /* تقليص العرض ليكون أكثر رشقاً */
+            padding: 15px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* الهيدر الأيقوني المحدث حسب ملاحظاتك */
+        .master-logo { margin-bottom: 5px; width: 100%; } 
+        .logo-text {
+            font-size: clamp(3.5em, 12vw, 5em); 
+            font-weight: 900;
+            margin: 0;
+            line-height: 0.85;
+            letter-spacing: 5px;
+        }
+        .max-text { color: var(--pure-gold); text-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        
+        .hub-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 5px;
+        }
+        .hub-line {
+            width: 180px;
+            height: 2px;
+            background: rgba(212, 175, 55, 0.3);
+            margin-bottom: 5px;
+        }
+        .hub-tag {
+            font-size: 1.5em;
+            letter-spacing: 12px;
+            text-indent: 12px;
+            color: var(--accent-blue); 
+            font-weight: 900;
+        }
+
+        /* الإبقاء على اللمسة الجمالية لـ "متصل الآن" بالأسفل */
+        .status-tag { 
+            font-size: 0.75em; 
+            color: #2ecc71; 
+            margin: 5px 0 2px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            font-weight: 700;
+        }
+        .status-dot {
+            width: 6px; height: 6px;
+            background-color: #2ecc71;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 6px #2ecc71;
+        }
+
+        /* تفاصيل المرحلة الدراسية */
+        .academic-info {
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 2px;
+            font-weight: 400;
+        }
+
+        /* حاوية الأزرار المدمجة */
+        .menu-container {
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* تقليص الفراغات بين الأزرار */
+        }
+
+        /* تصميم الأزرار الصغير والرشيق والمتوازن */
+        .gmax-btn {
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 12px 15px; /* تقليص الحشو الداخلي ليصبح الزر أنحف */
+            color: #ffffff;
+            font-size: 1.1em; /* حجم خط متناسق ومريح للعين */
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* توسيط النص تماماً لإلغاء عدم التوازن البصري */
+            transition: all 0.2s ease;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+        }
+
+        .gmax-btn:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-blue);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        /* الفاصل البسيط الجديد */
+        .section-divider {
+            width: 50%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+            margin: 15px 0;
+            align-self: center;
+        }
+
+        /* تمييز خفيف لأزرار الأدوات دون مبالغة */
+        .tool-btn:hover {
+            border-color: var(--pure-gold);
+        }
+
+        .dynamic-content-area {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 480px) {
+            .logo-text { font-size: 3.5em; }
+            .gmax-btn { font-size: 1em; padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        
+        <div class="master-logo">
+            <h1 class="logo-text">
+                <span>G</span><span class="max-text">MAX</span>
+            </h1>            
+            <div class="hub-area">
+                <div class="hub-line"></div>
+                <span class="hub-tag">BAC</span>
+            </div>            
+            
+ 
+            <div class="academic-info">المرحلة الثانوية • بكالوريا 2027 • شعب علمية</div>
+        </div>
+
+        <div class="menu-container" id="mainMenuContainer">
+            
+            <a href="#" class="gmax-btn" onclick="loadSubject('math')">
+                <span>📐 الرياضيات</span>
+            </a>
+
+            <a href="#" class="gmax-btn" onclick="loadSubject('physics')">
+                <span>⚡ الفيزياء</span>
+            </a>
+
+            <a href="#" class="gmax-btn" onclick="loadSubject('science')">
+                <span>🧬 العلوم الطبيعية</span>
+            </a>
+
+            <div class="section-divider"></div>
+
+            <a href="anki_view.html" class="gmax-btn tool-btn">
+                <span>🧠 التكرار المتباعد</span>
+            </a>
+
+            <a href="progress_view.html" class="gmax-btn tool-btn">
+                <span>📊 تقدماتي</span>
+            </a>
+
+        </div>
+
+        <div class="dynamic-content-area" id="dynamicContent"></div>
+
+    </div>
+
+    <script>
+        function loadSubject(subjectName) {
+            const contentArea = document.getElementById('dynamicContent');
+            // عند النقر، سنقوم بعمل مسح كامل للقائمة العلوية لتفرغ الشاشة للمحاور
+            document.getElementById('mainMenuContainer').style.display = 'none';
+            
+            let title = subjectName === 'math' ? 'الرياضيات' : subjectName === 'physics' ? 'الفيزياء' : 'العلوم الطبيعية';
+            
+            contentArea.innerHTML = `
+                <h3 style="color: var(--accent-blue); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; font-size:1.2em; text-align:right;">محاور مادة ${title}:</h3>
+                <p style="color: var(--white-fade); font-size:0.85em; text-align:right;">تم تفريغ اللوحة.. جاهز لاستقبال مستويات التمارين الثلاثة لهذا المحور.</p>
+            `;
+        }
+    </script>
+</body>
+</html>
+
+
+

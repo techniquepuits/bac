@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 جيماكس - تمارين البكالوريا</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+   <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true
+        }
+    };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-top: 20px;
+        }
+        .btn-container {
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        /* تنسيق محتوى التمرين المنبثق من الماركداون */
+        #exercise-display {
+            line-height: 1.8;
+            font-size: 18px;
+        }
+        #exercise-display h1, #exercise-display h2 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        #exercise-display code {
+            background: #f1f1f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+/* ضبط الجداول لتأخذ اتجاهها الصحيح دون الانقلاب */
+#exercise-content table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    width: 100%;
+    direction: ltr; /* يجبر الجدول على ترتيب أعمدته من اليسار إلى اليمين */
+    text-align: right; /* يحافظ على محاذاة النصوص العربية بالداخل إلى اليمين لسهولة القراءة */
+}
+
+#exercise-content th, #exercise-content td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+}
+
+#exercise-content th {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: bold;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <h1>منصة جيماكس لتمارين البكالوريا</h1>
+    
+    <div class="btn-container">
+        <button onclick="loadNextExercise()">اضغط لعرض التمرين التالي ↻</button>
+    </div>
+
+    <div class="container">
+        <div id="exercise-display">اضغط على الزر في الأعلى لبدء عرض التمارين...</div>
+    </div>
+
+    <script>
+        // أسماء ملفات التمارين المتواجدة داخل مجلد exercises الخاص بك
+        // يمكنك إضافة أي عدد من التمارين هنا بنفس الترتيب
+        const exerciseFiles = ['ex1.md', 'ex2.md', 'ex3.md'];
+        let currentIndex = 0;
+
+        function loadNextExercise() {
+            // جلب اسم الملف الحالي بناءً على العداد
+            const fileName = exerciseFiles[currentIndex];
+            const filePath = `exercises/${fileName}`;
+
+            // جلب محتوى ملف الماركداون من المجلد
+            fetch(filePath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('لم يتم العثور على ملف التمرين');
+                    }
+                    return response.text();
+                })
+                .then(markdownText => {
+                    // 1. تحويل نص الماركداون إلى HTML باستخدام مكتبة marked
+                    const htmlContent = marked.parse(markdownText);
+                    
+                    // 2. وضع المحتوى داخل الصندوق المخصص له في الصفحة
+                    const displayDiv = document.getElementById('exercise-display');
+                    displayDiv.innerHTML = htmlContent;
+
+                    // 3. أمر سحري لجعل مكتبة MathJax تبحث في النص الجديد وتحول الـ LaTeX إلى معادلات فوراً
+                    if (window.MathJax) {
+                        MathJax.typesetPromise([displayDiv]);
+                    }
+
+                    // الانتقال للتمرين التالي في الضغطة القادمة، وإذا انتهت التمارين نعود للأول
+                    currentIndex = (currentIndex + 1) % exerciseFiles.length;
+                })
+                .catch(error => {
+                    console.error('حدث خطأ:', error);
+                    document.getElementById('exercise-display').innerHTML = `<p style="color:red;">خطأ: تعذر تحميل التمرين (${fileName}). تأكد من وجود الملف داخل مجلد exercises بنفس الاسم تماماً.</p>`;
+                });
+        }
+    </script>
+
+</body>
+</html>
+
