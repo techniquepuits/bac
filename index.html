@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gmax Bac | لوحة التحكم</title>
+    <title>Gmax Architexture | لوحة التحكم</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -24,21 +24,23 @@
             color: #ffffff;
             display: flex;
             justify-content: center;
-            align-items: center; /* لتتوسط اللوحة الشاشة تماماً */
-            overflow: hidden; /* منع التمرير لضمان ظهور كل شيء من الوهلة الأولى */
+            align-items: center; 
+            overflow: hidden; 
         }
 
         .main-wrapper { 
             text-align: center; 
             width: 100%;
-            max-width: 480px; /* تقليص العرض ليكون أكثر رشقاً */
+            max-width: 480px; 
             padding: 15px; 
             display: flex;
             flex-direction: column;
             align-items: center;
+            height: 100vh;
+            justify-content: flex-start;
+            padding-top: 40px;
         }
 
-        /* الهيدر الأيقوني المحدث حسب ملاحظاتك */
         .master-logo { margin-bottom: 5px; width: 100%; } 
         .logo-text {
             font-size: clamp(3.5em, 12vw, 5em); 
@@ -61,15 +63,7 @@
             background: rgba(212, 175, 55, 0.3);
             margin-bottom: 5px;
         }
-        .hub-tag {
-            font-size: 1.5em;
-            letter-spacing: 12px;
-            text-indent: 12px;
-            color: var(--accent-blue); 
-            font-weight: 900;
-        }
-
-        /* الإبقاء على اللمسة الجمالية لـ "متصل الآن" بالأسفل */
+        
         .status-tag { 
             font-size: 0.75em; 
             color: #2ecc71; 
@@ -88,37 +82,44 @@
             box-shadow: 0 0 6px #2ecc71;
         }
 
-        /* تفاصيل المرحلة الدراسية */
+        /* كتابة المرحلة الدراسية والتفاصيل المتغيرة بخط صغير وأبيض خفيف أسفل الخط الثابت */
         .academic-info {
             font-size: 0.8em;
             color: rgba(255, 255, 255, 0.5);
-            margin-top: 2px;
+            margin-top: 5px;
             font-weight: 400;
+            min-height: 20px;
         }
 
-        /* حاوية الأزرار المدمجة */
+        /* حاوية الأزرار المدمجة والديناميكية */
         .menu-container {
             width: 100%;
             margin-top: 20px;
             display: flex;
             flex-direction: column;
-            gap: 10px; /* تقليص الفراغات بين الأزرار */
+            gap: 10px; 
+            max-height: 60vh;
+            overflow-y: auto;
+            padding-right: 5px;
         }
 
-        /* تصميم الأزرار الصغير والرشيق والمتوازن */
+        /* إخفاء شريط التمرير الافتراضي */
+        .menu-container::-webkit-scrollbar { width: 4px; }
+        .menu-container::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+
         .gmax-btn {
             width: 100%;
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 12px;
-            padding: 12px 15px; /* تقليص الحشو الداخلي ليصبح الزر أنحف */
+            padding: 12px 15px; 
             color: #ffffff;
-            font-size: 1.1em; /* حجم خط متناسق ومريح للعين */
+            font-size: 1.1em; 
             font-weight: 700;
             text-decoration: none;
             display: flex;
             align-items: center;
-            justify-content: center; /* توسيط النص تماماً لإلغاء عدم التوازن البصري */
+            justify-content: center; 
             transition: all 0.2s ease;
             cursor: pointer;
             backdrop-filter: blur(10px);
@@ -130,7 +131,6 @@
             background: rgba(255, 255, 255, 0.06);
         }
 
-        /* الفاصل البسيط الجديد */
         .section-divider {
             width: 50%;
             height: 1px;
@@ -139,14 +139,11 @@
             align-self: center;
         }
 
-        /* تمييز خفيف لأزرار الأدوات دون مبالغة */
-        .tool-btn:hover {
-            border-color: var(--pure-gold);
+        .back-btn {
+            border-color: rgba(212, 175, 55, 0.3);
         }
-
-        .dynamic-content-area {
-            width: 100%;
-            margin-top: 15px;
+        .back-btn:hover {
+            border-color: var(--pure-gold);
         }
 
         @media (max-width: 480px) {
@@ -165,59 +162,160 @@
             </h1>            
             <div class="hub-area">
                 <div class="hub-line"></div>
-                <span class="hub-tag">BAC</span>
+                <div class="status-tag"><span class="status-dot"></span>متصل الآن</div>
             </div>            
             
- 
-            <div class="academic-info">المرحلة الثانوية • بكالوريا 2027 • شعب علمية</div>
+            <div class="academic-info" id="academicInfo">جاري تحميل البنية التحتية...</div>
         </div>
 
-        <div class="menu-container" id="mainMenuContainer">
-            
-            <a href="#" class="gmax-btn" onclick="loadSubject('math')">
-                <span>📐 الرياضيات</span>
-            </a>
-
-            <a href="#" class="gmax-btn" onclick="loadSubject('physics')">
-                <span>⚡ الفيزياء</span>
-            </a>
-
-            <a href="#" class="gmax-btn" onclick="loadSubject('science')">
-                <span>🧬 العلوم الطبيعية</span>
-            </a>
-
-            <div class="section-divider"></div>
-
-            <a href="anki_view.html" class="gmax-btn tool-btn">
-                <span>🧠 التكرار المتباعد</span>
-            </a>
-
-            <a href="progress_view.html" class="gmax-btn tool-btn">
-                <span>📊 تقدماتي</span>
-            </a>
-
-        </div>
-
-        <div class="dynamic-content-area" id="dynamicContent"></div>
+        <div class="menu-container" id="mainMenuContainer"></div>
 
     </div>
 
     <script>
-        function loadSubject(subjectName) {
-            const contentArea = document.getElementById('dynamicContent');
-            // عند النقر، سنقوم بعمل مسح كامل للقائمة العلوية لتفرغ الشاشة للمحاور
-            document.getElementById('mainMenuContainer').style.display = 'none';
+        // إعدادات جلب البيانات من مستودع جيت هاب الخاص بك
+        const REPO_BASE_URL = "https://raw.githubusercontent.com/techniquepuits/bac/main/";
+        
+        let navigationData = null;
+        let imagesMapData = null;
+        
+        // مسار الحفظ لتتبع شجرة العودة إلى الخلف للخلف
+        let navigationHistory = [];
+
+        // أولاً: الاتصال التلقائي عند فتح الصفحة لقراءة الملفين المرجعيين
+        window.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const [navResponse, imgResponse] = await Promise.all([
+                    fetch(REPO_BASE_URL + 'json01_gmax_navigation_map.json'),
+                    fetch(REPO_BASE_URL + 'json02_gmax_images_map.json')
+                ]);
+
+                if (!navResponse.ok || !imgResponse.ok) throw new Error("فشل في قراءة ملفات البنية التحتية.");
+
+                navigationData = await navResponse.json();
+                imagesMapData = await imgResponse.json();
+
+                // عند النجاح، نعرض الجذور مباشرة
+                showBranches();
+            } catch (error) {
+                console.error(error);
+                document.getElementById('academicInfo').innerText = "❌ خطأ في الاتصال بالسيرفر.";
+            }
+        });
+
+        // 1. عرض الجذور المتاحة (Branches) مرتبة حسب المعرف (ID)
+        function showBranches() {
+            navigationHistory = []; // تصفير التاريخ
+            updateAcademicInfo("المرحلة الثانوية • بكالوريا 2027");
             
-            let title = subjectName === 'math' ? 'الرياضيات' : subjectName === 'physics' ? 'الفيزياء' : 'العلوم الطبيعية';
+            const container = document.getElementById('mainMenuContainer');
+            container.innerHTML = ""; // مسح كامل وتفريغ اللوحة
+
+            const sortedBranchIds = Object.keys(navigationData).sort();
             
-            contentArea.innerHTML = `
-                <h3 style="color: var(--accent-blue); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; font-size:1.2em; text-align:right;">محاور مادة ${title}:</h3>
-                <p style="color: var(--white-fade); font-size:0.85em; text-align:right;">تم تفريغ اللوحة.. جاهز لاستقبال مستويات التمارين الثلاثة لهذا المحور.</p>
-            `;
+            sortedBranchIds.forEach(brId => {
+                const btn = document.createElement('div');
+                btn.className = 'gmax-btn';
+                // بما أن القاموس مدمج داخل شجرة التنقل أو المعرف يعبر عن نفسه، نعرض اسم الجذر مباشرة
+                btn.innerHTML = `<span>📂 شعبة: ${brId}</span>`;
+                btn.onclick = () => {
+                    navigationHistory.push({ type: 'branches' });
+                    showModules(brId);
+                };
+                container.appendChild(btn);
+            });
         }
-    </script>
-</body>
-</html>
 
+        // 2. عرض المواد التابعة للجذر المحدد (Modules)
+        function showModules(brId) {
+            updateAcademicInfo(`الشعبة: ${brId}`);
+            const container = document.getElementById('mainMenuContainer');
+            container.innerHTML = ""; // تفريغ كامل وفوري للوحة لمنع اختلاط الأزرار الأخوة
 
+            const modules = navigationData[brId].modules;
+            const sortedModuleIds = Object.keys(modules).sort();
 
+            sortedModuleIds.forEach(modId => {
+                const btn = document.createElement('div');
+                btn.className = 'gmax-btn';
+                btn.innerHTML = `<span>📚 مادة: ${modId} (${modules[modId].module_tag})</span>`;
+                btn.onclick = () => {
+                    navigationHistory.push({ type: 'modules', brId: brId });
+                    showAxes(brId, modId);
+                };
+                container.appendChild(btn);
+            });
+
+            addBackButton(() => showBranches());
+        }
+
+        // 3. عرض المحاور (Axes)
+        function showAxes(brId, modId) {
+            updateAcademicInfo(`الشعبة: ${brId} • المادة: ${modId}`);
+            const container = document.getElementById('mainMenuContainer');
+            container.innerHTML = ""; 
+
+            const axes = navigationData[brId].modules[modId].axes;
+            
+            axes.forEach(axe => {
+                const btn = document.createElement('div');
+                btn.className = 'gmax-btn';
+                btn.innerHTML = `<span>🎯 محور: ${axe.axe_id} (${axe.axe_tag})</span>`;
+                btn.onclick = () => {
+                    navigationHistory.push({ type: 'axes', brId: brId, modId: modId });
+                    showMilestones(brId, modId, axe.axe_id);
+                };
+                container.appendChild(btn);
+            });
+
+            addBackButton(() => showModules(brId));
+        }
+
+        // 4. عرض الوحدات الدروسية (Milestones)
+        function showMilestones(brId, modId, axeId) {
+            updateAcademicInfo(`المادة: ${modId} • المحور: ${axeId}`);
+            const container = document.getElementById('mainMenuContainer');
+            container.innerHTML = "";
+
+            const axe = navigationData[brId].modules[modId].axes.find(a => a.axe_id === axeId);
+            
+            axe.milestones.forEach(miles => {
+                const btn = document.createElement('div');
+                btn.className = 'gmax-btn';
+                btn.innerHTML = `<span>📖 وحدة: ${miles.milestones_id}</span>`;
+                btn.onclick = () => {
+                    navigationHistory.push({ type: 'milestones', brId: brId, modId: modId, axeId: axeId });
+                    showLevels(brId, modId, axeId, miles.milestones_id);
+                };
+                container.appendChild(btn);
+            });
+
+            addBackButton(() => showAxes(brId, modId));
+        }
+
+        // 5. عرض المستويات الثلاثة المبنية للوحدة (Levels)
+        function showLevels(brId, modId, axeId, milesId) {
+            updateAcademicInfo(`الوحدة: ${milesId}`);
+            const container = document.getElementById('mainMenuContainer');
+            container.innerHTML = "";
+
+            const axe = navigationData[brId].modules[modId].axes.find(a => a.axe_id === axeId);
+            const milestone = axe.milestones.find(m => m.milestones_id === milesId);
+            const sortedLevelIds = Object.keys(milestone.levels).sort();
+
+            sortedLevelIds.forEach(lvlId => {
+                const btn = document.createElement('div');
+                btn.className = 'gmax-btn';
+                
+                // تسميات المستويات الثابتة حسب سياق بكالوريا جيماكس المنظم
+                let lvlName = "المستوى التجريبي";
+                if(lvlId == "01" || lvlId.endsWith("1")) lvlName = "💪 المستوى 1: تعزيز المفاهيم والفوكال";
+                if(lvlId == "02" || lvlId.endsWith("2")) lvlName = "🧠 المستوى 2: التمارين التركيبية المدمجة";
+                if(lvlId == "03" || lvlId.endsWith("3")) lvlName = "📝 المستوى 3: محاكاة الامتحان والباك";
+
+                btn.innerHTML = `<span>${lvlName}</span>`;
+                btn.onclick = () => {
+                    navigationHistory.push({ type: 'levels', brId: brId, modId: modId, axeId: axeId, milesId: milesId });
+                    showExercises(brId, modId, axeId, milesId, lvlId);
+                };
+                container
