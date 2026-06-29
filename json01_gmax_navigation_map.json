@@ -1,54 +1,116 @@
 {
-  "gg": {
-    "module_id": "gg",
-    "module_name": "qqq",
-    "module_tag": "الرياضيات",
-    "axes": [
-      {
-        "axe_id": "مشترك",
-        "axe_name": "mod_01_math",
-        "axe_tag": "الدوال العددية",
-        "milestones": [
+  "SC": {
+    "branche_id": "SC",
+    "branche_name": "علوم تجريبية",
+    "modules": {
+      "SC_ma": {
+        "module_id": "SC_ma",
+        "module_name": "الرياضيات",
+        "module_tag": "مشترك",
+        "axes": [
           {
-            "milestones_id": "رياضيات + تقني",
-            "milestones_name": "axe_02_arithmetic",
-            "milestones_tag": "المحطة 1: القواسم والمضاعفات",
-            "levels": {
-              "level_1": {
-                "name": "م1: فهم",
-                "exercises": []
-              },
-              "level_2": {
-                "name": "م2: بناء",
-                "exercises": []
-              },
-              "level_3": {
-                "name": "م3: بكالوريا",
-                "exercises": []
+            "axe_id": "SC_ma_01_funct",
+            "axe_name": "الدوال العددية",
+            "axe_tag": "مشترك",
+            "milestones": [
+              {
+                "milestones_id": "SC_ma_01_funct_01_limits",
+                "milestones_name": "النهايات والاستمرارية",
+                "milestones_tag": "مشترك",
+                "levels": {
+                  "level_1": {
+                    "level_id": "level_1",
+                    "level_name": "level_1",
+                    "exercises": [
+                      {
+                        "exercise_id": "ex_01_concept",
+                        "exercise_name": "تمرين فهم مفهوم النهاية",
+                        "exercise_tag": "مشترك",
+                        "exercise_type": "html",
+                        "exercise_status": "active"
+                      }
+                    ]
+                  },
+                  "level_3": {
+                    "level_id": "level_3",
+                    "level_name": "level_3",
+                    "exercises": [
+                      {
+                        "exercise_id": "ex_02_bac24",
+                        "exercise_name": "سؤال نهايات بكالوريا 2024",
+                        "exercise_tag": "رياضيات",
+                        "exercise_type": "image",
+                        "exercise_status": "active"
+                      }
+                    ]
+                  }
+                }
               }
-            }
+            ]
           },
           {
-            "milestones_id": "مشترك",
-            "milestones_name": "axe_01_functions",
-            "milestones_tag": "المحطة 1: النهايات والاستمرارية",
-            "levels": {
-              "level_1": {
-                "name": "م1: فهم",
-                "exercises": []
-              },
-              "level_2": {
-                "name": "م2: بناء",
-                "exercises": []
-              },
-              "level_3": {
-                "name": "م3: بكالوريا",
-                "exercises": []
+            "axe_id": "SC_ma_02_arith",
+            "axe_name": "الحساب",
+            "axe_tag": "رياضيات + تقني",
+            "milestones": [
+              {
+                "milestones_id": "SC_ma_02_arith_01_divis",
+                "milestones_name": "القواسم والمضاعفات",
+                "milestones_tag": "رياضيات + تقني",
+                "levels": {
+                  "level_2": {
+                    "level_id": "level_2",
+                    "level_name": "level_2",
+                    "exercises": [
+                      {
+                        "exercise_id": "ex_01_congruence",
+                        "exercise_name": "تمرين بناء في الموافقات",
+                        "exercise_tag": "مشترك",
+                        "exercise_type": "interactive",
+                        "exercise_status": "active"
+                      }
+                    ]
+                  }
+                }
               }
-            }
+            ]
+          }
+        ]
+      },
+      "SC_ph": {
+        "module_id": "SC_ph",
+        "module_name": "الفيزياء",
+        "module_tag": "مشترك",
+        "axes": [
+          {
+            "axe_id": "SC_ph_01_kinet",
+            "axe_name": "المتابعة الزمنية",
+            "axe_tag": "مشترك",
+            "milestones": [
+              {
+                "milestones_id": "SC_ph_01_kinet_01_condu",
+                "milestones_name": "المتابعة بالناقلية",
+                "milestones_tag": "مشترك",
+                "levels": {
+                  "level_1": {
+                    "level_id": "level_1",
+                    "level_name": "level_1",
+                    "exercises": [
+                      {
+                        "exercise_id": "ex_01_quiz",
+                        "exercise_name": "كويز الناقلية التفاعلي",
+                        "exercise_tag": "مشترك",
+                        "exercise_type": "interactive",
+                        "exercise_status": "active"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
           }
         ]
       }
-    ]
+    }
   }
 }
