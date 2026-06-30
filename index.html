@@ -60,7 +60,7 @@
 <body>
 
 <div class="container" id="main-container">
-    <div id="loading-overlay">جاري تحميل خريطة التنقل وقاموس التسميات...</div>
+    <div id="loading-overlay">جاري تحميل البيانات والربط بين القاموس وخريطة التنقل...</div>
 
     <div id="navigation-panels" style="display: none;">
         <div id="branches-section" class="section"><div id="branches-list" class="section"></div></div>
@@ -100,10 +100,10 @@
 </div>
 
 <script>
-// الإعدادات: بما أن الملفات تقع في نفس مستودع الـ GitHub، سنستخدم المسارات النسبية مباشرة
+// تحديد مسارات جلب ملفات الـ JSON المتواجدة معك بنفس المجلد على المستودع
 const PATH_NAV_MAP = "./json01_navigation_map.json";
 const PATH_DICTIONARY = "./json00_IDs_dictionary.json";
-const CLOUDINARY_BASE_URL = "https://res.cloudinary.com/dxuvloexk/image/upload/gmax/";
+//const CLOUDINARY_BASE_URL = "https://res.cloudinary.com/dxuvloexk/image/upload/gmax/";
 
 let navigationData = {};
 let dictionaryData = {};
@@ -113,7 +113,7 @@ let currentExerciseId = null;
 let currentCorrectionId = null;
 let currentAxeLabel = "";
 
-// بدء جلب البيانات من ملفات الـ JSON المحلية بداخل الجيت هاب عند تحميل الصفحة
+// بدء قراءة وجلب الملفات بمجرد إقلاع وتحميل صفحة المتصفح
 window.addEventListener('DOMContentLoaded', () => {
     Promise.all([
         fetch(PATH_NAV_MAP).then(res => res.json()),
@@ -123,17 +123,25 @@ window.addEventListener('DOMContentLoaded', () => {
         navigationData = navJson;
         dictionaryData = dictJson;
         
-        // إخفاء مؤشر التحميل وإظهار لوحة التحكم
+        // إخفاء عبارة التحميل وتجهيز الألواح
         document.getElementById('loading-overlay').style.display = 'none';
         document.getElementById('navigation-panels').style.display = 'block';
         
         renderBranches();
     })
     .catch(err => {
-        console.error("خطأ أثناء تحميل ملفات الجيسون:", err);
-        document.getElementById('loading-overlay').textContent = "❌ فشل تحميل البيانات. تأكد من وجود ملفات الـ JSON في نفس المجلد.";
+        console.error("خطأ أثناء جلب الملفات المرجعية:", err);
+        document.getElementById('loading-overlay').textContent = "❌ خطأ: فشل استحضار القاموس أو الخريطة من المستودع.";
     });
 });
+
+// دالة المطابقة الذكية: تبحث عن الـ ID داخل ملف القاموس وتستخرج حقل الـ label
+function getLabelFromDictionary(id) {
+    if (dictionaryData[id] && dictionaryData[id].label) {
+        return dictionaryData[id].label;
+    }
+    return id; // في حال عدم وجود تطابق، يظهر الـ ID كخيار احتياطي لضمان عمل الزر
+}
 
 function requestFullScreen() {
     const docElm = document.documentElement;
@@ -158,21 +166,17 @@ function clearActive(containerId) {
     buttons.forEach(b => b.classList.remove('active-selection'));
 }
 
-// دالة مساعدة لجلب تسمية العنصر المترجمة من قاموس البيانات
-function getLabel(id) {
-    return (dictionaryData[id] && dictionaryData[id].label) ? dictionaryData[id].label : id;
-}
-
+// 1. بناء أزرار الشعب أو الفروع (Branches)
 function renderBranches() {
     const list = document.getElementById('branches-list');
     list.innerHTML = "";
     
-    // استخراج الفروع الأساسية (مفاتيح الكائن الأول في خريطة التنقل)
-    const branches = Object.keys(navigationData);
+    const branchesIds = Object.keys(navigationData);
     
-    branches.sort().forEach(branchId => {
+    branchesIds.sort().forEach(branchId => {
         const btn = document.createElement('button');
-        btn.textContent = getLabel(branchId); 
+        // جلب التسمية العربية للفرع من ملف القاموس عبر معرفه
+        btn.textContent = getLabelFromDictionary(branchId); 
         btn.className = "btn-branch";
         btn.onclick = (e) => { 
             clearActive('branches-list'); 
@@ -183,9 +187,10 @@ function renderBranches() {
     });
 }
 
+// 2. بناء أزرار المواد (Modules)
 function renderModules(branchId) {
-    const list = document.getElementById('modules-list');
-    list.innerHTML = ""; 
+    // تصفية وتصفير كامل للمستويات الأدنى فور اختيار فرع جديد
+    document.getElementById('modules-list').innerHTML = ""; 
     document.getElementById('axes-list').innerHTML = "";
     document.getElementById('exercises-section').style.display = "none";
     document.getElementById('viewer').style.display = "none";
@@ -195,7 +200,8 @@ function renderModules(branchId) {
     
     branchObj.modules.forEach(mod => {
         const btn = document.createElement('button');
-        btn.textContent = getLabel(mod.module_id); 
+        // جلب التسمية العربية للمادة (مثل: الرياضيات) بالذهاب والبحث داخل القاموس الموحد
+        btn.textContent = getLabelFromDictionary(mod.module_id); 
         btn.className = "btn-mod";
         btn.onclick = (e) => { 
             clearActive('modules-list'); 
@@ -206,9 +212,10 @@ function renderModules(branchId) {
     });
 }
 
+// 3. بناء أزرار المحاور الأساسية (Axes)
 function renderAxes(axesArray) {
-    const list = document.getElementById('axes-list');
-    list.innerHTML = ""; 
+    // تصفير وتنظيف كامل لما هو أسفل المحاور بمجرد النقر والتبديل بين المواد
+    document.getElementById('axes-list').innerHTML = ""; 
     document.getElementById('exercises-section').style.display = "none";
     document.getElementById('viewer').style.display = "none";
     
@@ -216,24 +223,25 @@ function renderAxes(axesArray) {
     
     axesArray.forEach(axe => {
         const btn = document.createElement('button');
-        btn.textContent = getLabel(axe.axe_id); 
+        // مطابقة وتسمية زر المحور (مثل: الدوال العددية) من ملف الـ dictionary بالـ ID الخاص به
+        btn.textContent = getLabelFromDictionary(axe.axe_id); 
         btn.className = "btn-axes";
         btn.onclick = (e) => { 
             clearActive('axes-list'); 
             e.target.classList.add('active-selection'); 
-            currentAxeLabel = getLabel(axe.axe_id); 
+            currentAxeLabel = getLabelFromDictionary(axe.axe_id); 
             renderExercises(axe); 
         };
         list.appendChild(btn);
     });
 }
 
+// 4. استخراج وعرض التمارين المتواجدة داخل المحطات (Milestones) للمحور المختار
 function renderExercises(axeObj) {
     const list = document.getElementById('exercises-list');
     const container = document.getElementById('exercises-section');
     list.innerHTML = "";
     
-    // تجميع كافة التمارين المتواجدة داخل محطات (milestones) هذا المحور
     let exercisesMap = {};
     if (axeObj.milestones) {
         axeObj.milestones.forEach(milestone => {
@@ -246,18 +254,17 @@ function renderExercises(axeObj) {
     const excIds = Object.keys(exercisesMap);
     
     if (excIds.length === 0) {
-        list.innerHTML = "<p style='color: #7f8c8d; width: 100%; text-align: center;'>لا توجد تمارين حديثة</p>";
+        list.innerHTML = "<p style='color: #7f8c8d; width: 100%; text-align: center;'>لا توجد تمارين متوفرة حالياً</p>";
     } else {
-        // ترتيب التمارين تصاعدياً بحسب الـ ID
         excIds.sort().forEach(id => {
             const exercise = exercisesMap[id];
             const btn = document.createElement('button');
             
-            // استخدام exc_label كعنوان يظهر فوق الزر
+            // يعرض النص المكتوب داخل حقل exc_label في شيت التمارين المحدث
             btn.textContent = exercise.exc_label || id; 
             btn.id = "btn-ex-" + id;
             
-            // جلب الحالة المحفوظة محلياً (0: افتراضي، 1: جيد، 3: مراجعة)
+            // استحضار حالة المراجعة الحالية من الذاكرة المحلية للجهاز
             const status = localStatuses[id] || 0;
             btn.className = "status-" + status;
             
@@ -284,13 +291,13 @@ function enterFocusMode(id, item) {
     document.getElementById('viewer').style.display = "block";
     document.getElementById('id-text').textContent = id;
     
-    // فتح صورة التمرين افتراضياً فور الدخول
     showImage('exercise');
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function exitFocusMode() {
     exitFullScreen();
+    document.getElementById('navigation-panels').style.add = 'block';
     document.getElementById('navigation-panels').style.display = 'block';
     document.getElementById('focus-header').style.display = 'none';
     document.getElementById('viewer').style.display = "none";
@@ -300,11 +307,9 @@ function showImage(type) {
     const imgElement = document.getElementById('main-image');
     const ts = new Date().getTime();
     
-    // بناء رابط الصورة المباشر من Cloudinary بالاعتماد على معرف التمرين أو معرف الحل
     const imageId = (type === 'exercise') ? currentExerciseId : currentCorrectionId;
     imgElement.src = CLOUDINARY_BASE_URL + imageId + ".webp?t=" + ts;
 
-    // تحديث الشكل الخارجي واللون البرتقالي للأزرار النشطة
     clearActive('viewer-controls');
     const activeBtnId = (type === 'exercise') ? 'btn-show-ex' : 'btn-show-corr';
     document.getElementById(activeBtnId).classList.add('active-selection');
@@ -313,11 +318,9 @@ function showImage(type) {
 function updateStatus(newStatus) {
     if (!currentExerciseId) return;
     
-    // حفظ حالة التمرين في الـ LocalStorage بدلاً من الـ Firebase
     localStatuses[currentExerciseId] = newStatus;
     localStorage.setItem('gmax_exercises_status', JSON.stringify(localStatuses));
     
-    // تحديث لون الزر الخاص بالتمرين مباشرة على اللوحة
     const btn = document.getElementById("btn-ex-" + currentExerciseId);
     if (btn) {
         btn.className = "status-" + newStatus + " active-selection";
