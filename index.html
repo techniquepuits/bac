@@ -22,6 +22,7 @@
         .btn-branch { max-width: 250px; width: 32%; }
         .btn-mod { max-width: 200px; width: 30%; }
         .btn-axes { max-width: 400px; width: 51%; text-align: right; }
+        .btn-milestone { max-width: 400px; width: 51%; text-align: right; background: #16a085; }
 
         /* المنطق الموحد للاختيار النشط */
         .active-selection { background: #f39c12 !important; border: 2px solid #e67e22; }
@@ -40,7 +41,6 @@
         .btn-green { background: #2ecc71; }
         .btn-gray { background: #95a5a6; }
         
-        /* الأزرار الزرقاء الافتراضية */
         #btn-show-ex, #btn-show-corr { background: #2980b9; padding: 10px; flex-grow: 2; }
 
         #focus-header { 
@@ -60,12 +60,13 @@
 <body>
 
 <div class="container" id="main-container">
-    <div id="loading-overlay">جاري تحميل البيانات والربط بين القاموس وخريطة التنقل...</div>
+    <div id="loading-overlay">جاري تحميل البيانات والربط الهيكلي للمحطات...</div>
 
     <div id="navigation-panels" style="display: none;">
         <div id="branches-section" class="section"><div id="branches-list" class="section"></div></div>
         <div id="modules-section" class="section"><div id="modules-list" class="section"></div></div>
         <div id="axes-section" class="section"><div id="axes-list" class="section"></div></div>
+        <div id="milestones-section" class="section" style="display:none;"><div id="milestones-list" class="section"></div></div>
     </div>
 
     <div id="focus-header">
@@ -74,7 +75,7 @@
     </div>
 
     <div id="exercises-section" class="section" style="display:none;">
-        <h4 style="width:100%; text-align:center; margin:5px 0; color: #7f8c8d;">التمارين المتوفرة للمحور</h4>
+        <h4 style="width:100%; text-align:center; margin:5px 0; color: #7f8c8d;">التمارين المتوفرة للمحطة المحددة</h4>
         <div id="exercises-list" class="section"></div>
     </div>
 
@@ -100,7 +101,7 @@
 </div>
 
 <script>
-// تحديد مسارات جلب ملفات الـ JSON المتواجدة معك بنفس المجلد على المستودع
+// مسارات الملفات النسبية المعتمدة داخل مستودع جيت هاب
 const PATH_NAV_MAP = "./json01_navigation_map.json";
 const PATH_DICTIONARY = "./json00_IDs_dictionary.json";
 const CLOUDINARY_BASE_URL = "https://github.com/techniquepuits/bac/blob/main/assets/61_ex_webp/";
@@ -113,7 +114,7 @@ let currentExerciseId = null;
 let currentCorrectionId = null;
 let currentAxeLabel = "";
 
-// بدء قراءة وجلب الملفات بمجرد إقلاع وتحميل صفحة المتصفح
+// جلب الملفات ديناميكياً عند تحميل الصفحة في GitHub Pages
 window.addEventListener('DOMContentLoaded', () => {
     Promise.all([
         fetch(PATH_NAV_MAP).then(res => res.json()),
@@ -123,7 +124,7 @@ window.addEventListener('DOMContentLoaded', () => {
         navigationData = navJson;
         dictionaryData = dictJson;
         
-        // إخفاء عبارة التحميل وتجهيز الألواح
+        // إخفاء مؤشر التحميل وإظهار لوحات التحكم
         document.getElementById('loading-overlay').style.display = 'none';
         document.getElementById('navigation-panels').style.display = 'block';
         
@@ -135,7 +136,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// دالة المطابقة الذكية: تبحث عن الـ ID داخل ملف القاموس وتستخرج حقل الـ label
 function getLabelFromDictionary(id) {
     if (dictionaryData[id] && dictionaryData[id].label) {
         return dictionaryData[id].label;
@@ -166,10 +166,10 @@ function clearActive(containerId) {
     buttons.forEach(b => b.classList.remove('active-selection'));
 }
 
-// 1. بناء أزرار الشعب أو الفروع (Branches)
+// 1. بناء أزرار الشعب أو الفروع
 function renderBranches() {
-    const list = document.getElementById('branches-list');
-    list.innerHTML = "";
+    const branchesList = document.getElementById('branches-list');
+    branchesList.innerHTML = "";
     
     const branchesIds = Object.keys(navigationData);
     
@@ -182,16 +182,17 @@ function renderBranches() {
             e.target.classList.add('active-selection'); 
             renderModules(branchId); 
         };
-        list.appendChild(btn);
+        branchesList.appendChild(btn);
     });
 }
 
-// 2. بناء أزرار المواد (Modules)
+// 2. بناء أزرار المواد (Modules) والتطهير الشامل للأسفل
 function renderModules(branchId) {
-    const list = document.getElementById('modules-list');
-    // تصفية وتصفير كامل للمستويات الأدنى فور اختيار فرع جديد
-    list.innerHTML = ""; 
+    const modulesList = document.getElementById('modules-list');
+    modulesList.innerHTML = ""; 
     document.getElementById('axes-list').innerHTML = "";
+    document.getElementById('milestones-section').style.display = "none";
+    document.getElementById('milestones-list').innerHTML = "";
     document.getElementById('exercises-section').style.display = "none";
     document.getElementById('viewer').style.display = "none";
     
@@ -207,15 +208,16 @@ function renderModules(branchId) {
             e.target.classList.add('active-selection'); 
             renderAxes(mod.axes); 
         };
-        list.appendChild(btn);
+        modulesList.appendChild(btn);
     });
 }
 
-// 3. بناء أزرار المحاور الأساسية (Axes)
+// 3. بناء أزرار المحاور الأساسية (Axes) والتصفير الشامل للأسفل
 function renderAxes(axesArray) {
-    const list = document.getElementById('axes-list');
-    // تصفير وتنظيف كامل لما هو أسفل المحاور بمجرد النقر والتبديل بين المواد
-    list.innerHTML = ""; 
+    const axesList = document.getElementById('axes-list');
+    axesList.innerHTML = ""; 
+    document.getElementById('milestones-section').style.display = "none";
+    document.getElementById('milestones-list').innerHTML = "";
     document.getElementById('exercises-section').style.display = "none";
     document.getElementById('viewer').style.display = "none";
     
@@ -229,12 +231,124 @@ function renderAxes(axesArray) {
             clearActive('axes-list'); 
             e.target.classList.add('active-selection'); 
             currentAxeLabel = getLabelFromDictionary(axe.axe_id); 
-            renderExercises(axe); 
+            renderMilestones(axe.milestones); 
         };
-        list.appendChild(btn);
+        axesList.appendChild(btn);
     });
 }
 
-// 4. استخراج وعرض التمارين المتواجدة داخل المحطات (Milestones) للمحور المختار
-function renderExercises(axeObj) {
-    const list = document.getElementById('exercises-list
+// 4. بناء أزرار المحطات (Milestones) التابعة للمحور
+function renderMilestones(milestonesArray) {
+    const milestonesList = document.getElementById('milestones-list');
+    const container = document.getElementById('milestones-section');
+    milestonesList.innerHTML = "";
+    document.getElementById('exercises-section').style.display = "none";
+    document.getElementById('viewer').style.display = "none";
+
+    if (!milestonesArray || milestonesArray.length === 0) {
+        container.style.display = "none";
+        return;
+    }
+
+    milestonesArray.forEach(milestone => {
+        const btn = document.createElement('button');
+        btn.textContent = getLabelFromDictionary(milestone.milestones_id);
+        btn.className = "btn-milestone";
+        btn.onclick = (e) => {
+            clearActive('milestones-list');
+            e.target.classList.add('active-selection');
+            renderExercises(milestone.exercises);
+        };
+        milestonesList.appendChild(btn);
+    });
+    container.style.display = "flex";
+}
+
+// 5. بناء أزرار التمارين المتوفرة داخل المحطة المحددة فقط
+function renderExercises(exercisesMap) {
+    const exercisesList = document.getElementById('exercises-list');
+    const container = document.getElementById('exercises-section');
+    exercisesList.innerHTML = "";
+    document.getElementById('viewer').style.display = "none";
+    
+    if (!exercisesMap) {
+        exercisesList.innerHTML = "<p style='color: #7f8c8d; width: 100%; text-align: center;'>لا توجد تمارين متوفرة حالياً</p>";
+        container.style.display = "flex";
+        return;
+    }
+
+    const excIds = Object.keys(exercisesMap);
+    
+    if (excIds.length === 0) {
+        exercisesList.innerHTML = "<p style='color: #7f8c8d; width: 100%; text-align: center;'>لا توجد تمارين متوفرة حالياً</p>";
+    } else {
+        excIds.sort().forEach(id => {
+            const exercise = exercisesMap[id];
+            const btn = document.createElement('button');
+            
+            btn.textContent = exercise.exc_label || id; 
+            btn.id = "btn-ex-" + id;
+            
+            const status = localStatuses[id] || 0;
+            btn.className = "status-" + status;
+            
+            btn.onclick = () => enterFocusMode(id, exercise);
+            exercisesList.appendChild(btn);
+        });
+    }
+    container.style.display = "flex";
+}
+
+function enterFocusMode(id, item) {
+    if (window.innerWidth < 600) requestFullScreen();
+    document.getElementById('navigation-panels').style.display = 'none';
+    document.getElementById('focus-header').style.display = 'flex';
+    document.getElementById('focus-axe-name').textContent = currentAxeLabel;
+    clearActive('exercises-list');
+    
+    const targetBtn = document.getElementById("btn-ex-" + id);
+    if (targetBtn) targetBtn.classList.add('active-selection');
+    
+    currentExerciseId = id; 
+    currentCorrectionId = item.exc_cor_id;
+    
+    document.getElementById('viewer').style.display = "block";
+    document.getElementById('id-text').textContent = id;
+    
+    showImage('exercise');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function exitFocusMode() {
+    exitFullScreen();
+    document.getElementById('navigation-panels').style.display = 'block';
+    document.getElementById('focus-header').style.display = 'none';
+    document.getElementById('viewer').style.display = "none";
+}
+
+function showImage(type) {
+    const imgElement = document.getElementById('main-image');
+    const ts = new Date().getTime();
+    
+    const imageId = (type === 'exercise') ? currentExerciseId : currentCorrectionId;
+    imgElement.src = CLOUDINARY_BASE_URL + imageId + ".webp?t=" + ts;
+
+    clearActive('viewer-controls');
+    const activeBtnId = (type === 'exercise') ? 'btn-show-ex' : 'btn-show-corr';
+    document.getElementById(activeBtnId).classList.add('active-selection');
+}
+
+function updateStatus(newStatus) {
+    if (!currentExerciseId) return;
+    
+    localStatuses[currentExerciseId] = newStatus;
+    localStorage.setItem('gmax_exercises_status', JSON.stringify(localStatuses));
+    
+    const btn = document.getElementById("btn-ex-" + currentExerciseId);
+    if (btn) {
+        btn.className = "status-" + newStatus + " active-selection";
+    }
+}
+</script>
+</body>
+</html>
