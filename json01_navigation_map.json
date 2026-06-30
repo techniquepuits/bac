@@ -6,15 +6,15 @@
         "module_id": "MA_ma",
         "axes": [
           {
-            "axe_id": "SC_ma_01_funct",
+            "axe_id": "MA_ma_01_funct",
             "milestones": [
               {
-                "milestones_id": "SC_ma_01_funct_01_limits",
+                "milestones_id": "MA_ma_01_funct_01_limits",
                 "exercises": {
-                  "SC_ma_25_A_01": {
+                  "MA_ma_25_A_01": {
                     "exc_label": "ex_25_01",
                     "exc_info": "",
-                    "exc_cor_id": "SC_ma_25_As_01"
+                    "exc_cor_id": "MA_ma_25_As_01"
                   }
                 }
               }
@@ -31,15 +31,15 @@
         "module_id": "MT_ph",
         "axes": [
           {
-            "axe_id": "SC_ma_01_funct",
+            "axe_id": "MT_ma_01_funct",
             "milestones": [
               {
-                "milestones_id": "SC_ma_01_funct_01_limits",
+                "milestones_id": "MT_ph_01_funct_01_limits",
                 "exercises": {
-                  "SC_ma_25_A_01": {
+                  "MT_ph_25_A_01": {
                     "exc_label": "ex_25_01",
                     "exc_info": "",
-                    "exc_cor_id": "SC_ma_25_As_01"
+                    "exc_cor_id": "MT_ph_25_As_01"
                   }
                 }
               }
