@@ -2,456 +2,327 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gmax Architexture | لوحة التحكم</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GMax Bac - لوحة مراجعة التمارين</title>
     <style>
-        :root {
-            --primary-bg: #0f2027; 
-            --accent-blue: #3498db;
-            --pure-gold: #D4AF37;
-            --white-fade: rgba(255, 255, 255, 0.45);
-            --card-bg: rgba(255, 255, 255, 0.03);
-        }
-
-        * { box-sizing: border-box; }
-        body, html {
-            margin: 0; padding: 0; 
-            height: 100vh;
-            width: 100%;
-            font-family: 'Cairo', sans-serif;
-            background: radial-gradient(circle at center, #203a43 0%, #0f2027 100%);
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center; 
-            overflow: hidden; 
-        }
-
-        .main-wrapper { 
-            text-align: center; 
-            width: 100%;
-            max-width: 480px; 
-            padding: 15px; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            justify-content: flex-start;
-            padding-top: 40px;
-        }
-
-        .master-logo { margin-bottom: 5px; width: 100%; } 
-        .logo-text {
-            font-size: clamp(3.5em, 12vw, 5em); 
-            font-weight: 900;
-            margin: 0;
-            line-height: 0.85;
-            letter-spacing: 5px;
-        }
-        .max-text { color: var(--pure-gold); text-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; padding: 10px; margin: 0; transition: 0.3s; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         
-        .hub-area {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 5px;
-        }
-        .hub-line {
-            width: 180px;
-            height: 2px;
-            background: rgba(212, 175, 55, 0.3);
-            margin-bottom: 5px;
-        }
+        body.fullscreen-mode { padding: 0; background: white; }
+        body.fullscreen-mode .container { max-width: 100%; width: 100vw; height: 100vh; border-radius: 0; padding: 10px; overflow-y: auto; box-sizing: border-box; }
+
+        .section { margin-bottom: 2px; padding: 2px; border-bottom: 1px solid #eee; display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; }
         
-        .status-tag { 
-            font-size: 0.75em; 
-            color: #2ecc71; 
-            margin: 5px 0 2px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            font-weight: 700;
-        }
-        .status-dot {
-            width: 6px; height: 6px;
-            background-color: #2ecc71;
-            border-radius: 50%;
-            display: inline-block;
-            box-shadow: 0 0 6px #2ecc71;
+        button { 
+            padding: 12px 15px; border: none; border-radius: 8px; cursor: pointer; 
+            font-weight: bold; transition: 0.2s; background: #34495e; color: white; 
+            font-size: 14px; min-width: 80px; flex-grow: 1; max-width: 250px;
         }
 
-        .academic-info {
-            font-size: 0.8em;
-            color: rgba(255, 255, 255, 0.5);
-            margin-top: 5px;
-            font-weight: 400;
-            min-height: 20px;
-        }
+        .btn-branch { max-width: 250px; width: 32%; }
+        .btn-mod { max-width: 200px; width: 30%; }
+        .btn-axes { max-width: 400px; width: 51%; text-align: right; }
 
-        .menu-container {
-            width: 100%;
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px; 
-            max-height: 60vh;
-            overflow-y: auto;
-            padding-right: 5px;
-        }
+        /* المنطق الموحد للاختيار النشط */
+        .active-selection { background: #f39c12 !important; border: 2px solid #e67e22; }
 
-        .menu-container::-webkit-scrollbar { width: 4px; }
-        .menu-container::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+        .status-1 { background-color: #2ecc71 !important; }
+        .status-3 { background-color: #e74c3c !important; }
+        
+        .display-area { text-align: center; margin-top: 15px; border-top: 2px dashed #ccc; padding-top: 15px; }
+        #exercise-id-display { color: #2c3e50; background: #ecf0f1; padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 10px; font-weight: bold; }
+        
+        img { max-width: 98%; height: auto; border: 0.5px solid #333; margin-top: 10px; border-radius: 8px; background: white; padding: 5px; }
+        
+        .control-panel { margin-top: 20px; background: #f9f9f9; padding: 15px; border-radius: 8px; display: flex; gap: 10px; justify-content: center; }
+        
+        .btn-red { background: #e74c3c; }
+        .btn-green { background: #2ecc71; }
+        .btn-gray { background: #95a5a6; }
+        
+        /* الأزرار الزرقاء الافتراضية */
+        #btn-show-ex, #btn-show-corr { background: #2980b9; padding: 10px; flex-grow: 2; }
 
-        .gmax-btn {
-            width: 100%;
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            padding: 12px 15px; 
-            color: #ffffff;
-            font-size: 1.1em; 
-            font-weight: 700;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center; 
-            transition: all 0.2s ease;
-            cursor: pointer;
-            backdrop-filter: blur(10px);
+        #focus-header { 
+            display: none; width: 100%; justify-content: space-between; align-items: center; 
+            background: #2c3e50; color: white; padding: 10px; border-radius: 8px; margin-bottom: 10px; box-sizing: border-box;
         }
+        .btn-back { background: #e67e22 !important; max-width: 50px; padding: 5px; font-size: 14px; }
 
-        .gmax-btn:hover {
-            transform: translateY(-2px);
-            border-color: var(--accent-blue);
-            background: rgba(255, 255, 255, 0.06);
-        }
+        #loading-overlay { text-align: center; color: #7f8c8d; font-weight: bold; padding: 20px; }
 
-        .section-divider {
-            width: 50%;
-            height: 1px;
-            background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
-            margin: 15px 0;
-            align-self: center;
-        }
-
-        .back-btn {
-            border-color: rgba(212, 175, 55, 0.3);
-        }
-        .back-btn:hover {
-            border-color: var(--pure-gold);
-        }
-
-        @media (max-width: 480px) {
-            .logo-text { font-size: 3.5em; }
-            .gmax-btn { font-size: 1em; padding: 10px; }
+        @media (max-width: 600px) {
+            button { font-size: 12px; padding: 10px; }
+            #focus-header { font-size: 13px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="main-wrapper">
-        
-        <div class="master-logo">
-            <h1 class="logo-text">
-                <span>G</span><span class="max-text">MAX</span>
-            </h1>            
-            <div class="hub-area">
-                <div class="hub-line"></div>
-                <div class="status-tag"><span class="status-dot"></span>متصل الآن</div>
-            </div>            
-            
-            <div class="academic-info" id="academicInfo">جاري تحميل البنية التحتية...</div>
-        </div>
+<div class="container" id="main-container">
+    <div id="loading-overlay">جاري تحميل خريطة التنقل وقاموس التسميات...</div>
 
-        <div class="menu-container" id="mainMenuContainer"></div>
-
+    <div id="navigation-panels" style="display: none;">
+        <div id="branches-section" class="section"><div id="branches-list" class="section"></div></div>
+        <div id="modules-section" class="section"><div id="modules-list" class="section"></div></div>
+        <div id="axes-section" class="section"><div id="axes-list" class="section"></div></div>
     </div>
 
-    <script>
-        const REPO_BASE_URL = "https://raw.githubusercontent.com/techniquepuits/bac/main/";
+    <div id="focus-header">
+        <span id="focus-axe-name" style="font-weight: bold;"></span>
+        <button class="btn-back" onclick="exitFocusMode()">⬅ عودة</button>
+    </div>
+
+    <div id="exercises-section" class="section" style="display:none;">
+        <h4 style="width:100%; text-align:center; margin:5px 0; color: #7f8c8d;">التمارين المتوفرة للمحور</h4>
+        <div id="exercises-list" class="section"></div>
+    </div>
+
+    <div id="viewer" class="display-area" style="display:none;">
+        <div class="nav-controls-wrapper">
+            <div class="section" style="border:none;" id="viewer-controls">
+                <button onclick="showImage('exercise')" id="btn-show-ex">📄 التمرين</button>
+                <button onclick="showImage('correction')" id="btn-show-corr">💡 التصحيح</button>
+            </div>
+        </div>
+
+        <div id="image-container">
+            <img id="main-image" src="" alt="جاري التحميل...">
+        </div>
+
+        <div class="control-panel">
+            <button class="btn-red" onclick="updateStatus(3)">❌ مراجعة</button>
+            <button class="btn-green" onclick="updateStatus(1)">✅ جيد</button>
+            <button class="btn-gray" onclick="updateStatus(0)">⚪ إلغاء</button>
+        </div>
+        <div id="exercise-id-display">ID: <span id="id-text"></span></div>
+    </div>
+</div>
+
+<script>
+// الإعدادات: بما أن الملفات تقع في نفس مستودع الـ GitHub، سنستخدم المسارات النسبية مباشرة
+const PATH_NAV_MAP = "./json01_navigation_map.json";
+const PATH_DICTIONARY = "./json00_IDs_dictionary.json";
+const CLOUDINARY_BASE_URL = "https://res.cloudinary.com/dxuvloexk/image/upload/gmax/";
+
+let navigationData = {};
+let dictionaryData = {};
+let localStatuses = JSON.parse(localStorage.getItem('gmax_exercises_status')) || {};
+
+let currentExerciseId = null;
+let currentCorrectionId = null;
+let currentAxeLabel = "";
+
+// بدء جلب البيانات من ملفات الـ JSON المحلية بداخل الجيت هاب عند تحميل الصفحة
+window.addEventListener('DOMContentLoaded', () => {
+    Promise.all([
+        fetch(PATH_NAV_MAP).then(res => res.json()),
+        fetch(PATH_DICTIONARY).then(res => res.json())
+    ])
+    .then(([navJson, dictJson]) => {
+        navigationData = navJson;
+        dictionaryData = dictJson;
         
-        let navigationData = null;
-        let imagesMapData = null;
-        let navigationHistory = [];
+        // إخفاء مؤشر التحميل وإظهار لوحة التحكم
+        document.getElementById('loading-overlay').style.display = 'none';
+        document.getElementById('navigation-panels').style.display = 'block';
+        
+        renderBranches();
+    })
+    .catch(err => {
+        console.error("خطأ أثناء تحميل ملفات الجيسون:", err);
+        document.getElementById('loading-overlay').textContent = "❌ فشل تحميل البيانات. تأكد من وجود ملفات الـ JSON في نفس المجلد.";
+    });
+});
 
-        // أولاً: قراءة ملفات الإعدادات تلقائياً مع تدمير الكاش القديم
-        window.addEventListener('DOMContentLoaded', async () => {
-            try {
-                const cacheBuster = "?t=" + new Date().getTime();
-                const [navResponse, imgResponse] = await Promise.all([
-                    fetch(REPO_BASE_URL + 'json01_gmax_navigation_map.json' + cacheBuster),
-                    fetch(REPO_BASE_URL + 'json02_gmax_images_map.json' + cacheBuster)
-                ]);
+function requestFullScreen() {
+    const docElm = document.documentElement;
+    if (docElm.requestFullscreen) docElm.requestFullscreen();
+    else if (docElm.mozRequestFullScreen) docElm.mozRequestFullScreen();
+    else if (docElm.webkitRequestFullScreen) docElm.webkitRequestFullScreen();
+    else if (docElm.msRequestFullscreen) docElm.msRequestFullscreen();
+    document.body.classList.add('fullscreen-mode');
+}
 
-                if (!navResponse.ok || !imgResponse.ok) throw new Error("فشل في قراءة ملفات البنية التحتية.");
+function exitFullScreen() {
+    if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement) {
+        if (document.exitFullscreen) document.exitFullscreen();
+        else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+    }
+    document.body.classList.remove('fullscreen-mode');
+}
 
-                navigationData = await navResponse.json();
-                imagesMapData = await imgResponse.json();
+function clearActive(containerId) {
+    const buttons = document.querySelectorAll(`#${containerId} button`);
+    buttons.forEach(b => b.classList.remove('active-selection'));
+}
 
-                showBranches();
-            } catch (error) {
-                console.error(error);
-                document.getElementById('academicInfo').innerText = "❌ خطأ في الاتصال بالسيرفر.";
+// دالة مساعدة لجلب تسمية العنصر المترجمة من قاموس البيانات
+function getLabel(id) {
+    return (dictionaryData[id] && dictionaryData[id].label) ? dictionaryData[id].label : id;
+}
+
+function renderBranches() {
+    const list = document.getElementById('branches-list');
+    list.innerHTML = "";
+    
+    // استخراج الفروع الأساسية (مفاتيح الكائن الأول في خريطة التنقل)
+    const branches = Object.keys(navigationData);
+    
+    branches.sort().forEach(branchId => {
+        const btn = document.createElement('button');
+        btn.textContent = getLabel(branchId); 
+        btn.className = "btn-branch";
+        btn.onclick = (e) => { 
+            clearActive('branches-list'); 
+            e.target.classList.add('active-selection'); 
+            renderModules(branchId); 
+        };
+        list.appendChild(btn);
+    });
+}
+
+function renderModules(branchId) {
+    const list = document.getElementById('modules-list');
+    list.innerHTML = ""; 
+    document.getElementById('axes-list').innerHTML = "";
+    document.getElementById('exercises-section').style.display = "none";
+    document.getElementById('viewer').style.display = "none";
+    
+    const branchObj = navigationData[branchId];
+    if (!branchObj || !branchObj.modules) return;
+    
+    branchObj.modules.forEach(mod => {
+        const btn = document.createElement('button');
+        btn.textContent = getLabel(mod.module_id); 
+        btn.className = "btn-mod";
+        btn.onclick = (e) => { 
+            clearActive('modules-list'); 
+            e.target.classList.add('active-selection'); 
+            renderAxes(mod.axes); 
+        };
+        list.appendChild(btn);
+    });
+}
+
+function renderAxes(axesArray) {
+    const list = document.getElementById('axes-list');
+    list.innerHTML = ""; 
+    document.getElementById('exercises-section').style.display = "none";
+    document.getElementById('viewer').style.display = "none";
+    
+    if (!axesArray) return;
+    
+    axesArray.forEach(axe => {
+        const btn = document.createElement('button');
+        btn.textContent = getLabel(axe.axe_id); 
+        btn.className = "btn-axes";
+        btn.onclick = (e) => { 
+            clearActive('axes-list'); 
+            e.target.classList.add('active-selection'); 
+            currentAxeLabel = getLabel(axe.axe_id); 
+            renderExercises(axe); 
+        };
+        list.appendChild(btn);
+    });
+}
+
+function renderExercises(axeObj) {
+    const list = document.getElementById('exercises-list');
+    const container = document.getElementById('exercises-section');
+    list.innerHTML = "";
+    
+    // تجميع كافة التمارين المتواجدة داخل محطات (milestones) هذا المحور
+    let exercisesMap = {};
+    if (axeObj.milestones) {
+        axeObj.milestones.forEach(milestone => {
+            if (milestone.exercises) {
+                Object.assign(exercisesMap, milestone.exercises);
             }
         });
-
-        // 1. عرض الجذور (الشعب) مرتبة حسب المعرفات
-        function showBranches() {
-            navigationHistory = []; 
-            updateAcademicInfo("المرحلة الثانوية • بكالوريا 2027");
+    }
+    
+    const excIds = Object.keys(exercisesMap);
+    
+    if (excIds.length === 0) {
+        list.innerHTML = "<p style='color: #7f8c8d; width: 100%; text-align: center;'>لا توجد تمارين حديثة</p>";
+    } else {
+        // ترتيب التمارين تصاعدياً بحسب الـ ID
+        excIds.sort().forEach(id => {
+            const exercise = exercisesMap[id];
+            const btn = document.createElement('button');
             
-            const container = document.getElementById('mainMenuContainer');
-            container.innerHTML = ""; 
-
-            const sortedBranchIds = Object.keys(navigationData).sort();
+            // استخدام exc_label كعنوان يظهر فوق الزر
+            btn.textContent = exercise.exc_label || id; 
+            btn.id = "btn-ex-" + id;
             
-            sortedBranchIds.forEach(brId => {
-                const btn = document.createElement('div');
-                btn.className = 'gmax-btn';
-                // عرض الاسم أو المعرف المقروء للطالب
-                btn.innerHTML = `<span>📂 شعبة: ${brId}</span>`;
-                btn.onclick = () => {
-                    navigationHistory.push({ type: 'branches' });
-                    showModules(brId);
-                };
-                container.appendChild(btn);
-            });
-        }
-
-        // 2. عرض المواد التابعة للشعبة المختارة
-        function showModules(brId) {
-            updateAcademicInfo(`الشعبة: ${brId}`);
-            const container = document.getElementById('mainMenuContainer');
-            container.innerHTML = ""; 
-
-            const modules = navigationData[brId].modules;
-            const sortedModuleIds = Object.keys(modules).sort();
-
-            sortedModuleIds.forEach(modId => {
-                const btn = document.createElement('div');
-                btn.className = 'gmax-btn';
-                // عرض الاسم الوصفي المكتوب في حقل التاج بدلاً من المعرف الجاف
-                btn.innerHTML = `<span>📚 مادة: ${modules[modId].module_tag || modId}</span>`;
-                btn.onclick = () => {
-                    navigationHistory.push({ type: 'modules', brId: brId });
-                    showAxes(brId, modId);
-                };
-                container.appendChild(btn);
-            });
-
-            addBackButton(() => showBranches());
-        }
-
-        // 3. عرض المحاور التابعة للمادة
-        function showAxes(brId, modId) {
-            const currentModuleName = navigationData[brId].modules[modId].module_tag || modId;
-            updateAcademicInfo(`الشعبة: ${brId} • المادة: ${currentModuleName}`);
-            const container = document.getElementById('mainMenuContainer');
-            container.innerHTML = ""; 
-
-            const axes = navigationData[brId].modules[modId].axes;
+            // جلب الحالة المحفوظة محلياً (0: افتراضي، 1: جيد، 3: مراجعة)
+            const status = localStatuses[id] || 0;
+            btn.className = "status-" + status;
             
-            axes.forEach(axe => {
-                const btn = document.createElement('div');
-                btn.className = 'gmax-btn';
-                // تغليب الاسم (axe_tag) وإظهار الرقم المرجعي جانباً بشكل متناسق
-                btn.innerHTML = `<span>🎯 محور: ${axe.axe_tag || axe.axe_id}</span>`;
-                btn.onclick = () => {
-                    navigationHistory.push({ type: 'axes', brId: brId, modId: modId });
-                    showMilestones(brId, modId, axe.axe_id);
-                };
-                container.appendChild(btn);
-            });
+            btn.onclick = () => enterFocusMode(id, exercise);
+            list.appendChild(btn);
+        });
+    }
+    container.style.display = "flex";
+}
 
-            addBackButton(() => showModules(brId));
-        }
+function enterFocusMode(id, item) {
+    if (window.innerWidth < 600) requestFullScreen();
+    document.getElementById('navigation-panels').style.display = 'none';
+    document.getElementById('focus-header').style.display = 'flex';
+    document.getElementById('focus-axe-name').textContent = currentAxeLabel;
+    clearActive('exercises-list');
+    
+    const targetBtn = document.getElementById("btn-ex-" + id);
+    if (targetBtn) targetBtn.classList.add('active-selection');
+    
+    currentExerciseId = id; 
+    currentCorrectionId = item.exc_cor_id;
+    
+    document.getElementById('viewer').style.display = "block";
+    document.getElementById('id-text').textContent = id;
+    
+    // فتح صورة التمرين افتراضياً فور الدخول
+    showImage('exercise');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
-        // 4. عرض الوحدات الدروسية
-        function showMilestones(brId, modId, axeId) {
-            const currentModuleName = navigationData[brId].modules[modId].module_tag || modId;
-            const axe = navigationData[brId].modules[modId].axes.find(a => a.axe_id === axeId);
-            const currentAxeName = axe ? (axe.axe_tag || axe.axe_id) : axeId;
+function exitFocusMode() {
+    exitFullScreen();
+    document.getElementById('navigation-panels').style.display = 'block';
+    document.getElementById('focus-header').style.display = 'none';
+    document.getElementById('viewer').style.display = "none";
+}
 
-            updateAcademicInfo(`المادة: ${currentModuleName} • المحور: ${currentAxeName}`);
-            const container = document.getElementById('mainMenuContainer');
-            container.innerHTML = "";
+function showImage(type) {
+    const imgElement = document.getElementById('main-image');
+    const ts = new Date().getTime();
+    
+    // بناء رابط الصورة المباشر من Cloudinary بالاعتماد على معرف التمرين أو معرف الحل
+    const imageId = (type === 'exercise') ? currentExerciseId : currentCorrectionId;
+    imgElement.src = CLOUDINARY_BASE_URL + imageId + ".webp?t=" + ts;
 
-            if(axe && axe.milestones) {
-                axe.milestones.forEach(miles => {
-                    const btn = document.createElement('div');
-                    btn.className = 'gmax-btn';
-                    // عرض اسم الوحدة بدلاً من المعرف الجاف
-                    btn.innerHTML = `<span>📖 وحدة: ${miles.milestones_name || miles.milestones_id}</span>`;
-                    btn.onclick = () => {
-                        navigationHistory.push({ type: 'milestones', brId: brId, modId: modId, axeId: axeId });
-                        showLevels(brId, modId, axeId, miles.milestones_id);
-                    };
-                    container.appendChild(btn);
-                });
-            }
+    // تحديث الشكل الخارجي واللون البرتقالي للأزرار النشطة
+    clearActive('viewer-controls');
+    const activeBtnId = (type === 'exercise') ? 'btn-show-ex' : 'btn-show-corr';
+    document.getElementById(activeBtnId).classList.add('active-selection');
+}
 
-            addBackButton(() => showAxes(brId, modId));
-        }
-
-        // 5. عرض المستويات الثلاثة
-        function showLevels(brId, modId, axeId, milesId) {
-            const axe = navigationData[brId].modules[modId].axes.find(a => a.axe_id === axeId);
-            const milestone = axe.milestones.find(m => m.milestones_id === milesId);
-            const currentMilestoneName = milestone ? (milestone.milestones_name || milesId) : milesId;
-
-            updateAcademicInfo(`الوحدة: ${currentMilestoneName}`);
-            const container = document.getElementById('mainMenuContainer');
-            container.innerHTML = "";
-
-            if(milestone && milestone.levels) {
-                const sortedLevelIds = Object.keys(milestone.levels).sort();
-
-                sortedLevelIds.forEach(lvlId => {
-                    const btn = document.createElement('div');
-                    btn.className = 'gmax-btn';
-                    
-                    let lvlName = "المستوى التجريبي";
-                    if(lvlId == "01" || lvlId.endsWith("1")) lvlName = "💪 المستوى 1: تعزيز المفاهيم والفوكال";
-                    if(lvlId == "02" || lvlId.endsWith("2")) lvlName = "🧠 المستوى 2: التمارين التركيبية المدمجة";
-                    if(lvlId == "03" || lvlId.endsWith("3")) lvlName = "📝 المستوى 3: محاكاة الامتحان والباك";
-
-                    btn.innerHTML = `<span>${lvlName}</span>`;
-                    btn.onclick = () => {
-                        navigationHistory.push({ type: 'levels', brId: brId, modId: modId, axeId: axeId, milesId: milesId });
-                        showExercises(brId, modId, axeId, milesId, lvlId);
-                    };
-                    container.appendChild(btn);
-                });
-            }
-
-            addBackButton(() => showMilestones(brId, modId, axeId));
-        }
-
-        // 6. عرض قائمة التمارين التابعة للمستوى المختار
-        function showExercises(brId, modId, axeId, milesId, lvlId) {
-            const axe = navigationData[brId].modules[modId].axes.find(a => a.axe_id === axeId);
-            const milestone = axe.milestones.find(m => m.milestones_id === milesId);
-            const currentMilestoneName = milestone ? (milestone.milestones_name || milesId) : milesId;
-
-            updateAcademicInfo(`الوحدة: ${currentMilestoneName} • المستوى: ${lvlId}`);
-            const container = document.getElementById('mainMenuContainer');
-            container.innerHTML = "";
-
-            if(milestone && milestone.levels && milestone.levels[lvlId]) {
-                const exercises = milestone.levels[lvlId].exercises;
-
-                exercises.forEach(ex => {
-                    if (ex.exercise_status !== "active") return; 
-                    
-                    const btn = document.createElement('div');
-                    btn.className = 'gmax-btn';
-                    // تم التعديل هنا: يظهر حقل الاسم المقابل (exercise_name) على الزر، وإذا لم يتوفر يُظهر المعرف احتياطياً
-                    btn.innerHTML = `<span>📝 تمرين: ${ex.exercise_name || ex.exercise_id}</span>`;
-                    btn.onclick = () => {
-                        navigationHistory.push({ type: 'exercises', brId: brId, modId: modId, axeId: axeId, milesId: milesId, lvlId: lvlId });
-                        handleExerciseSelection(ex);
-                    };
-                    container.appendChild(btn);
-                });
-            }
-
-            addBackButton(() => showLevels(brId, modId, axeId, milesId));
-        }
-
-        // 7. معالجة التمرين باستخدام المعرف الفرعي (id) حصرياً لبناء الرابط وتفادي مشاكل الاسم
-        function handleExerciseSelection(ex) {
-            if (ex.exercise_type === "image" || ex.exercise_type === "html") { 
-                // نأخذ الـ id بشكل صارم للبحث وبناء روابط الـ webp
-                const exId = ex.exercise_id;
-                const exDisplayName = ex.exercise_name || exId;
-                
-                let imgRecord = imagesMapData ? imagesMapData[exId] : null;
-                
-                if (imgRecord && imgRecord.text_image_path) {
-                    displayImageExerciseDashboard(exDisplayName, exId, imgRecord.text_image_path, imgRecord.correction_image_path);
-                } else {
-                    console.warn(`⚠️ المعرف ${exId} غير مفهرس، تم تشغيل الاستنتاج الهيكلي.`);
-                    
-                    let subFolder = "";
-                    let lowerId = exId.toLowerCase();
-                    if (lowerId.includes("_ma_")) subFolder = "MA/";
-                    else if (lowerId.includes("_ph_")) subFolder = "PH/";
-                    else if (lowerId.includes("_sc_")) subFolder = "SC/";
-                    
-                    let lastUnderscoreIndex = exId.lastIndexOf('_');
-                    let correctionId = exId;
-                    if (lastUnderscoreIndex !== -1) {
-                        correctionId = exId.substring(0, lastUnderscoreIndex) + 's' + exId.substring(lastUnderscoreIndex);
-                    }
-                    
-                    const fallbackTextPath = `assets/60_ex_webp/${subFolder}${exId}.webp`;
-                    const fallbackCorrectPath = `assets/60_ex_webp/${subFolder}${correctionId}.webp`;
-                    
-                    displayImageExerciseDashboard(exDisplayName, exId, fallbackTextPath, fallbackCorrectPath);
-                }
-            } else {
-                alert("💡 هذا التمرين يعتمد صيغة عرض نصية مختلفة.");
-            }
-        }
-
-        // 8. عرض لوحة التحكم النهائية مع تمرير الاسم لعرضه والنظام التعريفي للروابط
-        function displayImageExerciseDashboard(displayName, exId, textImgPath, correctionImgPath) {
-            // نكتب اسم التمرين الفعلي فوق اللوحة بخط خفيف
-            updateAcademicInfo(`استعراض التمرين: ${displayName}`);
-            const container = document.getElementById('mainMenuContainer');
-            container.innerHTML = ""; 
-
-            const cacheBuster = "?t=" + new Date().getTime();
-            const fullTextUrl = (textImgPath.startsWith('http') ? textImgPath : `${REPO_BASE_URL}${textImgPath}`) + cacheBuster;
-            const fullCorrectUrl = (correctionImgPath.startsWith('http') ? correctionImgPath : `${REPO_BASE_URL}${correctionImgPath}`) + cacheBuster;
-
-            // زر استعراض نص التمرين
-            const btnText = document.createElement('a');
-            btnText.className = 'gmax-btn';
-            btnText.target = '_blank';
-            btnText.href = fullTextUrl;
-            btnText.innerHTML = `<span>📄 استعراض نص التمرين</span>`;
-            container.appendChild(btnText);
-
-            // زر استعراض تصحيح التمرين
-            const btnCorrect = document.createElement('a');
-            btnCorrect.className = 'gmax-btn';
-            btnCorrect.target = '_blank';
-            btnCorrect.href = fullCorrectUrl;
-            btnCorrect.innerHTML = `<span>💡 استعراض تصحيح التمرين</span>`;
-            container.appendChild(btnCorrect);
-
-            const divider = document.createElement('div');
-            divider.className = 'section-divider';
-            container.appendChild(divider);
-
-            // زر العودة للفهرس الرئيسي
-            const btnHome = document.createElement('div');
-            btnHome.className = 'gmax-btn back-btn';
-            btnHome.innerHTML = `<span>🏠 العودة إلى الفهرس الرئيسي</span>`;
-            btnHome.onclick = () => showBranches();
-            container.appendChild(btnHome);
-        }
-
-        function updateAcademicInfo(text) {
-            document.getElementById('academicInfo').innerText = text;
-        }
-
-        function addBackButton(previousStepFunction) {
-            const container = document.getElementById('mainMenuContainer');
-            
-            const divider = document.createElement('div');
-            divider.className = 'section-divider';
-            container.appendChild(divider);
-
-            const backBtn = document.createElement('div');
-            backBtn.className = 'gmax-btn back-btn';
-            backBtn.innerHTML = `<span>🔙 عودة للخلف</span>`;
-            backBtn.onclick = previousStepFunction;
-            container.appendChild(backBtn);
-        }
-    </script>
+function updateStatus(newStatus) {
+    if (!currentExerciseId) return;
+    
+    // حفظ حالة التمرين في الـ LocalStorage بدلاً من الـ Firebase
+    localStatuses[currentExerciseId] = newStatus;
+    localStorage.setItem('gmax_exercises_status', JSON.stringify(localStatuses));
+    
+    // تحديث لون الزر الخاص بالتمرين مباشرة على اللوحة
+    const btn = document.getElementById("btn-ex-" + currentExerciseId);
+    if (btn) {
+        btn.className = "status-" + newStatus + " active-selection";
+    }
+}
+</script>
 </body>
 </html>
