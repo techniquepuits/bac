@@ -2,402 +2,191 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>GMax Bac - لوحة مراجعة التمارين</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmax Bac | لوحة التحكم</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; padding: 10px; margin: 0; transition: 0.3s; }
-        .container { max-width: 800px; margin: auto; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        
-        /* الهيدر الثابت المعتمد */
-        .brand-header { text-align: center; padding-bottom: 10px; }
-        .brand-logo { font-size: 24px; font-weight: bold; color: #2c3e50; margin: 0; }
-        .status-online { font-size: 12px; color: #2ecc71; font-weight: bold; margin-top: 2px; }
-        .header-line { border: none; border-top: 1px solid #ccc; margin: 8px 0; }
-        
-        /* النطاق الأكاديمي المضاف أسفل الخط (صغير وخفيف) */
-        .academic-info { text-align: center; font-size: 13px; color: #7f8c8d; margin-bottom: 12px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; align-items: center; }
-        .academic-info label { cursor: pointer; display: inline-flex; align-items: center; gap: 4px; font-weight: 500; }
-        .academic-info input[type="radio"] { margin: 0; cursor: pointer; accent-color: #e67e22; }
-
-        body.fullscreen-mode { padding: 0; background: white; }
-        body.fullscreen-mode .container { max-width: 100%; width: 100vw; height: 100vh; border-radius: 0; padding: 10px; overflow-y: auto; box-sizing: border-box; }
-
-        .section { margin-bottom: 2px; padding: 2px; border-bottom: 1px solid #eee; display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; }
-        
-        button { 
-            padding: 12px 15px; border: none; border-radius: 8px; cursor: pointer; 
-            font-weight: bold; transition: 0.2s; background: #34495e; color: white; 
-            font-size: 14px; min-width: 80px; flex-grow: 1; max-width: 250px;
+        :root {
+            --primary-bg: #0f2027; 
+            --accent-blue: #3498db;
+            --pure-gold: #D4AF37;
+            --white-fade: rgba(255, 255, 255, 0.45);
+            --card-bg: rgba(255, 255, 255, 0.03);
         }
 
-        .btn-mod { max-width: 200px; width: 30%; }
-        .btn-axes { max-width: 400px; width: 51%; text-align: right; }
-        .btn-milestone { max-width: 400px; width: 51%; text-align: right; background: #16a085; }
-
-        .active-selection { background: #f39c12 !important; border: 2px solid #e67e22; }
-
-        .status-1 { background-color: #2ecc71 !important; }
-        .status-3 { background-color: #e74c3c !important; }
-        
-        .display-area { text-align: center; margin-top: 15px; border-top: 2px dashed #ccc; padding-top: 15px; }
-        #exercise-id-display { color: #2c3e50; background: #ecf0f1; padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 10px; font-weight: bold; }
-        
-        img { max-width: 98%; height: auto; border: 0.5px solid #333; margin-top: 10px; border-radius: 8px; background: white; padding: 5px; }
-        
-        .control-panel { margin-top: 20px; background: #f9f9f9; padding: 15px; border-radius: 8px; display: flex; gap: 10px; justify-content: center; }
-        
-        .btn-red { background: #e74c3c; }
-        .btn-green { background: #2ecc71; }
-        .btn-gray { background: #95a5a6; }
-        
-        #btn-show-ex, #btn-show-corr { background: #2980b9; padding: 10px; flex-grow: 2; }
-
-        #focus-header { 
-            display: none; width: 100%; justify-content: space-between; align-items: center; 
-            background: #2c3e50; color: white; padding: 10px; border-radius: 8px; margin-bottom: 10px; box-sizing: border-box;
+        * { box-sizing: border-box; }
+        body, html {
+            margin: 0; padding: 0; 
+            height: 100vh;
+            width: 100%;
+            font-family: 'Cairo', sans-serif;
+            background: radial-gradient(circle at center, #203a43 0%, #0f2027 100%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            overflow: hidden; 
         }
-        .btn-back { background: #e67e22 !important; max-width: 50px; padding: 5px; font-size: 14px; }
 
-        #loading-overlay { text-align: center; color: #7f8c8d; font-weight: bold; padding: 20px; }
+        .main-wrapper { 
+            text-align: center; 
+            width: 100%;
+            max-width: 480px; 
+            padding: 15px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-        @media (max-width: 600px) {
-            button { font-size: 12px; padding: 10px; }
-            #focus-header { font-size: 13px; }
+        .master-logo { margin-bottom: 5px; width: 100%; } 
+        .logo-text {
+            font-size: clamp(3.5em, 12vw, 5em); 
+            font-weight: 900;
+            margin: 0;
+            line-height: 0.85;
+            letter-spacing: 5px;
+        }
+        .max-text { color: var(--pure-gold); text-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        
+        .hub-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 5px;
+        }
+        .hub-line {
+            width: 180px;
+            height: 2px;
+            background: rgba(212, 175, 55, 0.3);
+            margin-bottom: 5px;
+        }
+        .hub-tag {
+            font-size: 1.5em;
+            letter-spacing: 12px;
+            text-indent: 12px;
+            color: var(--accent-blue); 
+            font-weight: 900;
+        }
+
+        .status-tag { 
+            font-size: 0.75em; 
+            color: #2ecc71; 
+            margin: 5px 0 2px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            font-weight: 700;
+        }
+        .status-dot {
+            width: 6px; height: 6px;
+            background-color: #2ecc71;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 6px #2ecc71;
+        }
+
+        /* تفاصيل المرحلة الدراسية - خط صغير وخفيف */
+        .academic-info {
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 5px;
+            font-weight: 400;
+        }
+
+        .menu-container {
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+        }
+
+        .gmax-btn {
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 12px 15px; 
+            color: #ffffff;
+            font-size: 1.1em; 
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            transition: all 0.2s ease;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+        }
+
+        .gmax-btn:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-blue);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .section-divider {
+            width: 50%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+            margin: 15px 0;
+            align-self: center;
+        }
+
+        .tool-btn:hover {
+            border-color: var(--pure-gold);
+        }
+
+        .dynamic-content-area {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 480px) {
+            .logo-text { font-size: 3.5em; }
+            .gmax-btn { font-size: 1em; padding: 10px; }
         }
     </style>
 </head>
 <body>
 
-<div class="container" id="main-container">
-    <div class="brand-header">
-        <div class="brand-logo">GMax Architector</div>
-        <div class="status-online">● متصل الآن</div>
-    </div>
-    <hr class="header-line">
-
-    <div class="academic-info">
-        <span>المرحلة: ثانوي</span>
-        <span>السنة: 3 ثانوي (بكالوريا)</span>
-        <div id="branches-radio-group" style="display: inline-flex; gap: 10px;">
-            </div>
-    </div>
-
-    <div id="loading-overlay">جاري تحميل البيانات والربط الهيكلي للمحطات...</div>
-
-    <div id="navigation-panels" style="display: none;">
-        <div id="modules-section" class="section"><div id="modules-list" class="section"></div></div>
-        <div id="axes-section" class="section"><div id="axes-list" class="section"></div></div>
-        <div id="milestones-section" class="section" style="display:none;"><div id="milestones-list" class="section"></div></div>
-    </div>
-
-    <div id="focus-header">
-        <span id="focus-axe-name" style="font-weight: bold;"></span>
-        <button class="btn-back" onclick="exitFocusMode()">⬅ عودة</button>
-    </div>
-
-    <div id="exercises-section" class="section" style="display:none;">
-        <h4 style="width:100%; text-align:center; margin:5px 0; color: #7f8c8d;">التمارين المتوفرة للمحطة المحددة</h4>
-        <div id="exercises-list" class="section"></div>
-    </div>
-
-    <div id="viewer" class="display-area" style="display:none;">
-        <div class="nav-controls-wrapper">
-            <div class="section" style="border:none;" id="viewer-controls">
-                <button onclick="showImage('exercise')" id="btn-show-ex">📄 التمرين</button>
-                <button onclick="showImage('correction')" id="btn-show-corr">💡 التصحيح</button>
-            </div>
-        </div>
-
-        <div id="image-container">
-            <img id="main-image" src="" alt="جاري التحميل...">
-        </div>
-
-        <div class="control-panel">
-            <button class="btn-red" onclick="updateStatus(3)">❌ 1مراجعة</button>
-            <button class="btn-green" onclick="updateStatus(1)">✅ جيد</button>
-            <button class="btn-gray" onclick="updateStatus(0)">⚪ إلغاء</button>
-        </div>
-        <div id="exercise-id-display">ID: <span id="id-text"></span></div>
-    </div>
-</div>
-
-<script>
-const PATH_NAV_MAP = "./json01_navigation_map.json";
-const PATH_DICTIONARY = "./json00_IDs_dictionary.json";
-const CLOUDINARY_BASE_URL = "https://raw.githubusercontent.com/techniquepuits/bac/main/assets/61_ex_webp/";
-
-let navigationData = {};
-let dictionaryData = {};
-let localStatuses = JSON.parse(localStorage.getItem('gmax_exercises_status')) || {};
-
-let currentExerciseId = null;
-let currentCorrectionId = null;
-let currentAxeLabel = "";
-
-window.addEventListener('DOMContentLoaded', () => {
-    Promise.all([
-        fetch(PATH_NAV_MAP).then(res => res.json()),
-        fetch(PATH_DICTIONARY).then(res => res.json())
-    ])
-    .then(([navJson, dictJson]) => {
-        navigationData = navJson;
-        dictionaryData = dictJson;
+    <div class="main-wrapper">
         
-        document.getElementById('loading-overlay').style.display = 'none';
-        document.getElementById('navigation-panels').style.display = 'block';
-        
-        buildBranchesRadio();
-    })
-    .catch(err => {
-        console.error("خطأ أثناء جلب الملفات المرجعية:", err);
-        document.getElementById('loading-overlay').textContent = "❌ خطأ: فشل استحضار القاموس أو الخريطة من المستودع.";
-    });
-});
-
-function getLabelFromDictionary(id) {
-    if (dictionaryData[id] && dictionaryData[id].label) {
-        return dictionaryData[id].label;
-    }
-    return id; 
-}
-
-function requestFullScreen() {
-    const docElm = document.documentElement;
-    if (docElm.requestFullscreen) docElm.requestFullscreen();
-    else if (docElm.mozRequestFullScreen) docElm.mozRequestFullScreen();
-    else if (docElm.webkitRequestFullScreen) docElm.webkitRequestFullScreen();
-    else if (docElm.msRequestFullscreen) docElm.msRequestFullscreen();
-    document.body.classList.add('fullscreen-mode');
-}
-
-function exitFullScreen() {
-    if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement) {
-        if (document.exitFullscreen) document.exitFullscreen();
-        else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
-        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
-    }
-    document.body.classList.remove('fullscreen-mode');
-}
-
-function clearActive(containerId) {
-    const buttons = document.querySelectorAll(`#${containerId} button`);
-    buttons.forEach(b => b.classList.remove('active-selection'));
-}
-
-// بناء خيارات الراديو للشعب وحفظ التفضيل
-function buildBranchesRadio() {
-    const radioGroup = document.getElementById('branches-radio-group');
-    radioGroup.innerHTML = "";
-    
-    const branchesIds = Object.keys(navigationData).sort();
-    if (branchesIds.length === 0) return;
-
-    // استرجاع الشعبة المحفوظة سابقاً، أو اختيار الأولى تلقائياً
-    let savedBranch = localStorage.getItem('gmax_selected_branch');
-    if (!savedBranch || !branchesIds.includes(savedBranch)) {
-        savedBranch = branchesIds[0];
-        localStorage.setItem('gmax_selected_branch', savedBranch);
-    }
-
-    branchesIds.forEach(branchId => {
-        const label = document.createElement('label');
-        const radio = document.createElement('input');
-        radio.type = "radio";
-        radio.name = "branch_selection";
-        radio.value = branchId;
-        if (branchId === savedBranch) {
-            radio.checked = true;
-        }
-
-        radio.onchange = (e) => {
-            localStorage.setItem('gmax_selected_branch', e.target.value);
-            // تطهير كامل عند تغيير الشعبة من الراديو
-            clearAllBelowModules();
-            renderModules(e.target.value);
-        };
-
-        label.appendChild(radio);
-        label.appendChild(document.createTextNode(" " + getLabelFromDictionary(branchId)));
-        radioGroup.appendChild(label);
-    });
-
-    // تشغيل تحميل المواد للشعبة المختارة أول مرة تلقائياً
-    renderModules(savedBranch);
-}
-
-// دالة لتطهير شامل لكل العناصر بالأسفل عند الضغط على مادة أو تغيير شعبة
-function clearAllBelowModules() {
-    document.getElementById('modules-list').innerHTML = ""; 
-    document.getElementById('axes-list').innerHTML = "";
-    document.getElementById('milestones-section').style.display = "none";
-    document.getElementById('milestones-list').innerHTML = "";
-    document.getElementById('exercises-section').style.display = "none";
-    document.getElementById('viewer').style.display = "none";
-}
-
-function renderModules(branchId) {
-    const modulesList = document.getElementById('modules-list');
-    modulesList.innerHTML = ""; 
-    document.getElementById('axes-list').innerHTML = "";
-    document.getElementById('milestones-section').style.display = "none";
-    document.getElementById('milestones-list').innerHTML = "";
-    document.getElementById('exercises-section').style.display = "none";
-    document.getElementById('viewer').style.display = "none";
-    
-    const branchObj = navigationData[branchId];
-    if (!branchObj || !branchObj.modules) return;
-    
-    branchObj.modules.forEach(mod => {
-        const btn = document.createElement('button');
-        btn.textContent = getLabelFromDictionary(mod.module_id); 
-        btn.className = "btn-mod";
-        btn.onclick = (e) => { 
-            clearActive('modules-list'); 
-            e.target.classList.add('active-selection'); 
-            renderAxes(mod.axes); 
-        };
-        modulesList.appendChild(btn);
-    });
-}
-
-function renderAxes(axesArray) {
-    const axesList = document.getElementById('axes-list');
-    axesList.innerHTML = ""; 
-    document.getElementById('milestones-section').style.display = "none";
-    document.getElementById('milestones-list').innerHTML = "";
-    document.getElementById('exercises-section').style.display = "none";
-    document.getElementById('viewer').style.display = "none";
-    
-    if (!axesArray) return;
-    
-    axesArray.forEach(axe => {
-        const btn = document.createElement('button');
-        btn.textContent = getLabelFromDictionary(axe.axe_id); 
-        btn.className = "btn-axes";
-        btn.onclick = (e) => { 
-            clearActive('axes-list'); 
-            e.target.classList.add('active-selection'); 
-            currentAxeLabel = getLabelFromDictionary(axe.axe_id); 
-            renderMilestones(axe.milestones); 
-        };
-        axesList.appendChild(btn);
-    });
-}
-
-function renderMilestones(milestonesArray) {
-    const milestonesList = document.getElementById('milestones-list');
-    const container = document.getElementById('milestones-section');
-    milestonesList.innerHTML = "";
-    document.getElementById('exercises-section').style.display = "none";
-    document.getElementById('viewer').style.display = "none";
-
-    if (!milestonesArray || milestonesArray.length === 0) {
-        container.style.display = "none";
-        return;
-    }
-
-    milestonesArray.forEach(milestone => {
-        const btn = document.createElement('button');
-        btn.textContent = getLabelFromDictionary(milestone.milestones_id);
-        btn.className = "btn-milestone";
-        btn.onclick = (e) => {
-            clearActive('milestones-list');
-            e.target.classList.add('active-selection');
-            renderExercises(milestone.exercises);
-        };
-        milestonesList.appendChild(btn);
-    });
-    container.style.display = "flex";
-}
-
-function renderExercises(exercisesMap) {
-    const exercisesList = document.getElementById('exercises-list');
-    const container = document.getElementById('exercises-section');
-    exercisesList.innerHTML = "";
-    document.getElementById('viewer').style.display = "none";
-    
-    if (!exercisesMap) {
-        exercisesList.innerHTML = "<p style='color: #7f8c8d; width: 100%; text-align: center;'>لا توجد تمارين متوفرة حالياً</p>";
-        container.style.display = "flex";
-        return;
-    }
-
-    const excIds = Object.keys(exercisesMap);
-    
-    if (excIds.length === 0) {
-        exercisesList.innerHTML = "<p style='color: #7f8c8d; width: 100%; text-align: center;'>لا توجد تمارين متوفرة حالياً</p>";
-    } else {
-        excIds.sort().forEach(id => {
-            const exercise = exercisesMap[id];
-            const btn = document.createElement('button');
+        <div class="master-logo">
+            <h1 class="logo-text">
+                <span>G</span><span class="max-text">MAX</span>
+            </h1>            
+            <div class="hub-area">
+                <div class="hub-line"></div>
+                <span class="hub-tag">BAC</span>
+            </div>            
             
-            btn.textContent = exercise.exc_label || id; 
-            btn.id = "btn-ex-" + id;
+            <div class="academic-info">المرحلة الثانوية • بكالوريا 2027 • شعب علمية</div>
+        </div>
+
+        <div class="menu-container" id="mainMenuContainer">
             
-            const status = localStatuses[id] || 0;
-            btn.className = "status-" + status;
-            
-            btn.onclick = () => enterFocusMode(id, exercise);
-            exercisesList.appendChild(btn);
-        });
-    }
-    container.style.display = "flex";
-}
+            <a href="exercises.html" class="gmax-btn">
+    <span>🏋️ التمارين</span>
+</a>
 
-function enterFocusMode(id, item) {
-    if (window.innerWidth < 600) requestFullScreen();
-    document.getElementById('navigation-panels').style.display = 'none';
-    document.getElementById('focus-header').style.display = 'flex';
-    document.getElementById('focus-axe-name').textContent = currentAxeLabel;
-    clearActive('exercises-list');
-    
-    const targetBtn = document.getElementById("btn-ex-" + id);
-    if (targetBtn) targetBtn.classList.add('active-selection');
-    
-    currentExerciseId = id; 
-    currentCorrectionId = item.exc_cor_id;
-    
-    document.getElementById('viewer').style.display = "block";
-    document.getElementById('id-text').textContent = id;
-    
-    showImage('exercise');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+            <div class="section-divider"></div>
 
-function exitFocusMode() {
-    exitFullScreen();
-    document.getElementById('navigation-panels').style.display = 'block';
-    document.getElementById('focus-header').style.display = 'none';
-    document.getElementById('viewer').style.display = "none";
-}
+            <a href="anki_view.html" class="gmax-btn tool-btn">
+                <span>🧠 التكرار المتباعد</span>
+            </a>
 
-function showImage(type) {
-    const imgElement = document.getElementById('main-image');
-    const ts = new Date().getTime();
-    
-    let imageId = (type === 'exercise') ? currentExerciseId : currentCorrectionId;
-    
-    if (imageId) {
-        imageId = imageId.replace('.webp', '').trim();
-        imgElement.src = CLOUDINARY_BASE_URL + imageId + ".webp?t=" + ts;
-    }
+            <a href="progress_view.html" class="gmax-btn tool-btn">
+                <span>📊 تقدماتي</span>
+            </a>
 
-    clearActive('viewer-controls');
-    const activeBtnId = (type === 'exercise') ? 'btn-show-ex' : 'btn-show-corr';
-    document.getElementById(activeBtnId).classList.add('active-selection');
-}
+        </div>
 
-function updateStatus(newStatus) {
-    if (!currentExerciseId) return;
+        <div class="dynamic-content-area" id="dynamicContent"></div>
+
+    </div>
+
     
-    localStatuses[currentExerciseId] = newStatus;
-    localStorage.setItem('gmax_exercises_status', JSON.stringify(localStatuses));
-    
-    const btn = document.getElementById("btn-ex-" + currentExerciseId);
-    if (btn) {
-        btn.className = "status-" + newStatus + " active-selection";
-    }
-}
-</script>
 </body>
 </html>
