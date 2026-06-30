@@ -1,0 +1,67 @@
+{
+  "SC": {
+    "branch_id": "SC",
+    "modules": [
+      {
+        "module_id": "SC_ma",
+        "axes": [
+          {
+            "axe_id": "SC_ma_01_funct",
+            "milestones": [
+              {
+                "milestones_id": "SC_ma_01_funct_01_limits",
+                "exercises": {
+                  "SC_ma_25_A_01": {
+                    "exc_label": "ex_25_01",
+                    "exc_info": "",
+                    "exc_cor_id": "SC_ma_25_As_01"
+                  },
+                  "SC_ma_25_A_02": {
+                    "exc_label": "ex_25_02",
+                    "exc_info": "",
+                    "exc_cor_id": "SC_ma_25_As_02"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "axe_id": "SC_ma_02_arith",
+            "milestones": [
+              {
+                "milestones_id": "SC_ma_02_arith_01_divis",
+                "exercises": {
+                  "SC_ma_25_A_03": {
+                    "exc_label": "ex_25_03",
+                    "exc_info": "",
+                    "exc_cor_id": "SC_ma_25_As_03"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "module_id": "SC_ph",
+        "axes": [
+          {
+            "axe_id": "SC_ph_01_kinet",
+            "milestones": [
+              {
+                "milestones_id": "SC_ph_01_kinet_01_condu",
+                "exercises": {
+                  "SC_ma_25_A_04": {
+                    "exc_label": "ex_25_04",
+                    "exc_info": "",
+                    "exc_cor_id": "SC_ma_25_As_04"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
