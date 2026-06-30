@@ -62,5 +62,13 @@
   "MT": {
     "ID": "MT",
     "label": "تقني"
+  },
+  "MA_ma_01_funct_01_limits": {
+    "ID": "MA_ma_01_funct_01_limits",
+    "label": "aaaa"
+  },
+  "MT_ma_01_funct_01_limits": {
+    "ID": "MT_ma_01_funct_01_limits",
+    "label": "zzzzz"
   }
 }
