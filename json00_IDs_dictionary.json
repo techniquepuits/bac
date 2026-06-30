@@ -46,5 +46,21 @@
   "level_3": {
     "ID": "level_3",
     "label": "level_3"
+  },
+  "MA": {
+    "ID": "MA",
+    "label": "رياضيات"
+  },
+  "MA_ma": {
+    "ID": "MA_ma",
+    "label": "الرياضيات"
+  },
+  "MT_ph": {
+    "ID": "MT_ph",
+    "label": "الفيزياء"
+  },
+  "MT": {
+    "ID": "MT",
+    "label": "تقني"
   }
 }
