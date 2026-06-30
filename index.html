@@ -103,7 +103,7 @@
 // تحديد مسارات جلب ملفات الـ JSON المتواجدة معك بنفس المجلد على المستودع
 const PATH_NAV_MAP = "./json01_navigation_map.json";
 const PATH_DICTIONARY = "./json00_IDs_dictionary.json";
-const CLOUDINARY_BASE_URL = "https://res.cloudinary.com/dxuvloexk/image/upload/gmax/";
+const CLOUDINARY_BASE_URL = "https://github.com/techniquepuits/bac/blob/main/assets/61_ex_webp/";
 
 let navigationData = {};
 let dictionaryData = {};
@@ -140,7 +140,7 @@ function getLabelFromDictionary(id) {
     if (dictionaryData[id] && dictionaryData[id].label) {
         return dictionaryData[id].label;
     }
-    return id; // في حال عدم وجود تطابق، يظهر الـ ID كخيار احتياطي لضمان عمل الزر
+    return id; 
 }
 
 function requestFullScreen() {
@@ -175,7 +175,6 @@ function renderBranches() {
     
     branchesIds.sort().forEach(branchId => {
         const btn = document.createElement('button');
-        // جلب التسمية العربية للفرع من ملف القاموس عبر معرفه
         btn.textContent = getLabelFromDictionary(branchId); 
         btn.className = "btn-branch";
         btn.onclick = (e) => { 
@@ -189,8 +188,9 @@ function renderBranches() {
 
 // 2. بناء أزرار المواد (Modules)
 function renderModules(branchId) {
+    const list = document.getElementById('modules-list');
     // تصفية وتصفير كامل للمستويات الأدنى فور اختيار فرع جديد
-    document.getElementById('modules-list').innerHTML = ""; 
+    list.innerHTML = ""; 
     document.getElementById('axes-list').innerHTML = "";
     document.getElementById('exercises-section').style.display = "none";
     document.getElementById('viewer').style.display = "none";
@@ -200,7 +200,6 @@ function renderModules(branchId) {
     
     branchObj.modules.forEach(mod => {
         const btn = document.createElement('button');
-        // جلب التسمية العربية للمادة (مثل: الرياضيات) بالذهاب والبحث داخل القاموس الموحد
         btn.textContent = getLabelFromDictionary(mod.module_id); 
         btn.className = "btn-mod";
         btn.onclick = (e) => { 
@@ -214,8 +213,9 @@ function renderModules(branchId) {
 
 // 3. بناء أزرار المحاور الأساسية (Axes)
 function renderAxes(axesArray) {
+    const list = document.getElementById('axes-list');
     // تصفير وتنظيف كامل لما هو أسفل المحاور بمجرد النقر والتبديل بين المواد
-    document.getElementById('axes-list').innerHTML = ""; 
+    list.innerHTML = ""; 
     document.getElementById('exercises-section').style.display = "none";
     document.getElementById('viewer').style.display = "none";
     
@@ -223,7 +223,6 @@ function renderAxes(axesArray) {
     
     axesArray.forEach(axe => {
         const btn = document.createElement('button');
-        // مطابقة وتسمية زر المحور (مثل: الدوال العددية) من ملف الـ dictionary بالـ ID الخاص به
         btn.textContent = getLabelFromDictionary(axe.axe_id); 
         btn.className = "btn-axes";
         btn.onclick = (e) => { 
@@ -238,94 +237,4 @@ function renderAxes(axesArray) {
 
 // 4. استخراج وعرض التمارين المتواجدة داخل المحطات (Milestones) للمحور المختار
 function renderExercises(axeObj) {
-    const list = document.getElementById('exercises-list');
-    const container = document.getElementById('exercises-section');
-    list.innerHTML = "";
-    
-    let exercisesMap = {};
-    if (axeObj.milestones) {
-        axeObj.milestones.forEach(milestone => {
-            if (milestone.exercises) {
-                Object.assign(exercisesMap, milestone.exercises);
-            }
-        });
-    }
-    
-    const excIds = Object.keys(exercisesMap);
-    
-    if (excIds.length === 0) {
-        list.innerHTML = "<p style='color: #7f8c8d; width: 100%; text-align: center;'>لا توجد تمارين متوفرة حالياً</p>";
-    } else {
-        excIds.sort().forEach(id => {
-            const exercise = exercisesMap[id];
-            const btn = document.createElement('button');
-            
-            // يعرض النص المكتوب داخل حقل exc_label في شيت التمارين المحدث
-            btn.textContent = exercise.exc_label || id; 
-            btn.id = "btn-ex-" + id;
-            
-            // استحضار حالة المراجعة الحالية من الذاكرة المحلية للجهاز
-            const status = localStatuses[id] || 0;
-            btn.className = "status-" + status;
-            
-            btn.onclick = () => enterFocusMode(id, exercise);
-            list.appendChild(btn);
-        });
-    }
-    container.style.display = "flex";
-}
-
-function enterFocusMode(id, item) {
-    if (window.innerWidth < 600) requestFullScreen();
-    document.getElementById('navigation-panels').style.display = 'none';
-    document.getElementById('focus-header').style.display = 'flex';
-    document.getElementById('focus-axe-name').textContent = currentAxeLabel;
-    clearActive('exercises-list');
-    
-    const targetBtn = document.getElementById("btn-ex-" + id);
-    if (targetBtn) targetBtn.classList.add('active-selection');
-    
-    currentExerciseId = id; 
-    currentCorrectionId = item.exc_cor_id;
-    
-    document.getElementById('viewer').style.display = "block";
-    document.getElementById('id-text').textContent = id;
-    
-    showImage('exercise');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function exitFocusMode() {
-    exitFullScreen();
-    document.getElementById('navigation-panels').style.add = 'block';
-    document.getElementById('navigation-panels').style.display = 'block';
-    document.getElementById('focus-header').style.display = 'none';
-    document.getElementById('viewer').style.display = "none";
-}
-
-function showImage(type) {
-    const imgElement = document.getElementById('main-image');
-    const ts = new Date().getTime();
-    
-    const imageId = (type === 'exercise') ? currentExerciseId : currentCorrectionId;
-    imgElement.src = CLOUDINARY_BASE_URL + imageId + ".webp?t=" + ts;
-
-    clearActive('viewer-controls');
-    const activeBtnId = (type === 'exercise') ? 'btn-show-ex' : 'btn-show-corr';
-    document.getElementById(activeBtnId).classList.add('active-selection');
-}
-
-function updateStatus(newStatus) {
-    if (!currentExerciseId) return;
-    
-    localStatuses[currentExerciseId] = newStatus;
-    localStorage.setItem('gmax_exercises_status', JSON.stringify(localStatuses));
-    
-    const btn = document.getElementById("btn-ex-" + currentExerciseId);
-    if (btn) {
-        btn.className = "status-" + newStatus + " active-selection";
-    }
-}
-</script>
-</body>
-</html>
+    const list = document.getElementById('exercises-list
