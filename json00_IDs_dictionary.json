@@ -1,0 +1,50 @@
+{
+  "SC": {
+    "ID": "SC",
+    "label": "علوم تجريبية"
+  },
+  "SC_ma": {
+    "ID": "SC_ma",
+    "label": "الرياضيات"
+  },
+  "SC_ph": {
+    "ID": "SC_ph",
+    "label": "الفيزياء"
+  },
+  "SC_ma_01_funct": {
+    "ID": "SC_ma_01_funct",
+    "label": "الدوال العددية"
+  },
+  "SC_ma_02_arith": {
+    "ID": "SC_ma_02_arith",
+    "label": "الحساب"
+  },
+  "SC_ph_01_kinet": {
+    "ID": "SC_ph_01_kinet",
+    "label": "المتابعة الزمنية"
+  },
+  "SC_ma_01_funct_01_limits": {
+    "ID": "SC_ma_01_funct_01_limits",
+    "label": "النهايات والاستمرارية"
+  },
+  "SC_ma_02_arith_01_divis": {
+    "ID": "SC_ma_02_arith_01_divis",
+    "label": "القواسم والمضاعفات"
+  },
+  "SC_ph_01_kinet_01_condu": {
+    "ID": "SC_ph_01_kinet_01_condu",
+    "label": "المتابعة بالناقلية"
+  },
+  "level_1": {
+    "ID": "level_1",
+    "label": "level_1"
+  },
+  "level_2": {
+    "ID": "level_2",
+    "label": "level_2"
+  },
+  "level_3": {
+    "ID": "level_3",
+    "label": "level_3"
+  }
+}
