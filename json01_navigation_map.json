@@ -1,4 +1,54 @@
 {
+  "MA": {
+    "branch_id": "MA",
+    "modules": [
+      {
+        "module_id": "MA_ma",
+        "axes": [
+          {
+            "axe_id": "SC_ma_01_funct",
+            "milestones": [
+              {
+                "milestones_id": "SC_ma_01_funct_01_limits",
+                "exercises": {
+                  "SC_ma_25_A_01": {
+                    "exc_label": "ex_25_01",
+                    "exc_info": "",
+                    "exc_cor_id": "SC_ma_25_As_01"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "MT": {
+    "branch_id": "MT",
+    "modules": [
+      {
+        "module_id": "MT_ph",
+        "axes": [
+          {
+            "axe_id": "SC_ma_01_funct",
+            "milestones": [
+              {
+                "milestones_id": "SC_ma_01_funct_01_limits",
+                "exercises": {
+                  "SC_ma_25_A_01": {
+                    "exc_label": "ex_25_01",
+                    "exc_info": "",
+                    "exc_cor_id": "SC_ma_25_As_01"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "SC": {
     "branch_id": "SC",
     "modules": [
