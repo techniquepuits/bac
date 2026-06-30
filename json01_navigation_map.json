@@ -1,0 +1,48 @@
+{
+  "SC": {
+    "branch_id": "SC",
+    "modules": [
+      {
+        "module_id": "SC_ma",
+        "axes": [
+          {
+            "axe_id": "SC_ma_01_funct",
+            "exercises": [
+              {
+                "exercise_id": "ex_02",
+                "exercise_label": "2026"
+              },
+              {
+                "exercise_id": "SC_ma_25_H_04",
+                "exercise_label": "2026"
+              }
+            ]
+          },
+          {
+            "axe_id": "SC_ma_02_arith",
+            "exercises": [
+              {
+                "exercise_id": "ex_01",
+                "exercise_label": "2026"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "module_id": "SC_ph",
+        "axes": [
+          {
+            "axe_id": "SC_ph_01_kinet",
+            "exercises": [
+              {
+                "exercise_id": "ex_01",
+                "exercise_label": "2026"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
