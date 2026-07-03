@@ -95,14 +95,12 @@
 
 <div class="container" id="main-container">
     
-    <!-- الهيدر العلوي المتكامل المتمركز في الوسط -->
     <div class="brand-header">
         <div class="status-container">
             <span class="status-online">متصل الآن</span>
             <span style="color: #2ecc71; font-size: 11px;">●</span>
         </div>
         <span class="header-separator">|</span>
-        <!-- هنا يكتب اسم الشعبة الممررة من فيسبوك تلقائياً -->
         <div class="current-branch-display" id="branch-text-display">الشعبة : جاري القراءة...</div>
     </div>
     
@@ -111,7 +109,6 @@
     <div id="loading-overlay">جاري استحضار البيانات الذكية محلياً...</div>
 
     <div id="navigation-panels" style="display: none;">
-        <!-- هنا تظهر أزرار المواد الخاصة بالشعبة المحددة مباشرة -->
         <div id="modules-section" class="section"><div id="modules-list" class="section"></div></div>
         <div id="axes-section" class="section"><div id="axes-list" class="section"></div></div>
         <div id="milestones-section" class="section" style="display:none;"><div id="milestones-list" class="section"></div></div>
@@ -162,7 +159,6 @@ let currentCorrectionId = null;
 let currentAxeLabel = "";
 
 window.addEventListener('DOMContentLoaded', () => {
-    // التحقق الفوري من الكاش المحلي المخزن بواسطة صفحة الفايربيز
     const cachedNav = localStorage.getItem('gmax_cache_nav_map');
     const cachedDict = localStorage.getItem('gmax_cache_dictionary');
 
@@ -171,7 +167,6 @@ window.addEventListener('DOMContentLoaded', () => {
         dictionaryData = JSON.parse(cachedDict);
         initializePage();
     } else {
-        // حالة احتياطية إذا دخل الطالب عبر رابط مباشر دون المرور بالصفحة الرئيسية لفايربيز
         Promise.all([
             fetch(PATH_NAV_MAP).then(res => res.json()),
             fetch(PATH_DICTIONARY).then(res => res.json())
@@ -224,22 +219,21 @@ function clearActive(containerId) {
     buttons.forEach(b => b.classList.remove('active-selection'));
 }
 
-// قراءة وتحديد الشعبة المختارة من صفحة الفايربيز مباشرة وتحديث الهيدر
+// الدالة المحدثة والمعدلة لإجبار الصفحة على قراءة اختيار الفايربيز الفعلي فوراً
 function detectAndLoadUserBranch() {
     const textDisplay = document.getElementById('branch-text-display');
-    let activeBranch = localStorage.getItem('gmax_user_branch'); // قراءة الخيار المخزن من فايربيز
+    let activeBranch = localStorage.getItem('gmax_user_branch'); 
     const branchesIds = Object.keys(navigationData).sort();
     
-    // إذا لم يجد أي شعبة مخزنة، يأخذ أول شعبة متوفرة كخيار احتياطي
+    // إجبار النظام على التحقق ومطابقة الـ ID مع الملف الحالي لمنع التثبيت التلقائي على شعبة قديمة
     if (!activeBranch || !branchesIds.includes(activeBranch)) {
         activeBranch = branchesIds[0] || "science";
+        localStorage.setItem('gmax_user_branch', activeBranch);
     }
 
-    // كتابة اسم الشعبة في الهيدر بجانب متصل الآن
     const branchName = getLabelFromDictionary(activeBranch);
     textDisplay.textContent = "الشعبة: " + branchName;
 
-    // عرض المواد الخاصة بالشعبة المحددة فوراً
     renderModules(activeBranch);
 }
 
