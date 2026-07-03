@@ -157,41 +157,75 @@ let localStatuses = JSON.parse(localStorage.getItem('gmax_exercises_status')) ||
 let currentExerciseId = null;
 let currentCorrectionId = null;
 let currentAxeLabel = "";
+let activeBranch = ""; // تحديد معرّف الشعبة النشطة بشكل عام
 
 window.addEventListener('DOMContentLoaded', () => {
+    // خطوة 1: استخراج الشعبة من الرابط أولاً وقبل أي شيء لمنع التداخل
+    const urlParams = new URLSearchParams(window.location.search);
+    activeBranch = urlParams.get('branch');
+    
+    // إذا لم تكن في الرابط نأخذها من الستوريج المحلي لجيتهاب
+    if (!activeBranch) {
+        activeBranch = localStorage.getItem('gmax_user_branch');
+    }
+
     const cachedNav = localStorage.getItem('gmax_cache_nav_map');
     const cachedDict = localStorage.getItem('gmax_cache_dictionary');
 
+    // خطوة 2: التحقق من وجود الكاش وسلامته
     if (cachedNav && cachedDict) {
         navigationData = JSON.parse(cachedNav);
         dictionaryData = JSON.parse(cachedDict);
-        initializePage();
-    } else {
-        Promise.all([
-            fetch(PATH_NAV_MAP).then(res => res.json()),
-            fetch(PATH_DICTIONARY).then(res => res.json())
-        ])
-        .then(([navJson, dictJson]) => {
-            navigationData = navJson;
-            dictionaryData = dictJson;
-            
-            // حفظ الكاش على مستوى دومين جيتهاب أيضاً لتسريع التصفح اللاحق
-            localStorage.setItem('gmax_cache_nav_map', JSON.stringify(navJson));
-            localStorage.setItem('gmax_cache_dictionary', JSON.stringify(dictJson));
-            
+        
+        // التحقق من أن الشعبة المستخرجة موجودة فعلياً داخل ملف البيانات لمنع الأخطاء
+        if (activeBranch && Object.keys(navigationData).includes(activeBranch)) {
             initializePage();
-        })
-        .catch(err => {
-            console.error("خطأ جلب البيانات المرجعية:", err);
-            document.getElementById('loading-overlay').textContent = "❌ خطأ: فشل استحضار ملف البيانات.";
-        });
+            return; // إنهاء دالة التحميل بنجاح من الكاش
+        }
     }
+
+    // خطوة 3: إذا لم يتوفر الكاش أو كانت الشعبة جديدة تماماً، نقوم بجلب البيانات من السيرفر فوراً
+    Promise.all([
+        fetch(PATH_NAV_MAP).then(res => res.json()),
+        fetch(PATH_DICTIONARY).then(res => res.json())
+    ])
+    .then(([navJson, dictJson]) => {
+        navigationData = navJson;
+        dictionaryData = dictJson;
+        
+        // تحديث الكاش المحلي لجيتهاب
+        localStorage.setItem('gmax_cache_nav_map', JSON.stringify(navJson));
+        localStorage.setItem('gmax_cache_dictionary', JSON.stringify(dictJson));
+        
+        initializePage();
+    })
+    .catch(err => {
+        console.error("خطأ جلب البيانات المرجعية:", err);
+        document.getElementById('loading-overlay').textContent = "❌ خطأ: فشل استحضار ملف البيانات.";
+    });
 });
 
 function initializePage() {
     document.getElementById('loading-overlay').style.display = 'none';
     document.getElementById('navigation-panels').style.display = 'block';
-    detectAndLoadUserBranch();
+    
+    const branchesIds = Object.keys(navigationData).sort();
+    
+    // حماية إضافية: التأكد من ضبط قيمة الشعبة بشكل صحيح
+    if (!activeBranch || !branchesIds.includes(activeBranch)) {
+        activeBranch = branchesIds[0] || "science";
+    }
+
+    // حفظ الشعبة الصحيحة والنهائية في الستوريج للنطاق الحالي
+    localStorage.setItem('gmax_user_branch', activeBranch);
+
+    // طباعة الاسم المقروء من الدكشنري
+    const textDisplay = document.getElementById('branch-text-display');
+    const branchName = getLabelFromDictionary(activeBranch);
+    textDisplay.textContent = "الشعبة: " + branchName;
+
+    // بناء القوائم بناءً على الـ ID المصحح والمؤكد
+    renderModules(activeBranch);
 }
 
 function getLabelFromDictionary(id) {
@@ -222,34 +256,6 @@ function exitFullScreen() {
 function clearActive(containerId) {
     const buttons = document.querySelectorAll(`#${containerId} button`);
     buttons.forEach(b => b.classList.remove('active-selection'));
-}
-
-// قراءة الشعبة الممررة بالرابط فوراً لتفادي مشكلة اختلاف النطاقات (Domains)
-function detectAndLoadUserBranch() {
-    const textDisplay = document.getElementById('branch-text-display');
-    const branchesIds = Object.keys(navigationData).sort();
-    
-    // 1. محاولة قراءة الشعبة من الرابط (URL Query Parameter) أولاً وهي الأضمن والأحدث
-    const urlParams = new URLSearchParams(window.location.search);
-    let activeBranch = urlParams.get('branch');
-    
-    // 2. إذا لم تكن متوفرة في الرابط، يقرأ من لوكال ستوريج الدومين الحالي كخيار احتياطي
-    if (!activeBranch) {
-        activeBranch = localStorage.getItem('gmax_user_branch');
-    }
-
-    // 3. حماية أمنية وتأكيد في حال عدم وجود خيار
-    if (!activeBranch || !branchesIds.includes(activeBranch)) {
-        activeBranch = branchesIds[0] || "science";
-    }
-
-    // حفظها في اللوكال ستوريج لجيتهاب لتثبيتها في النطاق الحالي
-    localStorage.setItem('gmax_user_branch', activeBranch);
-
-    const branchName = getLabelFromDictionary(activeBranch);
-    textDisplay.textContent = "الشعبة: " + branchName;
-
-    renderModules(activeBranch);
 }
 
 function renderModules(branchId) {
