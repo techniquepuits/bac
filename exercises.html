@@ -106,7 +106,7 @@
     
     <hr class="header-line">
 
-    <div id="loading-overlay">جاري استحضار البيانات الذكية محلياً...</div>
+    <div id="loading-overlay">جاري استحضار البيانات الذكية...</div>
 
     <div id="navigation-panels" style="display: none;">
         <div id="modules-section" class="section"><div id="modules-list" class="section"></div></div>
@@ -174,6 +174,11 @@ window.addEventListener('DOMContentLoaded', () => {
         .then(([navJson, dictJson]) => {
             navigationData = navJson;
             dictionaryData = dictJson;
+            
+            // حفظ الكاش على مستوى دومين جيتهاب أيضاً لتسريع التصفح اللاحق
+            localStorage.setItem('gmax_cache_nav_map', JSON.stringify(navJson));
+            localStorage.setItem('gmax_cache_dictionary', JSON.stringify(dictJson));
+            
             initializePage();
         })
         .catch(err => {
@@ -219,17 +224,27 @@ function clearActive(containerId) {
     buttons.forEach(b => b.classList.remove('active-selection'));
 }
 
-// الدالة المحدثة والمعدلة لإجبار الصفحة على قراءة اختيار الفايربيز الفعلي فوراً
+// قراءة الشعبة الممررة بالرابط فوراً لتفادي مشكلة اختلاف النطاقات (Domains)
 function detectAndLoadUserBranch() {
     const textDisplay = document.getElementById('branch-text-display');
-    let activeBranch = localStorage.getItem('gmax_user_branch'); 
     const branchesIds = Object.keys(navigationData).sort();
     
-    // إجبار النظام على التحقق ومطابقة الـ ID مع الملف الحالي لمنع التثبيت التلقائي على شعبة قديمة
+    // 1. محاولة قراءة الشعبة من الرابط (URL Query Parameter) أولاً وهي الأضمن والأحدث
+    const urlParams = new URLSearchParams(window.location.search);
+    let activeBranch = urlParams.get('branch');
+    
+    // 2. إذا لم تكن متوفرة في الرابط، يقرأ من لوكال ستوريج الدومين الحالي كخيار احتياطي
+    if (!activeBranch) {
+        activeBranch = localStorage.getItem('gmax_user_branch');
+    }
+
+    // 3. حماية أمنية وتأكيد في حال عدم وجود خيار
     if (!activeBranch || !branchesIds.includes(activeBranch)) {
         activeBranch = branchesIds[0] || "science";
-        localStorage.setItem('gmax_user_branch', activeBranch);
     }
+
+    // حفظها في اللوكال ستوريج لجيتهاب لتثبيتها في النطاق الحالي
+    localStorage.setItem('gmax_user_branch', activeBranch);
 
     const branchName = getLabelFromDictionary(activeBranch);
     textDisplay.textContent = "الشعبة: " + branchName;
