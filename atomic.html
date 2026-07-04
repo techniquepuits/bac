@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMax Architector - بنك التمارين الذرية</title>
+    
+    <!-- مكتبة التنسيق الجمالي البسيط والسريع -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    
+    <!-- مكتبة KaTeX لعرض المعادلات الرياضية -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    
+    <!-- مكتبة Marked لتحويل الـ Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- مكتبة PapaParse لقراءة ملف الـ CSV -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; background-color: #f8f9fa; padding: 20px; }
+        .container { max-width: 900px; }
+        .header-section { text-align: center; margin-bottom: 40px; border-bottom: 2px solid #e0e0e0; padding-bottom: 20px; }
+        .student-info { font-size: 0.9rem; color: #666; margin-top: 5px; }
+        .exercise-card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #eef2f5; }
+        .badge { background-color: #007bff; color: white; padding: 3px 10px; border-radius: 5px; font-size: 0.8rem; display: inline-block; margin-left: 10px; }
+        .badge-skill { background-color: #28a745; }
+        .badge-atomic { background-color: #17a2b8; }
+        .solution-box { background-color: #f4f6f9; border-right: 4px solid #007bff; padding: 15px; margin-top: 20px; border-radius: 0 4px 4px 0; }
+        details summary { font-weight: bold; color: #007bff; cursor: pointer; }
+        svg { max-width: 100%; height: auto; display: block; margin: 15px auto; }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <!-- الهيدر الثابت الخاص بموقعك بناءً على تفضيلاتك -->
+        <div class="header-section">
+            <h1 style="margin-bottom:0; font-weight: bold;">GMax Architector</h1>
+            <div style="color: #28a745; font-size: 0.95rem; font-weight: bold; margin-top: 5px;">● متصل الآن</div>
+            <div class="student-info">المرحلة الدراسية: بكالوريا | السنة: الثالثة ثانوية | الشعبة: علوم تجريبية</div>
+        </div>
+
+        <!-- مكان ظهور التمارين ديناميكياً -->
+        <div id="exercises-container">
+            <p style="text-align: center;">جاري تحميل التمارين الذرية ومعالجة المعادلات الرياضية... ⏳</p>
+        </div>
+    </main>
+
+    <script>
+        // اسم ملف الـ CSV الخاص بك والموجود في نفس المجلد على GitHub
+        const CSV_FILE_URL = 'atomic.csv'; 
+
+        // دالة لعرض المعادلات الرياضية فوراً بعد حقن النص
+        function renderMathAndMarkdown(elementId, textData) {
+            const target = document.getElementById(elementId);
+            // تحويل الماركداون أولاً
+            let htmlContent = marked.parse(textData);
+            target.innerHTML = htmlContent;
+            
+            // تشغيل KaTeX لترجمة المعادلات الرياضية المحصورة بين $ أو \
+            renderMathInElement(target, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '\\(', right: '\\)', display: false},
+                    {left: '\\[', right: '\\]', display: true}
+                ],
+                throwOnError: false
+            });
+        }
+
+        // قراءة ومعالجة ملف CSV تلقائياً
+        Papa.parse(CSV_FILE_URL, {
+            download: true,
+            header: true,
+            skipEmptyLines: true,
+            complete: function(results) {
+                const data = results.data;
+                const container = document.getElementById('exercises-container');
+                container.innerHTML = ''; // تنظيف نص التحميل
+
+                if(data.length === 0) {
+                    container.innerHTML = '<p style="text-align:center;">لا توجد بيانات متاحة حالياً.</p>';
+                    return;
+                }
+
+                // الدوران حول كل تمرين ذري مستخرج وعرضه في بطاقة مستقلة للرؤية
+                data.forEach((row, index) => {
+                    // إذا كان السطر يحتوي على خطأ عام في المعالجة نتخطى عرضه الجمالي
+                    if (row['Axis'] === 'خطأ في المعالجة والتفكيك') return;
+
+                    const cardId = `card-${index}`;
+                    const textId = `text-${index}`;
+                    const solId = `sol-${index}`;
+
+                    const cardHtml = `
+                        <div class="exercise-card" id="${cardId}">
+                            <div style="margin-bottom: 15px;">
+                                <span class="badge">المعرف: ${row['ID_atomic_exc'] || ''}</span>
+                                <span class="badge badge-skill">${row['Axis'] || ''}</span>
+                                <span class="badge badge-atomic">${row['Atomic Skill'] || ''}</span>
+                            </div>
+                            
+                            <div style="font-size:1.15rem; line-height:1.7;">
+                                <strong>التمرين الذري:</strong>
+                                <div id="${textId}"></div>
+                            </div>
+                            
+                            <hr>
+                            
+                            <details>
+                                <summary>👁️ عرض الحل النموذجي المفصل</summary>
+                                <div class="solution-box" id="${solId}"></div>
+                            </details>
+                        </div>
+                    `;
+                    
+                    container.insertAdjacentHTML('beforeend', cardHtml);
+
+                    // حقن النصوص وتحويل الماركداون واللاتيكس ديناميكياً
+                    renderMathAndMarkdown(textId, row['Exercise Text'] || '');
+                    renderMathAndMarkdown(solId, row['Solution'] || '');
+                });
+            },
+            error: function(err) {
+                document.getElementById('exercises-container').innerHTML = 
+                    `<p style="text-align:center; color:red;">خطأ أثناء قراءة ملف الـ CSV: ${err.message}</p>`;
+            }
+        });
+    </script>
+</body>
+</html>
