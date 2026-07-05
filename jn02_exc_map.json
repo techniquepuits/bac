@@ -1,0 +1,14 @@
+{
+  "SC_ma_fnc": {
+    "SC_ma_25_A_01": {
+      "exc_label": "2025_01",
+      "exc_info": "bac 2025 ex 01 sujet 02",
+      "exc_cor_id": "SC_ma_25_As_01"
+    },
+    "SC_ma_25_A_02": {
+      "exc_label": "2025_02",
+      "exc_info": "bac 2025 ex 01 sujet 03",
+      "exc_cor_id": "SC_ma_25_As_02"
+    }
+  }
+}
