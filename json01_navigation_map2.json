@@ -1,0 +1,525 @@
+{
+  "start": [
+    "SC",
+    "MA",
+    "MT"
+  ],
+  "SC": [
+    "SC_ma",
+    "SC_ph",
+    "SC_sc"
+  ],
+  "MA": [
+    "MA_ma",
+    "MA_ph",
+    "MA_sc"
+  ],
+  "MT": [
+    "MT_ma",
+    "MT_ph"
+  ],
+  "SC_ma": [
+    "SC_ma_fnc",
+    "SC_ma_sut",
+    "SC_ma_flg",
+    "SC_ma_fdf",
+    "SC_ma_prb",
+    "SC_ma_cmp",
+    "SC_ma_esp",
+    "SC_ma_nmb"
+  ],
+  "SC_ph": [
+    "SC_ph_knt",
+    "SC_ph_equ",
+    "SC_ph_cts",
+    "SC_ph_mcn",
+    "SC_ph_ele",
+    "SC_ph_ncl",
+    "SC_ph_osc",
+    "SC_ph_wav"
+  ],
+  "SC_sc": [
+    "SC_sc_prt",
+    "SC_sc_imm",
+    "SC_sc_nrv",
+    "SC_sc_erg",
+    "SC_sc_glg"
+  ],
+  "MA_ma": [
+    "MA_ma_fnc",
+    "MA_ma_sut",
+    "SC_ma_flg",
+    "SC_ma_fdf",
+    "MA_ma_prb",
+    "MA_ma_cmp",
+    "MA_ma_esp",
+    "MA_ma_nmb"
+  ],
+  "MA_ph": [
+    "MA_ph_knt",
+    "MA_ph_equ",
+    "MA_ph_cts",
+    "MA_ph_mcn",
+    "MA_ph_ele",
+    "MA_ph_ncl",
+    "MA_ph_osc",
+    "MA_ph_wav"
+  ],
+  "MA_sc": [
+    "MA_sc_prt",
+    "MA_sc_imm",
+    "MA_sc_nrv",
+    "MA_sc_erg",
+    "MA_sc_glg"
+  ],
+  "MT_ma": [
+    "MT_ma_fnc",
+    "MT_ma_sut",
+    "SC_ma_flg",
+    "SC_ma_fdf",
+    "MT_ma_prb",
+    "MT_ma_cmp",
+    "MT_ma_esp",
+    "MT_ma_nmb"
+  ],
+  "MT_ph": [
+    "MT_ph_knt",
+    "SC_ph_equ",
+    "MT_ph_cts",
+    "MT_ph_mcn",
+    "MT_ph_ele",
+    "MT_ph_ncl",
+    "MT_ph_osc",
+    "MT_ph_wav"
+  ],
+  "MT_sc": [
+    "MT_sc_prt",
+    "MT_sc_imm",
+    "MT_sc_nrv",
+    "MT_sc_erg",
+    "MT_sc_glg"
+  ],
+  "SC_ma_fnc": [
+    "SC_ma_fnc_lmc",
+    "SC_ma_fnc_asy",
+    "SC_ma_fnc_crv",
+    "SC_ma_fnc_dsc",
+    "SC_ma_fnc_bac"
+  ],
+  "SC_ma_sut": [
+    "SC_ma_sut_gen",
+    "SC_ma_sut_ind",
+    "SC_ma_sut_pro",
+    "SC_ma_sut_con",
+    "SC_ma_sut_bac"
+  ],
+  "SC_ma_flg": [
+    "SC_ma_flg_eql",
+    "SC_ma_flg_lml",
+    "SC_ma_flg_etl",
+    "SC_ma_flg_bac"
+  ],
+  "SC_ma_fdf": [
+    "SC_ma_fdf_prm",
+    "SC_ma_fdf_itg",
+    "SC_ma_fdf_dif",
+    "SC_ma_fdf_bac"
+  ],
+  "SC_ma_prb": [
+    "SC_ma_prb_cnt",
+    "SC_ma_prb_cnd",
+    "SC_ma_prb_rvr",
+    "SC_ma_prb_bin",
+    "SC_ma_prb_bac"
+  ],
+  "SC_ma_cmp": [
+    "SC_ma_cmp_alg",
+    "SC_ma_cmp_gmt",
+    "SC_ma_cmp_set",
+    "SC_ma_cmp_trf",
+    "SC_ma_cmp_bac"
+  ],
+  "SC_ma_esp": [
+    "SC_ma_esp_vct",
+    "SC_ma_esp_eqn",
+    "SC_ma_esp_pos",
+    "SC_ma_esp_sph",
+    "SC_ma_esp_bac"
+  ],
+  "SC_ma_nmb": [
+    "SC_ma_nmb_div",
+    "SC_ma_nmb_gcd",
+    "SC_ma_nmb_prm",
+    "SC_ma_nmb_cry",
+    "SC_ma_nmb_bac"
+  ],
+  "SC_ph_knt": [
+    "SC_ph_knt_red",
+    "SC_ph_knt_mth",
+    "SC_ph_knt_spd",
+    "SC_ph_knt_fct",
+    "SC_ph_knt_bac"
+  ],
+  "SC_ph_equ": [
+    "SC_ph_equ_phs",
+    "SC_ph_equ_cst",
+    "SC_ph_equ_dom",
+    "SC_ph_equ_tit",
+    "SC_ph_equ_bac"
+  ],
+  "SC_ph_cts": [
+    "SC_ph_cts_est",
+    "SC_ph_cts_yld",
+    "SC_ph_cts_ctl",
+    "SC_ph_cts_sap",
+    "SC_ph_cts_bac"
+  ],
+  "SC_ph_mcn": [
+    "SC_ph_mcn_new",
+    "SC_ph_mcn_sat",
+    "SC_ph_mcn_fal",
+    "SC_ph_mcn_prj",
+    "SC_ph_mcn_pln",
+    "SC_ph_mcn_bac"
+  ],
+  "SC_ph_ele": [
+    "SC_ph_ele_mdf",
+    "SC_ph_ele_dpr",
+    "SC_ph_ele_dpl",
+    "SC_ph_ele_bac"
+  ],
+  "SC_ph_ncl": [
+    "SC_ph_ncl_rad",
+    "SC_ph_ncl_act",
+    "SC_ph_ncl_mas",
+    "SC_ph_ncl_rea",
+    "SC_ph_ncl_bac"
+  ],
+  "SC_ph_osc": [
+    "SC_ph_osc_mch",
+    "SC_ph_osc_elc",
+    "SC_ph_osc_nrg",
+    "SC_ph_osc_bac"
+  ],
+  "SC_ph_wav": [
+    "SC_ph_wav_mch",
+    "SC_ph_wav_per",
+    "SC_ph_wav_lgt",
+    "SC_ph_wav_bac"
+  ],
+  "SC_sc_prt": [
+    "SC_sc_prt_syn",
+    "SC_sc_prt_str",
+    "SC_sc_prt_enz",
+    "SC_sc_prt_bac"
+  ],
+  "SC_sc_imm": [
+    "SC_sc_imm_slf",
+    "SC_sc_imm_hum",
+    "SC_sc_imm_cel",
+    "SC_sc_imm_coo",
+    "SC_sc_imm_bac"
+  ],
+  "SC_sc_nrv": [
+    "SC_sc_nrv_pot",
+    "SC_sc_nrv_syn",
+    "SC_sc_nrv_int",
+    "SC_sc_nrv_drg",
+    "SC_sc_nrv_bac"
+  ],
+  "SC_sc_erg": [
+    "SC_sc_erg_pht",
+    "SC_sc_erg_rsp",
+    "SC_sc_erg_frm",
+    "SC_sc_erg_bac"
+  ],
+  "SC_sc_glg": [
+    "SC_sc_glg_str",
+    "SC_sc_glg_div",
+    "SC_sc_glg_sub",
+    "SC_sc_glg_met",
+    "SC_sc_glg_bac"
+  ],
+  "MA_ma_fnc": [
+    "SC_ma_fnc_lmc",
+    "SC_ma_fnc_asy",
+    "SC_ma_fnc_crv",
+    "SC_ma_fnc_dsc",
+    "MA_ma_fnc_bac"
+  ],
+  "MA_ma_sut": [
+    "MA_ma_sut_gen",
+    "MA_ma_sut_ind",
+    "MA_ma_sut_pro",
+    "MA_ma_sut_con",
+    "MA_ma_sut_bac"
+  ],
+  "MA_ma_flg": [
+    "SC_ma_flg_eql",
+    "SC_ma_flg_lml",
+    "SC_ma_flg_etl",
+    "MA_ma_flg_bac"
+  ],
+  "MA_ma_fdf": [
+    "SC_ma_fdf_prm",
+    "SC_ma_fdf_itg",
+    "SC_ma_fdf_dif",
+    "MA_ma_fdf_bac"
+  ],
+  "MA_ma_prb": [
+    "MA_ma_prb_cnt",
+    "MA_ma_prb_cnd",
+    "MA_ma_prb_rvr",
+    "MA_ma_prb_bin",
+    "MA_ma_prb_bac"
+  ],
+  "MA_ma_cmp": [
+    "MA_ma_cmp_alg",
+    "MA_ma_cmp_gmt",
+    "MA_ma_cmp_set",
+    "MA_ma_cmp_trf",
+    "MA_ma_cmp_bac"
+  ],
+  "MA_ma_esp": [
+    "MA_ma_esp_vct",
+    "MA_ma_esp_eqn",
+    "MA_ma_esp_pos",
+    "MA_ma_esp_sph",
+    "MA_ma_esp_bac"
+  ],
+  "MA_ma_nmb": [
+    "MA_ma_nmb_div",
+    "MA_ma_nmb_gcd",
+    "MA_ma_nmb_prm",
+    "MA_ma_nmb_cry",
+    "MA_ma_nmb_bac"
+  ],
+  "MA_ph_knt": [
+    "MA_ph_knt_red",
+    "MA_ph_knt_mth",
+    "MA_ph_knt_spd",
+    "MA_ph_knt_fct",
+    "MA_ph_knt_bac"
+  ],
+  "MA_ph_equ": [
+    "MA_ph_equ_phs",
+    "MA_ph_equ_cst",
+    "MA_ph_equ_dom",
+    "MA_ph_equ_tit",
+    "MA_ph_equ_bac"
+  ],
+  "MA_ph_cts": [
+    "MA_ph_cts_est",
+    "MA_ph_cts_yld",
+    "MA_ph_cts_ctl",
+    "MA_ph_cts_sap",
+    "MA_ph_cts_bac"
+  ],
+  "MA_ph_mcn": [
+    "MA_ph_mcn_new",
+    "MA_ph_mcn_sat",
+    "MA_ph_mcn_fal",
+    "MA_ph_mcn_prj",
+    "MA_ph_mcn_pln",
+    "MA_ph_mcn_bac"
+  ],
+  "MA_ph_ele": [
+    "MA_ph_ele_mdf",
+    "MA_ph_ele_dpr",
+    "MA_ph_ele_dpl",
+    "MA_ph_ele_bac"
+  ],
+  "MA_ph_ncl": [
+    "MA_ph_ncl_rad",
+    "MA_ph_ncl_act",
+    "MA_ph_ncl_mas",
+    "MA_ph_ncl_rea",
+    "MA_ph_ncl_bac"
+  ],
+  "MA_ph_osc": [
+    "MA_ph_osc_mch",
+    "MA_ph_osc_elc",
+    "MA_ph_osc_nrg",
+    "MA_ph_osc_bac"
+  ],
+  "MA_ph_wav": [
+    "MA_ph_wav_mch",
+    "MA_ph_wav_per",
+    "MA_ph_wav_lgt",
+    "MA_ph_wav_bac"
+  ],
+  "MA_sc_prt": [
+    "MA_sc_prt_syn",
+    "MA_sc_prt_str",
+    "MA_sc_prt_enz",
+    "MA_sc_prt_bac"
+  ],
+  "MA_sc_imm": [
+    "MA_sc_imm_slf",
+    "MA_sc_imm_hum",
+    "MA_sc_imm_cel",
+    "MA_sc_imm_coo",
+    "MA_sc_imm_bac"
+  ],
+  "MA_sc_nrv": [
+    "MA_sc_nrv_pot",
+    "MA_sc_nrv_syn",
+    "MA_sc_nrv_int",
+    "MA_sc_nrv_drg",
+    "MA_sc_nrv_bac"
+  ],
+  "MA_sc_erg": [
+    "MA_sc_erg_pht",
+    "MA_sc_erg_rsp",
+    "MA_sc_erg_frm",
+    "MA_sc_erg_bac"
+  ],
+  "MA_sc_glg": [
+    "MA_sc_glg_str",
+    "MA_sc_glg_div",
+    "MA_sc_glg_sub",
+    "MA_sc_glg_met",
+    "MA_sc_glg_bac"
+  ],
+  "MT_ma_fnc": [
+    "SC_ma_fnc_lmc",
+    "SC_ma_fnc_asy",
+    "SC_ma_fnc_crv",
+    "SC_ma_fnc_dsc",
+    "MT_ma_fnc_bac"
+  ],
+  "MT_ma_sut": [
+    "MT_ma_sut_gen",
+    "MT_ma_sut_ind",
+    "MT_ma_sut_pro",
+    "MT_ma_sut_con",
+    "MT_ma_sut_bac"
+  ],
+  "MT_ma_flg": [
+    "SC_ma_flg_eql",
+    "SC_ma_flg_lml",
+    "SC_ma_flg_etl",
+    "MT_ma_flg_bac"
+  ],
+  "MT_ma_fdf": [
+    "SC_ma_fdf_prm",
+    "SC_ma_fdf_itg",
+    "SC_ma_fdf_dif",
+    "MT_ma_fdf_bac"
+  ],
+  "MT_ma_prb": [
+    "MT_ma_prb_cnt",
+    "MT_ma_prb_cnd",
+    "MT_ma_prb_rvr",
+    "MT_ma_prb_bin",
+    "MT_ma_prb_bac"
+  ],
+  "MT_ma_cmp": [
+    "MT_ma_cmp_alg",
+    "MT_ma_cmp_gmt",
+    "MT_ma_cmp_set",
+    "MT_ma_cmp_trf",
+    "MT_ma_cmp_bac"
+  ],
+  "MT_ma_esp": [
+    "MT_ma_esp_vct",
+    "MT_ma_esp_eqn",
+    "MT_ma_esp_pos",
+    "MT_ma_esp_sph",
+    "MT_ma_esp_bac"
+  ],
+  "MT_ma_nmb": [
+    "MT_ma_nmb_div",
+    "MT_ma_nmb_gcd",
+    "MT_ma_nmb_prm",
+    "MT_ma_nmb_cry",
+    "MT_ma_nmb_bac"
+  ],
+  "MT_ph_knt": [
+    "MT_ph_knt_red",
+    "MT_ph_knt_mth",
+    "MT_ph_knt_spd",
+    "MT_ph_knt_fct",
+    "MT_ph_knt_bac"
+  ],
+  "MT_ph_equ": [
+    "MT_ph_equ_phs",
+    "MT_ph_equ_cst",
+    "MT_ph_equ_dom",
+    "MT_ph_equ_tit",
+    "MT_ph_equ_bac"
+  ],
+  "MT_ph_cts": [
+    "MT_ph_cts_est",
+    "MT_ph_cts_yld",
+    "MT_ph_cts_ctl",
+    "MT_ph_cts_sap",
+    "MT_ph_cts_bac"
+  ],
+  "MT_ph_mcn": [
+    "MT_ph_mcn_new",
+    "MT_ph_mcn_sat",
+    "MT_ph_mcn_fal",
+    "MT_ph_mcn_prj",
+    "MT_ph_mcn_pln",
+    "MT_ph_mcn_bac"
+  ],
+  "MT_ph_ele": [
+    "MT_ph_ele_mdf",
+    "MT_ph_ele_dpr",
+    "MT_ph_ele_dpl",
+    "MT_ph_ele_bac"
+  ],
+  "MT_ph_ncl": [
+    "MT_ph_ncl_rad",
+    "MT_ph_ncl_act",
+    "MT_ph_ncl_mas",
+    "MT_ph_ncl_rea",
+    "MT_ph_ncl_bac"
+  ],
+  "MT_ph_osc": [
+    "MT_ph_osc_mch",
+    "MT_ph_osc_elc",
+    "MT_ph_osc_nrg",
+    "MT_ph_osc_bac"
+  ],
+  "MT_ph_wav": [
+    "MT_ph_wav_mch",
+    "MT_ph_wav_per",
+    "MT_ph_wav_lgt",
+    "MT_ph_wav_bac"
+  ],
+  "MT_sc_prt": [
+    "MT_sc_prt_syn",
+    "MT_sc_prt_str",
+    "MT_sc_prt_enz",
+    "MT_sc_prt_bac"
+  ],
+  "MT_sc_imm": [
+    "MT_sc_imm_slf",
+    "MT_sc_imm_hum",
+    "MT_sc_imm_cel",
+    "MT_sc_imm_coo",
+    "MT_sc_imm_bac"
+  ],
+  "MT_sc_nrv": [
+    "MT_sc_nrv_pot",
+    "MT_sc_nrv_syn",
+    "MT_sc_nrv_int",
+    "MT_sc_nrv_drg",
+    "MT_sc_nrv_bac"
+  ],
+  "MT_sc_erg": [
+    "MT_sc_erg_pht",
+    "MT_sc_erg_rsp",
+    "MT_sc_erg_frm",
+    "MT_sc_erg_bac"
+  ],
+  "MT_sc_glg": [
+    "MT_sc_glg_str",
+    "MT_sc_glg_div",
+    "MT_sc_glg_sub",
+    "MT_sc_glg_met",
+    "MT_sc_glg_bac"
+  ]
+}
