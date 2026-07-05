@@ -1,0 +1,278 @@
+{
+  "SC": {
+    "ID": "SC",
+    "label": "علوم تجريبية"
+  },
+  "MA": {
+    "ID": "MA",
+    "label": "رياضيات"
+  },
+  "MT": {
+    "ID": "MT",
+    "label": "تقني"
+  },
+  "SC_ma": {
+    "ID": "SC_ma",
+    "label": "الرياضيات"
+  },
+  "SC_ph": {
+    "ID": "SC_ph",
+    "label": "الفيزياء"
+  },
+  "SC_sc": {
+    "ID": "SC_sc",
+    "label": "علوم"
+  },
+  "MA_ma": {
+    "ID": "MA_ma",
+    "label": "الرياضيات"
+  },
+  "MA_ph": {
+    "ID": "MA_ph",
+    "label": "الفيزياء"
+  },
+  "MA_sc": {
+    "ID": "MA_sc",
+    "label": "علوم"
+  },
+  "MT_ma": {
+    "ID": "MT_ma",
+    "label": "الرياضيات"
+  },
+  "MT_ph": {
+    "ID": "MT_ph",
+    "label": "الفيزياء"
+  },
+  "SC_ma_fnc": {
+    "ID": "SC_ma_fnc",
+    "label": "الدوال العددية"
+  },
+  "SC_ma_sut": {
+    "ID": "SC_ma_sut",
+    "label": "المتتاليات"
+  },
+  "SC_ma_flg": {
+    "ID": "SC_ma_flg",
+    "label": "الدوال الاسيه واللوغاريتيه"
+  },
+  "SC_ma_fdf": {
+    "ID": "SC_ma_fdf",
+    "label": "الحساب التكاملي والمعادلات التفاضلية"
+  },
+  "SC_ma_prb": {
+    "ID": "SC_ma_prb",
+    "label": "الاحتمالات"
+  },
+  "SC_ma_cmp": {
+    "ID": "SC_ma_cmp",
+    "label": "الأعداد المركبة - التحويلات النقطية"
+  },
+  "SC_ma_esp": {
+    "ID": "SC_ma_esp",
+    "label": "الهندسة في الفضاء"
+  },
+  "SC_ma_nmb": {
+    "ID": "SC_ma_nmb",
+    "label": "الاعداد"
+  },
+  "SC_ph_knt": {
+    "ID": "SC_ph_knt",
+    "label": "المتابعة الزمنية لتحول كيميائي"
+  },
+  "SC_ph_equ": {
+    "ID": "SC_ph_equ",
+    "label": "تطور جملة كيميائية نحو حالة التوازن"
+  },
+  "SC_ph_cts": {
+    "ID": "SC_ph_cts",
+    "label": "مراقبة تطور جملة كيميائية"
+  },
+  "SC_ph_mcn": {
+    "ID": "SC_ph_mcn",
+    "label": "تطور جملة ميكانيكية"
+  },
+  "SC_ph_ele": {
+    "ID": "SC_ph_ele",
+    "label": "دراسة ظواهر كهربائية"
+  },
+  "SC_ph_ncl": {
+    "ID": "SC_ph_ncl",
+    "label": "التحولات النووية"
+  },
+  "SC_ph_osc": {
+    "ID": "SC_ph_osc",
+    "label": "التطورات المهتزة"
+  },
+  "SC_ph_wav": {
+    "ID": "SC_ph_wav",
+    "label": "مفهوم الموجة"
+  },
+  "SC_sc_prt": {
+    "ID": "SC_sc_prt",
+    "label": "البروتينات (التركيب، البنية، والإنزيمات)"
+  },
+  "SC_sc_imm": {
+    "ID": "SC_sc_imm",
+    "label": "المناعة (الدفاع عن الذات)"
+  },
+  "SC_sc_nrv": {
+    "ID": "SC_sc_nrv",
+    "label": "الاتصال العصبي"
+  },
+  "SC_sc_erg": {
+    "ID": "SC_sc_erg",
+    "label": "التحولات الطاقوية (التركيب الضوئي والتنفس)"
+  },
+  "SC_sc_glg": {
+    "ID": "SC_sc_glg",
+    "label": "الجيولوجيا (التكتونية العامة)"
+  },
+  "MA_ma_fnc": {
+    "ID": "MA_ma_fnc",
+    "label": "الدوال العددية"
+  },
+  "MA_ma_sut": {
+    "ID": "MA_ma_sut",
+    "label": "المتتاليات"
+  },
+  "MA_ma_flg": {
+    "ID": "MA_ma_flg",
+    "label": "الدوال الاسيه واللوغاريتيه"
+  },
+  "MA_ma_fdf": {
+    "ID": "MA_ma_fdf",
+    "label": "الحساب التكاملي والمعادلات التفاضلية"
+  },
+  "MA_ma_prb": {
+    "ID": "MA_ma_prb",
+    "label": "الاحتمالات"
+  },
+  "MA_ma_cmp": {
+    "ID": "MA_ma_cmp",
+    "label": "الأعداد المركبة - التحويلات النقطية"
+  },
+  "MA_ma_esp": {
+    "ID": "MA_ma_esp",
+    "label": "الهندسة في الفضاء"
+  },
+  "MA_ma_nmb": {
+    "ID": "MA_ma_nmb",
+    "label": "الاعداد"
+  },
+  "MA_ph_knt": {
+    "ID": "MA_ph_knt",
+    "label": "المتابعة الزمنية لتحول كيميائي"
+  },
+  "MA_ph_equ": {
+    "ID": "MA_ph_equ",
+    "label": "تطور جملة كيميائية نحو حالة التوازن"
+  },
+  "MA_ph_cts": {
+    "ID": "MA_ph_cts",
+    "label": "مراقبة تطور جملة كيميائية"
+  },
+  "MA_ph_mcn": {
+    "ID": "MA_ph_mcn",
+    "label": "تطور جملة ميكانيكية"
+  },
+  "MA_ph_ele": {
+    "ID": "MA_ph_ele",
+    "label": "دراسة ظواهر كهربائية"
+  },
+  "MA_ph_ncl": {
+    "ID": "MA_ph_ncl",
+    "label": "التحولات النووية"
+  },
+  "MA_ph_osc": {
+    "ID": "MA_ph_osc",
+    "label": "التطورات المهتزة"
+  },
+  "MA_ph_wav": {
+    "ID": "MA_ph_wav",
+    "label": "مفهوم الموجة"
+  },
+  "MA_sc_prt": {
+    "ID": "MA_sc_prt",
+    "label": "البروتينات (التركيب، البنية، والإنزيمات)"
+  },
+  "MA_sc_imm": {
+    "ID": "MA_sc_imm",
+    "label": "المناعة (الدفاع عن الذات)"
+  },
+  "MA_sc_nrv": {
+    "ID": "MA_sc_nrv",
+    "label": "الاتصال العصبي"
+  },
+  "MA_sc_erg": {
+    "ID": "MA_sc_erg",
+    "label": "التحولات الطاقوية (التركيب الضوئي والتنفس)"
+  },
+  "MA_sc_glg": {
+    "ID": "MA_sc_glg",
+    "label": "الجيولوجيا (التكتونية العامة)"
+  },
+  "MT_ma_fnc": {
+    "ID": "MT_ma_fnc",
+    "label": "الدوال العددية"
+  },
+  "MT_ma_sut": {
+    "ID": "MT_ma_sut",
+    "label": "المتتاليات"
+  },
+  "MT_ma_flg": {
+    "ID": "MT_ma_flg",
+    "label": "الدوال الاسيه واللوغاريتيه"
+  },
+  "MT_ma_fdf": {
+    "ID": "MT_ma_fdf",
+    "label": "الحساب التكاملي والمعادلات التفاضلية"
+  },
+  "MT_ma_prb": {
+    "ID": "MT_ma_prb",
+    "label": "الاحتمالات"
+  },
+  "MT_ma_cmp": {
+    "ID": "MT_ma_cmp",
+    "label": "الأعداد المركبة - التحويلات النقطية"
+  },
+  "MT_ma_esp": {
+    "ID": "MT_ma_esp",
+    "label": "الهندسة في الفضاء"
+  },
+  "MT_ma_nmb": {
+    "ID": "MT_ma_nmb",
+    "label": "الاعداد"
+  },
+  "MT_ph_knt": {
+    "ID": "MT_ph_knt",
+    "label": "المتابعة الزمنية لتحول كيميائي"
+  },
+  "MT_ph_equ": {
+    "ID": "MT_ph_equ",
+    "label": "تطور جملة كيميائية نحو حالة التوازن"
+  },
+  "MT_ph_cts": {
+    "ID": "MT_ph_cts",
+    "label": "مراقبة تطور جملة كيميائية"
+  },
+  "MT_ph_mcn": {
+    "ID": "MT_ph_mcn",
+    "label": "تطور جملة ميكانيكية"
+  },
+  "MT_ph_ele": {
+    "ID": "MT_ph_ele",
+    "label": "دراسة ظواهر كهربائية"
+  },
+  "MT_ph_ncl": {
+    "ID": "MT_ph_ncl",
+    "label": "التحولات النووية"
+  },
+  "MT_ph_osc": {
+    "ID": "MT_ph_osc",
+    "label": "التطورات المهتزة"
+  },
+  "MT_ph_wav": {
+    "ID": "MT_ph_wav",
+    "label": "مفهوم الموجة"
+  }
+}
