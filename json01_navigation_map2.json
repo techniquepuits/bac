@@ -1,8 +1,8 @@
 {
   "start": [
-    "SC",
     "MA",
-    "MT"
+    "MT",
+    "SC"
   ],
   "SC": [
     "SC_ma",
