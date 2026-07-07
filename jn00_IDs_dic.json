@@ -346,5 +346,13 @@
   "MA_sc_wpl": {
     "ID": "MA_sc_wpl",
     "label": "تحديد مصادر تلوث المياه وعواقبه على الصحة"
+  },
+  "SC_ma_fnc_sub01": {
+    "ID": "SC_ma_fnc_sub01",
+    "label": "المتتاليات"
+  },
+  "SC_ma_fnc_sub02": {
+    "ID": "SC_ma_fnc_sub02",
+    "label": "المتتاليات والدوال"
   }
 }
