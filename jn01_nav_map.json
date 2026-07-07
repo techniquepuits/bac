@@ -20,75 +20,94 @@
   ],
   "SC_ma": [
     "SC_ma_fnc",
-    "SC_ma_sut",
     "SC_ma_flg",
+    "SC_ma_fns",
+    "SC_ma_sut",
     "SC_ma_fdf",
     "SC_ma_prb",
     "SC_ma_cmp",
     "SC_ma_esp"
   ],
-  "SC_ph": [
-    "SC_ph_knt",
-    "SC_ph_equ",
-    "SC_ph_cts",
-    "SC_ph_mcn",
-    "SC_ph_ele",
-    "SC_ph_ncl",
-    "SC_ph_osc",
-    "SC_ph_wav"
-  ],
-  "SC_sc": [
-    "SC_sc_prt",
-    "SC_sc_imm",
-    "SC_sc_nrv",
-    "SC_sc_erg",
-    "SC_sc_glg"
-  ],
   "MA_ma": [
     "MA_ma_fnc",
+    "MA_ma_flg",
+    "MA_ma_fns",
     "MA_ma_sut",
-    "SC_ma_flg",
-    "SC_ma_fdf",
+    "MA_ma_fdf",
+    "MA_ma_nmb",
     "MA_ma_prb",
     "MA_ma_cmp",
-    "MA_ma_esp",
-    "MA_ma_nmb"
-  ],
-  "MA_ph": [
-    "MA_ph_knt",
-    "MA_ph_equ",
-    "MA_ph_cts",
-    "MA_ph_mcn",
-    "MA_ph_ele",
-    "MA_ph_ncl",
-    "MA_ph_osc",
-    "MA_ph_wav"
-  ],
-  "MA_sc": [
-    "MA_sc_prt",
-    "MA_sc_imm",
-    "MA_sc_nrv",
-    "MA_sc_erg",
-    "MA_sc_glg"
+    "MA_ma_esp"
   ],
   "MT_ma": [
     "MT_ma_fnc",
+    "MT_ma_flg",
+    "MT_ma_fns",
     "MT_ma_sut",
-    "SC_ma_flg",
-    "SC_ma_fdf",
+    "MT_ma_fdf",
+    "MT_ma_nmb",
     "MT_ma_prb",
     "MT_ma_cmp",
-    "MT_ma_esp",
-    "MT_ma_nmb"
+    "MT_ma_esp"
+  ],
+  "SC_ph": [
+    "SC_ph_knt",
+    "SC_ph_mcn",
+    "SC_ph_ele",
+    "SC_ph_equ",
+    "SC_ph_ncl",
+    "SC_ph_cts",
+    "SC_ph_osc",
+    "SC_ph_wav"
+  ],
+  "MA_ph": [
+    "MA_ph_knt",
+    "MA_ph_mcn",
+    "MA_ph_ele",
+    "MA_ph_equ",
+    "MA_ph_ncl",
+    "MA_ph_cts",
+    "MA_ph_osc",
+    "MA_ph_wav"
   ],
   "MT_ph": [
     "MT_ph_knt",
-    "SC_ph_equ",
-    "MT_ph_cts",
     "MT_ph_mcn",
     "MT_ph_ele",
+    "MT_ph_equ",
     "MT_ph_ncl",
+    "MT_ph_cts",
     "MT_ph_osc",
     "MT_ph_wav"
+  ],
+  "SC_sc": [
+    "SC_sc_prs",
+    "SC_sc_psf",
+    "SC_sc_enz",
+    "SC_sc_imm",
+    "SC_sc_ncs",
+    "SC_sc_pht",
+    "SC_sc_atp",
+    "SC_sc_etc",
+    "SC_sc_eas",
+    "SC_sc_tec"
+  ],
+  "MA_sc": [
+    "MA_sc_prs",
+    "MA_sc_mrn",
+    "MA_sc_trn",
+    "MA_sc_trl",
+    "MA_sc_dpd",
+    "MA_sc_amp",
+    "MA_sc_sbd",
+    "MA_sc_mhc",
+    "MA_sc_abs",
+    "MA_sc_sab",
+    "MA_sc_lbm",
+    "MA_sc_ltc",
+    "MA_sc_hiv",
+    "MA_sc_gwh",
+    "MA_sc_ozn",
+    "MA_sc_wpl"
   ]
 }
