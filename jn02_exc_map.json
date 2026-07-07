@@ -1,20 +1,4 @@
 {
-  "SC_ma_fnc": {
-    "SC_ma_fnc_sub01": {
-      "SC_ma_25_A_01": {
-        "exc_label": "2025",
-        "exc_info": "SC_ma_25_A_01",
-        "exc_cor_id": "SC_ma_25_As_01"
-      }
-    },
-    "SC_ma_fnc_sub02": {
-      "SC_ma_25_A_02": {
-        "exc_label": "2025",
-        "exc_info": "SC_ma_25_A_02",
-        "exc_cor_id": "SC_ma_25_As_02"
-      }
-    }
-  },
   "MA_ma_esp": {
     "MA_ma_esp": {
       "MA_ma_17_A_01": {
