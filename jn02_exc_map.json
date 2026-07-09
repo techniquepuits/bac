@@ -307,7 +307,12 @@
         "exc_cor_id": "MA_ma_25_Bs_04"
       }
     },
-    "MA_ma_fns, MA_ma_fdf, MA_ma_sut": {
+    "MA_ma_fdf, MA_ma_sut": {
+      "MA_ma_22_B_02": {
+        "exc_label": "2022",
+        "exc_info": "MA_ma_22_B_02",
+        "exc_cor_id": "MA_ma_22_Bs_02"
+      },
       "MA_ma_24_B_04": {
         "exc_label": "2024",
         "exc_info": "MA_ma_24_B_04",
@@ -337,6 +342,11 @@
         "exc_info": "MA_ma_22_A_03",
         "exc_cor_id": "MA_ma_22_As_03"
       },
+      "MA_ma_22_B_03": {
+        "exc_label": "2022",
+        "exc_info": "MA_ma_22_B_03",
+        "exc_cor_id": "MA_ma_22_Bs_03"
+      },
       "MA_ma_23_A_02": {
         "exc_label": "2023",
         "exc_info": "MA_ma_23_A_02",
@@ -358,20 +368,6 @@
         "exc_label": "2021",
         "exc_info": "MA_ma_21_A_01",
         "exc_cor_id": "MA_ma_21_As_01"
-      }
-    },
-    "MA_ma_flg, MA_ma_fdf, MA_ma_sut": {
-      "MA_ma_22_B_02": {
-        "exc_label": "2022",
-        "exc_info": "MA_ma_22_B_02",
-        "exc_cor_id": "MA_ma_22_Bs_02"
-      }
-    },
-    "MA_ma_sut, MA_ma_flg": {
-      "MA_ma_22_B_03": {
-        "exc_label": "2022",
-        "exc_info": "MA_ma_22_B_03",
-        "exc_cor_id": "MA_ma_22_Bs_03"
       }
     }
   },
@@ -434,8 +430,8 @@
       }
     }
   },
-  "MA_ma_flg": {
-    "MA_ma_sut, MA_ma_nmb, MA_ma_flg": {
+  "MA_ma_QCM": {
+    "MA_ma_QCM": {
       "MA_ma_22_A_02": {
         "exc_label": "2022",
         "exc_info": "MA_ma_22_A_02",
@@ -948,13 +944,6 @@
         "exc_info": "SC_ma_18_A_02",
         "exc_cor_id": "SC_ma_18_As_02"
       }
-    },
-    "SC_ma_flg, SC_ma_prb, SC_ma_sut": {
-      "SC_ma_20_A_01": {
-        "exc_label": "2020",
-        "exc_info": "SC_ma_20_A_01",
-        "exc_cor_id": "SC_ma_20_As_01"
-      }
     }
   },
   "SC_ma_fdf": {
@@ -1029,13 +1018,6 @@
         "exc_info": "SC_ma_17_V2_B_04",
         "exc_cor_id": "SC_ma_17_V2_Bs_04"
       }
-    },
-    "SC_ma_flg, SC_ma_fns, SC_ma_sut, SC_ma_fdf": {
-      "SC_ma_22_A_02": {
-        "exc_label": "2022",
-        "exc_info": "SC_ma_22_A_02",
-        "exc_cor_id": "SC_ma_22_As_02"
-      }
     }
   },
   "SC_ma_cmp": {
@@ -1049,11 +1031,6 @@
         "exc_label": "2025",
         "exc_info": "SC_ma_25_B_01",
         "exc_cor_id": "SC_ma_25_Bs_01"
-      },
-      "SC_ma_23_B_02": {
-        "exc_label": "2023",
-        "exc_info": "SC_ma_23_B_02",
-        "exc_cor_id": "SC_ma_23_Bs_02"
       },
       "SC_ma_24_A_02": {
         "exc_label": "2024",
@@ -1079,11 +1056,6 @@
         "exc_label": "2018",
         "exc_info": "SC_ma_18_A_03",
         "exc_cor_id": "SC_ma_18_As_03"
-      },
-      "SC_ma_17_B_03": {
-        "exc_label": "2017",
-        "exc_info": "SC_ma_17_B_03",
-        "exc_cor_id": "SC_ma_17_Bs_03"
       },
       "SC_ma_17_V2_A_03": {
         "exc_label": "2017",
@@ -1119,15 +1091,25 @@
         "exc_info": "SC_ma_25_B_03",
         "exc_cor_id": "SC_ma_25_Bs_03"
       },
-      "SC_ma_21_A_02": {
-        "exc_label": "2021",
-        "exc_info": "SC_ma_21_A_02",
-        "exc_cor_id": "SC_ma_21_As_02"
+      "SC_ma_22_B_03": {
+        "exc_label": "2022",
+        "exc_info": "SC_ma_22_B_03",
+        "exc_cor_id": "SC_ma_22_Bs_03"
       },
-      "SC_ma_21_B_02": {
+      "SC_ma_21_A_03": {
         "exc_label": "2021",
-        "exc_info": "SC_ma_21_B_02",
-        "exc_cor_id": "SC_ma_21_Bs_02"
+        "exc_info": "SC_ma_21_A_03",
+        "exc_cor_id": "SC_ma_21_As_03"
+      },
+      "SC_ma_19_A_01": {
+        "exc_label": "2019",
+        "exc_info": "SC_ma_19_A_01",
+        "exc_cor_id": "SC_ma_19_As_01"
+      },
+      "SC_ma_18_B_01": {
+        "exc_label": "2018",
+        "exc_info": "SC_ma_18_B_01",
+        "exc_cor_id": "SC_ma_18_Bs_01"
       },
       "SC_ma_19_B_02": {
         "exc_label": "2019",
@@ -1148,13 +1130,6 @@
         "exc_label": "2017",
         "exc_info": "SC_ma_17_A_02",
         "exc_cor_id": "SC_ma_17_As_02"
-      }
-    },
-    "SC_ma_cmp, SC_ma_flg, SC_ma_sut": {
-      "SC_ma_24_B_02": {
-        "exc_label": "2024",
-        "exc_info": "SC_ma_24_B_02",
-        "exc_cor_id": "SC_ma_24_Bs_02"
       }
     },
     "SC_ma_sut": {
@@ -1203,43 +1178,59 @@
         "exc_info": "SC_ma_17_V2_A_01",
         "exc_cor_id": "SC_ma_17_V2_As_01"
       }
-    },
-    "SC_ma_fns, SC_ma_sut, SC_ma_fdf": {
+    }
+  },
+  "SC_ma_QCM": {
+    "SC_ma_QCM": {
+      "SC_ma_24_B_02": {
+        "exc_label": "2024",
+        "exc_info": "SC_ma_24_B_02",
+        "exc_cor_id": "SC_ma_24_Bs_02"
+      },
+      "SC_ma_23_B_02": {
+        "exc_label": "2023",
+        "exc_info": "SC_ma_23_B_02",
+        "exc_cor_id": "SC_ma_23_Bs_02"
+      },
       "SC_ma_23_A_02": {
         "exc_label": "2023",
         "exc_info": "SC_ma_23_A_02",
         "exc_cor_id": "SC_ma_23_As_02"
-      }
-    },
-    "SC_ma_sut, SC_ma_flg": {
-      "SC_ma_22_B_03": {
+      },
+      "SC_ma_22_A_02": {
         "exc_label": "2022",
-        "exc_info": "SC_ma_22_B_03",
-        "exc_cor_id": "SC_ma_22_Bs_03"
+        "exc_info": "SC_ma_22_A_02",
+        "exc_cor_id": "SC_ma_22_As_02"
       },
-      "SC_ma_21_A_03": {
+      "SC_ma_22_B_02": {
+        "exc_label": "2022",
+        "exc_info": "SC_ma_22_B_02",
+        "exc_cor_id": "SC_ma_22_Bs_02"
+      },
+      "SC_ma_21_A_02": {
         "exc_label": "2021",
-        "exc_info": "SC_ma_21_A_03",
-        "exc_cor_id": "SC_ma_21_As_03"
+        "exc_info": "SC_ma_21_A_02",
+        "exc_cor_id": "SC_ma_21_As_02"
       },
-      "SC_ma_19_A_01": {
-        "exc_label": "2019",
-        "exc_info": "SC_ma_19_A_01",
-        "exc_cor_id": "SC_ma_19_As_01"
-      }
-    },
-    "SC_ma_flg, SC_ma_prb, SC_ma_sut": {
+      "SC_ma_21_B_02": {
+        "exc_label": "2021",
+        "exc_info": "SC_ma_21_B_02",
+        "exc_cor_id": "SC_ma_21_Bs_02"
+      },
       "SC_ma_20_B_01": {
         "exc_label": "2020",
         "exc_info": "SC_ma_20_B_01",
         "exc_cor_id": "SC_ma_20_Bs_01"
-      }
-    },
-    "SC_ma_sut, SC_ma_flg, SC_ma_fns": {
-      "SC_ma_18_B_01": {
-        "exc_label": "2018",
-        "exc_info": "SC_ma_18_B_01",
-        "exc_cor_id": "SC_ma_18_Bs_01"
+      },
+      "SC_ma_20_A_01": {
+        "exc_label": "2020",
+        "exc_info": "SC_ma_20_A_01",
+        "exc_cor_id": "SC_ma_20_As_01"
+      },
+      "SC_ma_17_B_03": {
+        "exc_label": "2017",
+        "exc_info": "SC_ma_17_B_03",
+        "exc_cor_id": "SC_ma_17_Bs_03"
       }
     }
   },
@@ -1284,15 +1275,6 @@
         "exc_label": "2017",
         "exc_info": "SC_ma_17_A_04",
         "exc_cor_id": "SC_ma_17_As_04"
-      }
-    }
-  },
-  "SC_ma_su": {
-    "SC_ma_fns, SC_ma_sut, SC_ma_fdf": {
-      "SC_ma_22_B_02": {
-        "exc_label": "2022",
-        "exc_info": "SC_ma_22_B_02",
-        "exc_cor_id": "SC_ma_22_Bs_02"
       }
     }
   },
@@ -1646,6 +1628,11 @@
         "exc_info": "SC_ph_17_A_02",
         "exc_cor_id": "SC_ph_17_As_02"
       },
+      "SC_ph_17_V2_A_03": {
+        "exc_label": "2017",
+        "exc_info": "SC_ph_17_V2_A_03",
+        "exc_cor_id": "SC_ph_17_V2_As_03"
+      },
       "SC_ph_19_A_01": {
         "exc_label": "2019",
         "exc_info": "SC_ph_19_A_01",
@@ -1660,12 +1647,439 @@
       }
     }
   },
-  "C_ph_osc": {
-    "SC_ph_ele, SC_ph_osc": {
-      "SC_ph_17_V2_A_03": {
+  "MT_ma_fdf": {
+    "MT_ma_fns, MT_ma_fdf": {
+      "MT_ma_17_A_04": {
         "exc_label": "2017",
-        "exc_info": "SC_ph_17_V2_A_03",
-        "exc_cor_id": "SC_ph_17_V2_As_03"
+        "exc_info": "MT_ma_17_A_04",
+        "exc_cor_id": "MT_ma_17_As_04"
+      },
+      "MT_ma_17_B_04": {
+        "exc_label": "2017",
+        "exc_info": "MT_ma_17_B_04",
+        "exc_cor_id": "MT_ma_17_Bs_04"
+      },
+      "MT_ma_17_V2_A_04": {
+        "exc_label": "2017",
+        "exc_info": "MT_ma_17_V2_A_04",
+        "exc_cor_id": "MT_ma_17_V2_As_04"
+      },
+      "MT_ma_17_V2_B_04": {
+        "exc_label": "2017",
+        "exc_info": "MT_ma_17_V2_B_04",
+        "exc_cor_id": "MT_ma_17_V2_Bs_04"
+      },
+      "MT_ma_18_A_04": {
+        "exc_label": "2018",
+        "exc_info": "MT_ma_18_A_04",
+        "exc_cor_id": "MT_ma_18_As_04"
+      },
+      "MT_ma_19_A_04": {
+        "exc_label": "2019",
+        "exc_info": "MT_ma_19_A_04",
+        "exc_cor_id": "MT_ma_19_As_04"
+      },
+      "MT_ma_19_B_04": {
+        "exc_label": "2019",
+        "exc_info": "MT_ma_19_B_04",
+        "exc_cor_id": "MT_ma_19_Bs_04"
+      },
+      "MT_ma_22_A_04": {
+        "exc_label": "2022",
+        "exc_info": "MT_ma_22_A_04",
+        "exc_cor_id": "MT_ma_22_As_04"
+      },
+      "MT_ma_22_B_04": {
+        "exc_label": "2022",
+        "exc_info": "MT_ma_22_B_04",
+        "exc_cor_id": "MT_ma_22_Bs_04"
+      },
+      "MT_ma_23_A_04": {
+        "exc_label": "2023",
+        "exc_info": "MT_ma_23_A_04",
+        "exc_cor_id": "MT_ma_23_As_04"
+      },
+      "MT_ma_23_B_04": {
+        "exc_label": "2023",
+        "exc_info": "MT_ma_23_B_04",
+        "exc_cor_id": "MT_ma_23_Bs_04"
+      },
+      "MT_ma_24_A_04": {
+        "exc_label": "2024",
+        "exc_info": "MT_ma_24_A_04",
+        "exc_cor_id": "MT_ma_24_As_04"
+      },
+      "MT_ma_24_B_04": {
+        "exc_label": "2024",
+        "exc_info": "MT_ma_24_B_04",
+        "exc_cor_id": "MT_ma_24_Bs_04"
+      },
+      "MT_ma_25_A_04": {
+        "exc_label": "2025",
+        "exc_info": "MT_ma_25_A_04",
+        "exc_cor_id": "MT_ma_25_As_04"
+      },
+      "MT_ma_25_B_04": {
+        "exc_label": "2025",
+        "exc_info": "MT_ma_25_B_04",
+        "exc_cor_id": "MT_ma_25_Bs_04"
+      }
+    }
+  },
+  "MT_ma_cmp": {
+    "MT_ma_cmp": {
+      "MT_ma_17_A_03": {
+        "exc_label": "2017",
+        "exc_info": "MT_ma_17_A_03",
+        "exc_cor_id": "MT_ma_17_As_03"
+      },
+      "MT_ma_17_B_03": {
+        "exc_label": "2017",
+        "exc_info": "MT_ma_17_B_03",
+        "exc_cor_id": "MT_ma_17_Bs_03"
+      },
+      "MT_ma_17_V2_A_03": {
+        "exc_label": "2017",
+        "exc_info": "MT_ma_17_V2_A_03",
+        "exc_cor_id": "MT_ma_17_V2_As_03"
+      },
+      "MT_ma_17_V2_B_03": {
+        "exc_label": "2017",
+        "exc_info": "MT_ma_17_V2_B_03",
+        "exc_cor_id": "MT_ma_17_V2_Bs_03"
+      },
+      "MT_ma_18_A_03": {
+        "exc_label": "2018",
+        "exc_info": "MT_ma_18_A_03",
+        "exc_cor_id": "MT_ma_18_As_03"
+      },
+      "MT_ma_18_B_03": {
+        "exc_label": "2018",
+        "exc_info": "MT_ma_18_B_03",
+        "exc_cor_id": "MT_ma_18_Bs_03"
+      },
+      "MT_ma_19_A_03": {
+        "exc_label": "2019",
+        "exc_info": "MT_ma_19_A_03",
+        "exc_cor_id": "MT_ma_19_As_03"
+      },
+      "MT_ma_19_B_03": {
+        "exc_label": "2019",
+        "exc_info": "MT_ma_19_B_03",
+        "exc_cor_id": "MT_ma_19_Bs_03"
+      }
+    }
+  },
+  "MT_ma_sut": {
+    "MT_ma_sut, MT_ma_fns": {
+      "MT_ma_17_A_02": {
+        "exc_label": "2017",
+        "exc_info": "MT_ma_17_A_02",
+        "exc_cor_id": "MT_ma_17_As_02"
+      },
+      "MT_ma_20_A_01": {
+        "exc_label": "2020",
+        "exc_info": "MT_ma_20_A_01",
+        "exc_cor_id": "MT_ma_20_As_01"
+      },
+      "MT_ma_20_B_03": {
+        "exc_label": "2020",
+        "exc_info": "MT_ma_20_B_03",
+        "exc_cor_id": "MT_ma_20_Bs_03"
+      },
+      "MT_ma_21_A_01": {
+        "exc_label": "2021",
+        "exc_info": "MT_ma_21_A_01",
+        "exc_cor_id": "MT_ma_21_As_01"
+      },
+      "MT_ma_21_B_03": {
+        "exc_label": "2021",
+        "exc_info": "MT_ma_21_B_03",
+        "exc_cor_id": "MT_ma_21_Bs_03"
+      },
+      "MT_ma_23_B_03": {
+        "exc_label": "2023",
+        "exc_info": "MT_ma_23_B_03",
+        "exc_cor_id": "MT_ma_23_Bs_03"
+      },
+      "MT_ma_24_B_03": {
+        "exc_label": "2024",
+        "exc_info": "MT_ma_24_B_03",
+        "exc_cor_id": "MT_ma_24_Bs_03"
+      },
+      "MT_ma_25_B_02": {
+        "exc_label": "2025",
+        "exc_info": "MT_ma_25_B_02",
+        "exc_cor_id": "MT_ma_25_Bs_02"
+      }
+    },
+    "MT_ma_sut": {
+      "MT_ma_17_V2_B_02": {
+        "exc_label": "2017",
+        "exc_info": "MT_ma_17_V2_B_02",
+        "exc_cor_id": "MT_ma_17_V2_Bs_02"
+      },
+      "MT_ma_22_A_03": {
+        "exc_label": "2022",
+        "exc_info": "MT_ma_22_A_03",
+        "exc_cor_id": "MT_ma_22_As_03"
+      },
+      "MT_ma_22_B_03": {
+        "exc_label": "2022",
+        "exc_info": "MT_ma_22_B_03",
+        "exc_cor_id": "MT_ma_22_Bs_03"
+      },
+      "MT_ma_23_A_02": {
+        "exc_label": "2023",
+        "exc_info": "MT_ma_23_A_02",
+        "exc_cor_id": "MT_ma_23_As_02"
+      },
+      "MT_ma_24_A_03": {
+        "exc_label": "2024",
+        "exc_info": "MT_ma_24_A_03",
+        "exc_cor_id": "MT_ma_24_As_03"
+      },
+      "MT_ma_25_A_02": {
+        "exc_label": "2025",
+        "exc_info": "MT_ma_25_A_02",
+        "exc_cor_id": "MT_ma_25_As_02"
+      }
+    }
+  },
+  "MT_ma_esp": {
+    "MT_ma_esp": {
+      "MT_ma_17_A_01": {
+        "exc_label": "2017",
+        "exc_info": "MT_ma_17_A_01",
+        "exc_cor_id": "MT_ma_17_As_01"
+      },
+      "MT_ma_17_B_01": {
+        "exc_label": "2017",
+        "exc_info": "MT_ma_17_B_01",
+        "exc_cor_id": "MT_ma_17_Bs_01"
+      },
+      "MT_ma_17_V2_A_01": {
+        "exc_label": "2017",
+        "exc_info": "MT_ma_17_V2_A_01",
+        "exc_cor_id": "MT_ma_17_V2_As_01"
+      },
+      "MT_ma_17_V2_B_01": {
+        "exc_label": "2017",
+        "exc_info": "MT_ma_17_V2_B_01",
+        "exc_cor_id": "MT_ma_17_V2_Bs_01"
+      },
+      "MT_ma_18_A_02": {
+        "exc_label": "2018",
+        "exc_info": "MT_ma_18_A_02",
+        "exc_cor_id": "MT_ma_18_As_02"
+      }
+    }
+  },
+  "MT_ma_nmb": {
+    "MT_ma_nmb": {
+      "MT_ma_17_B_02": {
+        "exc_label": "2017",
+        "exc_info": "MT_ma_17_B_02",
+        "exc_cor_id": "MT_ma_17_Bs_02"
+      },
+      "MT_ma_17_V2_A_02": {
+        "exc_label": "2017",
+        "exc_info": "MT_ma_17_V2_A_02",
+        "exc_cor_id": "MT_ma_17_V2_As_02"
+      },
+      "MT_ma_19_B_01": {
+        "exc_label": "2019",
+        "exc_info": "MT_ma_19_B_01",
+        "exc_cor_id": "MT_ma_19_Bs_01"
+      },
+      "MT_ma_20_A_02": {
+        "exc_label": "2020",
+        "exc_info": "MT_ma_20_A_02",
+        "exc_cor_id": "MT_ma_20_As_02"
+      },
+      "MT_ma_20_B_02": {
+        "exc_label": "2020",
+        "exc_info": "MT_ma_20_B_02",
+        "exc_cor_id": "MT_ma_20_Bs_02"
+      },
+      "MT_ma_21_A_03": {
+        "exc_label": "2021",
+        "exc_info": "MT_ma_21_A_03",
+        "exc_cor_id": "MT_ma_21_As_03"
+      },
+      "MT_ma_21_B_01": {
+        "exc_label": "2021",
+        "exc_info": "MT_ma_21_B_01",
+        "exc_cor_id": "MT_ma_21_Bs_01"
+      },
+      "MT_ma_22_A_01": {
+        "exc_label": "2022",
+        "exc_info": "MT_ma_22_A_01",
+        "exc_cor_id": "MT_ma_22_As_01"
+      },
+      "MT_ma_22_B_01": {
+        "exc_label": "2022",
+        "exc_info": "MT_ma_22_B_01",
+        "exc_cor_id": "MT_ma_22_Bs_01"
+      },
+      "MT_ma_23_A_03": {
+        "exc_label": "2023",
+        "exc_info": "MT_ma_23_A_03",
+        "exc_cor_id": "MT_ma_23_As_03"
+      },
+      "MT_ma_24_A_02": {
+        "exc_label": "2024",
+        "exc_info": "MT_ma_24_A_02",
+        "exc_cor_id": "MT_ma_24_As_02"
+      },
+      "MT_ma_24_B_02": {
+        "exc_label": "2024",
+        "exc_info": "MT_ma_24_B_02",
+        "exc_cor_id": "MT_ma_24_Bs_02"
+      },
+      "MT_ma_25_A_03": {
+        "exc_label": "2025",
+        "exc_info": "MT_ma_25_A_03",
+        "exc_cor_id": "MT_ma_25_As_03"
+      },
+      "MT_ma_25_B_03": {
+        "exc_label": "2025",
+        "exc_info": "MT_ma_25_B_03",
+        "exc_cor_id": "MT_ma_25_Bs_03"
+      }
+    },
+    "MT_ma_sut, MT_ma_nmb": {
+      "MT_ma_18_A_01": {
+        "exc_label": "2018",
+        "exc_info": "MT_ma_18_A_01",
+        "exc_cor_id": "MT_ma_18_As_01"
+      },
+      "MT_ma_18_B_01": {
+        "exc_label": "2018",
+        "exc_info": "MT_ma_18_B_01",
+        "exc_cor_id": "MT_ma_18_Bs_01"
+      },
+      "MT_ma_19_A_01": {
+        "exc_label": "2019",
+        "exc_info": "MT_ma_19_A_01",
+        "exc_cor_id": "MT_ma_19_As_01"
+      }
+    }
+  },
+  "MT_ma_prb": {
+    "MT_ma_prb": {
+      "MT_ma_18_B_02": {
+        "exc_label": "2018",
+        "exc_info": "MT_ma_18_B_02",
+        "exc_cor_id": "MT_ma_18_Bs_02"
+      },
+      "MT_ma_19_B_02": {
+        "exc_label": "2019",
+        "exc_info": "MT_ma_19_B_02",
+        "exc_cor_id": "MT_ma_19_Bs_02"
+      },
+      "MT_ma_20_A_03": {
+        "exc_label": "2020",
+        "exc_info": "MT_ma_20_A_03",
+        "exc_cor_id": "MT_ma_20_As_03"
+      },
+      "MT_ma_20_B_01": {
+        "exc_label": "2020",
+        "exc_info": "MT_ma_20_B_01",
+        "exc_cor_id": "MT_ma_20_Bs_01"
+      },
+      "MT_ma_23_A_01": {
+        "exc_label": "2023",
+        "exc_info": "MT_ma_23_A_01",
+        "exc_cor_id": "MT_ma_23_As_01"
+      },
+      "MT_ma_23_B_01": {
+        "exc_label": "2023",
+        "exc_info": "MT_ma_23_B_01",
+        "exc_cor_id": "MT_ma_23_Bs_01"
+      },
+      "MT_ma_24_A_01": {
+        "exc_label": "2024",
+        "exc_info": "MT_ma_24_A_01",
+        "exc_cor_id": "MT_ma_24_As_01"
+      },
+      "MT_ma_24_B_01": {
+        "exc_label": "2024",
+        "exc_info": "MT_ma_24_B_01",
+        "exc_cor_id": "MT_ma_24_Bs_01"
+      },
+      "MT_ma_25_A_01": {
+        "exc_label": "2025",
+        "exc_info": "MT_ma_25_A_01",
+        "exc_cor_id": "MT_ma_25_As_01"
+      },
+      "MT_ma_25_B_01": {
+        "exc_label": "2025",
+        "exc_info": "MT_ma_25_B_01",
+        "exc_cor_id": "MT_ma_25_Bs_01"
+      }
+    }
+  },
+  "MT_ma_fns": {
+    "MT_ma_fns": {
+      "MT_ma_18_B_04": {
+        "exc_label": "2018",
+        "exc_info": "MT_ma_18_B_04",
+        "exc_cor_id": "MT_ma_18_Bs_04"
+      },
+      "MT_ma_20_A_04": {
+        "exc_label": "2020",
+        "exc_info": "MT_ma_20_A_04",
+        "exc_cor_id": "MT_ma_20_As_04"
+      },
+      "MT_ma_20_B_04": {
+        "exc_label": "2020",
+        "exc_info": "MT_ma_20_B_04",
+        "exc_cor_id": "MT_ma_20_Bs_04"
+      },
+      "MT_ma_21_A_04": {
+        "exc_label": "2021",
+        "exc_info": "MT_ma_21_A_04",
+        "exc_cor_id": "MT_ma_21_As_04"
+      },
+      "MT_ma_21_B_04": {
+        "exc_label": "2021",
+        "exc_info": "MT_ma_21_B_04",
+        "exc_cor_id": "MT_ma_21_Bs_04"
+      }
+    }
+  },
+  "MT_ma_QCM": {
+    "MT_ma_QCM": {
+      "MT_ma_19_A_02": {
+        "exc_label": "2019",
+        "exc_info": "MT_ma_19_A_02",
+        "exc_cor_id": "MT_ma_19_As_02"
+      },
+      "MT_ma_21_A_02": {
+        "exc_label": "2021",
+        "exc_info": "MT_ma_21_A_02",
+        "exc_cor_id": "MT_ma_21_As_02"
+      },
+      "MT_ma_21_B_02": {
+        "exc_label": "2021",
+        "exc_info": "MT_ma_21_B_02",
+        "exc_cor_id": "MT_ma_21_Bs_02"
+      },
+      "MT_ma_22_A_02": {
+        "exc_label": "2022",
+        "exc_info": "MT_ma_22_A_02",
+        "exc_cor_id": "MT_ma_22_As_02"
+      },
+      "MT_ma_22_B_02": {
+        "exc_label": "2022",
+        "exc_info": "MT_ma_22_B_02",
+        "exc_cor_id": "MT_ma_22_Bs_02"
+      },
+      "MT_ma_23_B_02": {
+        "exc_label": "2023",
+        "exc_info": "MT_ma_23_B_02",
+        "exc_cor_id": "MT_ma_23_Bs_02"
       }
     }
   }
