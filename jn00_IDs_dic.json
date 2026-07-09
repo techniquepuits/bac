@@ -354,5 +354,17 @@
   "SC_ma_fnc_sub02": {
     "ID": "SC_ma_fnc_sub02",
     "label": "المتتاليات والدوال"
+  },
+  "MA_ma_QCM": {
+    "ID": "MA_ma_QCM",
+    "label": "QCM"
+  },
+  "MT_ma_QCM": {
+    "ID": "MT_ma_QCM",
+    "label": "QCM"
+  },
+  "SC_ma_QCM": {
+    "ID": "SC_ma_QCM",
+    "label": "QCM"
   }
 }
