@@ -26,7 +26,8 @@
     "SC_ma_fdf",
     "SC_ma_prb",
     "SC_ma_cmp",
-    "SC_ma_esp"
+    "SC_ma_esp",
+    "SC_ma_QCM"
   ],
   "MA_ma": [
     "MA_ma_fnc",
@@ -37,7 +38,8 @@
     "MA_ma_nmb",
     "MA_ma_prb",
     "MA_ma_cmp",
-    "MA_ma_esp"
+    "MA_ma_esp",
+    "MA_ma_QCM"
   ],
   "MT_ma": [
     "MT_ma_fnc",
@@ -48,7 +50,8 @@
     "MT_ma_nmb",
     "MT_ma_prb",
     "MT_ma_cmp",
-    "MT_ma_esp"
+    "MT_ma_esp",
+    "MT_ma_QCM"
   ],
   "SC_ph": [
     "SC_ph_knt",
